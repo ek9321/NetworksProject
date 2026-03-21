@@ -1,0 +1,10 @@
+# Generated data (reproducible from build_network.py)
+nodes.csv
+edges.csv
+ercot_network.graphml
+figures/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

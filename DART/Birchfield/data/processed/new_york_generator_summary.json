@@ -1,0 +1,12 @@
+{
+  "total_substations": 600,
+  "total_requested_n_b": 33,
+  "total_selected": 33,
+  "total_assigned_generators": 445,
+  "total_target_gen_mw": 5925.2398082421005,
+  "total_assigned_gen_mw": 8748.2,
+  "total_shortfall_mw": 0.0,
+  "fraction_with_generation": 0.055,
+  "random_seed": 42,
+  "warnings": []
+}

@@ -1,0 +1,1387 @@
+gen_uid,plant_code,generator_id,lat,lon,nameplate_mw,summer_mw,winter_mw,min_load_mw,pmax_mw,fuel_code,fuel,prime_mover,unit_type,technology,grid_kv
+EIA_88_1,88,1,41.949,-74.2063,2.3,1.8,1.8,1.0,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.8
+EIA_88_2,88,2,41.949,-74.2063,2.3,1.8,1.8,1.0,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.8
+EIA_579_1,579,1,41.828814,-74.131877,3.2,3.2,3.2,0.2,3.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_625_1,625,1,42.9126,-73.6805,8.2,9.2,9.2,0.0,9.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.0
+EIA_625_2,625,2,42.9126,-73.6805,8.2,9.2,9.2,0.0,9.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.0
+EIA_808_1,808,1,43.3121,-75.109,4.5,4.5,4.5,1.0,4.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_808_2,808,2,43.3121,-75.109,4.5,4.5,4.5,1.0,4.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2480_1,2480,1,41.573361,-73.96457,72.0,68.0,68.0,20.0,68.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,115.0
+EIA_2480_2,2480,2,41.573361,-73.96457,73.5,65.7,65.5,20.0,65.7,NG,Gas,ST,ST,Natural Gas Steam Turbine,115.0
+EIA_2480_3,2480,3,41.573361,-73.96457,147.1,137.7,137.1,40.0,137.7,NG,Gas,ST,ST,Natural Gas Steam Turbine,115.0
+EIA_2480_4,2480,4,41.573361,-73.96457,239.4,225.9,229.5,60.0,225.9,NG,Gas,ST,ST,Natural Gas Steam Turbine,115.0
+EIA_2481_1,2481,1,41.8217,-74.0497,2.4,2.4,2.4,0.3,2.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2481_2,2481,2,41.8217,-74.0497,2.4,2.4,2.4,0.3,2.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2483_H1,2483,H1,41.8194,-74.6358,25.0,22.0,22.0,1.0,22.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2485_GT1,2485,GT1,42.291275,-73.986452,21.3,18.1,22.9,2.0,18.1,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_2486_H1,2486,H1,41.848191,-74.046678,4.8,4.8,4.8,4.0,4.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2486_H2,2486,H2,41.848191,-74.046678,4.8,4.8,4.8,4.0,4.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2486_H3,2486,H3,41.848191,-74.046678,4.8,4.8,4.8,4.0,4.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2487_GT1,2487,GT1,42.350889,-73.815798,21.3,20.2,24.8,2.0,20.2,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_2490_2,2490,2,40.591564,-74.200035,342.0,362.2,361.0,90.0,362.2,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2490_3,2490,3,40.591564,-74.200035,535.5,522.7,530.0,150.0,522.7,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2490_GT1,2490,GT1,40.591564,-74.200035,18.0,12.3,15.9,1.0,12.3,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2493_1,2493,1,40.7281,-73.9742,180.0,151.5,197.8,110.0,151.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_2493_2,2493,2,40.7281,-73.9742,180.0,155.0,199.1,110.0,155.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_2493_6,2493,6,40.7281,-73.9742,156.2,141.4,140.5,45.0,141.4,NG,Gas,ST,ST,Natural Gas Steam Turbine,69.0
+EIA_2493_7,2493,7,40.7281,-73.9742,200.0,182.4,186.7,65.0,182.4,NG,Gas,ST,ST,Natural Gas Steam Turbine,69.0
+EIA_2494_GT11,2494,GT11,40.6635,-74.0051,20.0,19.1,24.9,16.0,19.1,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT12,2494,GT12,40.6635,-74.0051,20.0,17.1,22.3,16.0,17.1,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT13,2494,GT13,40.6635,-74.0051,20.0,17.2,22.5,16.0,17.2,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT14,2494,GT14,40.6635,-74.0051,20.0,17.1,22.3,15.6,17.1,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT15,2494,GT15,40.6635,-74.0051,20.0,16.5,21.6,15.9,16.5,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT16,2494,GT16,40.6635,-74.0051,20.0,18.0,23.5,15.6,18.0,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT17,2494,GT17,40.6635,-74.0051,20.0,17.6,23.0,16.0,17.6,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT21,2494,GT21,40.6635,-74.0051,20.0,17.9,23.4,16.0,17.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT22,2494,GT22,40.6635,-74.0051,20.0,18.8,24.6,15.2,18.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT23,2494,GT23,40.6635,-74.0051,20.0,20.6,26.9,16.0,20.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT24,2494,GT24,40.6635,-74.0051,20.0,19.3,25.2,16.0,19.3,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT25,2494,GT25,40.6635,-74.0051,20.0,18.6,24.3,16.0,18.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT26,2494,GT26,40.6635,-74.0051,20.0,20.3,26.5,16.0,20.3,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT27,2494,GT27,40.6635,-74.0051,20.0,19.6,25.6,16.0,19.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT28,2494,GT28,40.6635,-74.0051,20.0,17.7,23.1,16.0,17.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT31,2494,GT31,40.6635,-74.0051,20.0,17.7,23.1,16.0,17.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT32,2494,GT32,40.6635,-74.0051,20.0,17.7,23.1,16.0,17.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT33,2494,GT33,40.6635,-74.0051,20.0,19.8,25.9,16.0,19.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT34,2494,GT34,40.6635,-74.0051,20.0,17.9,23.4,15.9,17.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT35,2494,GT35,40.6635,-74.0051,20.0,19.0,24.8,16.0,19.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT36,2494,GT36,40.6635,-74.0051,20.0,17.6,23.0,15.2,17.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT37,2494,GT37,40.6635,-74.0051,20.0,18.1,23.6,16.0,18.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT38,2494,GT38,40.6635,-74.0051,20.0,19.0,24.8,16.0,19.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2494_GT41,2494,GT41,40.6635,-74.0051,20.0,16.8,21.9,16.0,16.8,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT42,2494,GT42,40.6635,-74.0051,20.0,17.3,22.6,16.0,17.3,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT43,2494,GT43,40.6635,-74.0051,20.0,17.6,23.0,16.0,17.6,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT44,2494,GT44,40.6635,-74.0051,20.0,17.1,22.3,15.8,17.1,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT45,2494,GT45,40.6635,-74.0051,20.0,17.1,22.3,15.7,17.1,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT46,2494,GT46,40.6635,-74.0051,20.0,18.6,24.3,16.0,18.6,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT47,2494,GT47,40.6635,-74.0051,20.0,16.6,21.7,14.0,16.6,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2494_GT48,2494,GT48,40.6635,-74.0051,20.0,19.0,24.8,16.0,19.0,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2499_NT11,2499,NT11,40.648611,-74.020833,22.0,21.0,27.4,16.0,21.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT12,2499,NT12,40.648611,-74.020833,22.0,19.5,25.5,16.0,19.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT13,2499,NT13,40.648611,-74.020833,22.0,20.4,26.6,16.0,20.4,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT14,2499,NT14,40.648611,-74.020833,22.0,20.1,26.3,16.0,20.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT15,2499,NT15,40.648611,-74.020833,22.0,19.8,25.9,16.0,19.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT16,2499,NT16,40.648611,-74.020833,22.0,18.9,24.7,15.7,18.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT17,2499,NT17,40.648611,-74.020833,22.0,18.4,24.0,15.6,18.4,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT18,2499,NT18,40.648611,-74.020833,22.0,19.9,26.0,16.0,19.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT21,2499,NT21,40.648611,-74.020833,22.0,19.4,25.3,16.0,19.4,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT22,2499,NT22,40.648611,-74.020833,22.0,18.7,24.4,16.0,18.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT23,2499,NT23,40.648611,-74.020833,22.0,18.4,24.0,16.0,18.4,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT24,2499,NT24,40.648611,-74.020833,22.0,18.4,24.0,16.0,18.4,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT25,2499,NT25,40.648611,-74.020833,22.0,19.9,26.0,16.0,19.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT26,2499,NT26,40.648611,-74.020833,22.0,18.1,23.6,15.3,18.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT27,2499,NT27,40.648611,-74.020833,22.0,20.7,27.0,16.0,20.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2499_NT28,2499,NT28,40.648611,-74.020833,22.0,17.5,22.9,15.7,17.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2500_1,2500,1,40.759167,-73.946111,400.0,368.5,375.8,75.0,368.5,NG,Gas,ST,ST,Natural Gas Steam Turbine,348.0
+EIA_2500_2,2500,2,40.759167,-73.946111,400.0,374.5,374.3,75.0,374.5,NG,Gas,ST,ST,Natural Gas Steam Turbine,348.0
+EIA_2500_3,2500,3,40.759167,-73.946111,1027.0,987.3,968.3,150.0,987.3,NG,Gas,ST,ST,Natural Gas Steam Turbine,348.0
+EIA_2500_4,2500,4,40.759167,-73.946111,181.0,150.4,185.8,115.0,150.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,348.0
+EIA_2500_4S,2500,4S,40.759167,-73.946111,87.5,72.8,89.8,0.0,72.8,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,348.0
+EIA_2503_GT1,2503,GT1,40.771285,-73.99115,17.1,13.9,17.4,3.0,13.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,13.8
+EIA_2504_GT1,2504,GT1,40.768,-73.9515,18.5,18.5,21.7,8.0,18.5,KER,Oil,GT,GT,Petroleum Liquids,13.8
+EIA_2504_GT2,2504,GT2,40.768,-73.9515,18.5,19.3,21.9,8.0,19.3,KER,Oil,GT,GT,Petroleum Liquids,13.8
+EIA_2511_10,2511,10,40.616689,-73.647881,41.8,40.6,50.0,30.0,40.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_11,2511,11,40.616689,-73.647881,41.8,40.1,50.5,30.0,40.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_12,2511,12,40.616689,-73.647881,41.8,40.9,48.7,30.0,40.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_3,2511,3,40.616689,-73.647881,18.0,17.7,20.2,10.5,17.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_4,2511,4,40.616689,-73.647881,18.0,16.8,20.5,11.4,16.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_5,2511,5,40.616689,-73.647881,18.0,17.6,20.1,11.0,17.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_6,2511,6,40.616689,-73.647881,18.0,16.4,19.9,11.2,16.4,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_8,2511,8,40.616689,-73.647881,18.0,15.1,15.2,11.4,15.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_9,2511,9,40.616689,-73.647881,41.8,41.2,49.2,29.8,41.2,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_GT1,2511,GT1,40.616689,-73.647881,18.0,17.4,20.5,10.7,17.4,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_GT2,2511,GT2,40.616689,-73.647881,18.0,17.6,20.4,9.0,17.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2511_ST1,2511,ST1,40.616689,-73.647881,188.0,194.2,199.5,15.0,194.2,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2511_ST2,2511,ST2,40.616689,-73.647881,188.0,178.0,190.5,15.0,178.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2512_1,2512,1,40.961706,-72.210277,21.3,19.2,24.0,15.4,19.2,DFO,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_2512_2,2512,2,40.961706,-72.210277,2.0,2.0,2.0,2.0,2.0,DFO,Oil,IC,IC,Petroleum Liquids,69.0
+EIA_2512_3,2512,3,40.961706,-72.210277,2.0,2.0,2.1,2.0,2.0,DFO,Oil,IC,IC,Petroleum Liquids,69.0
+EIA_2512_4,2512,4,40.961706,-72.210277,2.0,2.0,2.1,1.9,2.0,DFO,Oil,IC,IC,Petroleum Liquids,69.0
+EIA_2514_GT2,2514,GT2,40.827149,-73.647473,55.0,49.0,55.1,40.0,49.0,DFO,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_2514_GT3,2514,GT3,40.827149,-73.647473,55.0,55.1,68.6,44.1,55.1,DFO,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_2516_2,2516,2,40.923565,-73.342323,387.0,398.0,399.0,40.0,398.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2516_3,2516,3,40.923565,-73.342323,387.0,398.5,394.2,30.0,398.5,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2516_4,2516,4,40.923565,-73.342323,387.0,398.0,396.5,40.0,398.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2516_GT1,2516,GT1,40.923565,-73.342323,16.0,11.8,15.8,10.6,11.8,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2516_ST1,2516,ST1,40.923565,-73.342323,387.0,397.7,396.2,40.0,397.7,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2517_3,2517,3,40.949696,-73.078507,188.0,192.0,189.2,15.0,192.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2517_4,2517,4,40.949696,-73.078507,188.0,193.0,194.7,15.0,193.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_2517_GT1,2517,GT1,40.949696,-73.078507,16.0,12.9,16.6,10.6,12.9,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2517_GT2,2517,GT2,40.949696,-73.078507,53.0,42.6,46.7,37.0,42.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2517_GT3,2517,GT3,40.949696,-73.078507,53.0,40.1,47.1,37.0,40.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_2518_GT1,2518,GT1,40.96159,-72.864976,52.9,49.8,65.0,39.4,49.8,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2518_GT2,2518,GT2,40.96159,-72.864976,18.6,15.9,19.7,12.0,15.9,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_2519_1,2519,1,40.899997,-72.381977,11.5,8.5,10.4,6.6,8.5,DFO,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_2520_1,2520,1,41.1059,-72.3761,14.0,10.0,9.0,7.3,10.0,DFO,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_2522_2,2522,2,44.695,-73.6219,1.2,1.2,1.2,0.0,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,11.0
+EIA_2522_3,2522,3,44.695,-73.6219,3.1,3.1,3.1,0.0,3.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,11.0
+EIA_2527_4,2527,4,42.6789,-76.9483,112.0,104.5,106.3,32.0,104.5,NG,Gas,ST,ST,Natural Gas Steam Turbine,115.0
+EIA_2528_1,2528,1,43.9719,-74.1861,1.7,1.7,1.7,1.7,1.7,DFO,Oil,IC,IC,Petroleum Liquids,2.4
+EIA_2528_2,2528,2,43.9719,-74.1861,2.5,2.3,2.3,2.3,2.3,DFO,Oil,IC,IC,Petroleum Liquids,2.4
+EIA_2530_1,2530,1,44.6389,-73.7492,4.0,4.0,4.0,0.0,4.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,6.9
+EIA_2530_3,2530,3,44.6389,-73.7492,7.0,7.0,7.0,0.0,7.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,6.9
+EIA_2539_5,2539,5,42.594196,-73.763752,194.3,178.4,205.8,170.0,178.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_2539_6,2539,6,42.594196,-73.763752,194.3,179.7,205.8,170.0,179.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_2539_7,2539,7,42.594196,-73.763752,194.3,177.9,205.8,170.0,177.9,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_2539_8,2539,8,42.594196,-73.763752,310.2,279.5,307.3,170.0,279.5,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_2540_1,2540,1,44.660338,-74.860265,4.0,3.5,5.0,3.5,3.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2543_1,2543,1,43.019113,-74.741349,10.0,8.5,8.9,4.0,8.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2543_2,2543,2,43.019113,-74.741349,10.0,8.1,7.8,4.0,8.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2544_1,2544,1,43.9275,-75.3331,0.4,0.4,0.4,0.2,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2544_2,2544,2,43.9275,-75.3331,0.6,0.5,0.5,0.4,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2544_3,2544,3,43.9275,-75.3331,1.0,0.9,0.9,0.7,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2545_1,2545,1,43.5317,-75.9531,9.0,8.4,7.0,3.0,8.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2545_2,2545,2,43.5317,-75.9531,9.0,8.4,7.5,3.0,8.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2545_3,2545,3,43.5317,-75.9531,9.0,6.3,7.3,3.0,6.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2545_4,2545,4,43.5317,-75.9531,9.0,7.2,7.3,3.0,7.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2546_1,2546,1,44.000122,-75.813151,2.0,1.5,2.3,1.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2546_2,2546,2,44.000122,-75.813151,2.0,1.5,2.3,1.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2546_3,2546,3,44.000122,-75.813151,2.0,1.5,2.3,1.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2547_1,2547,1,44.506474,-74.753442,15.0,14.2,14.5,1.0,14.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2548_1,2548,1,44.211407,-75.059441,8.0,7.9,7.6,7.0,7.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2548_2,2548,2,44.211407,-75.059441,8.0,7.9,7.6,7.0,7.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2550_1,2550,1,44.7533,-74.2169,1.0,0.5,0.6,0.5,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2550_2,2550,2,44.7533,-74.2169,1.0,0.5,0.6,0.5,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2550_3,2550,3,44.7533,-74.2169,1.0,0.6,0.7,0.6,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2551_1,2551,1,44.5839,-74.9583,10.0,9.9,9.7,0.2,9.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2551_2,2551,2,44.5839,-74.9583,10.0,10.3,9.9,0.2,10.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2551_3,2551,3,44.5839,-74.9583,10.0,9.5,11.1,0.2,9.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2552_1,2552,1,44.0381,-75.6806,4.0,3.6,3.6,2.8,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2552_2,2552,2,44.0381,-75.6806,4.0,3.6,3.6,2.8,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2552_3,2552,3,44.0381,-75.6806,4.0,3.6,3.6,2.8,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2555_1,2555,1,43.909714,-75.200831,2.0,1.4,1.1,1.1,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2555_2,2555,2,43.909714,-75.200831,1.0,1.2,1.0,1.0,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2555_3,2555,3,43.909714,-75.200831,1.0,1.2,1.0,1.0,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2555_4,2555,4,43.909714,-75.200831,2.0,2.0,1.8,1.8,2.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2556_1,2556,1,44.638365,-75.49052,0.5,0.4,0.4,0.4,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2556_2,2556,2,44.638365,-75.49052,1.0,0.8,0.8,0.8,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2556_3,2556,3,44.638365,-75.49052,1.0,0.8,0.8,0.8,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2557_1,2557,1,43.922831,-75.277923,0.4,0.4,0.4,0.4,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2557_2,2557,2,43.922831,-75.277923,0.4,0.4,0.4,0.4,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2557_3,2557,3,43.922831,-75.277923,0.6,0.4,0.4,0.4,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2557_4,2557,4,43.922831,-75.277923,1.6,1.7,1.4,1.4,1.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2559_1,2559,1,43.927536,-75.288322,1.0,1.0,1.0,0.7,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2559_2,2559,2,43.927536,-75.288322,1.0,1.0,1.0,0.7,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2560_1,2560,1,43.0092,-74.5372,1.0,0.9,0.9,0.2,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2560_2,2560,2,43.0092,-74.5372,1.0,0.9,1.0,0.2,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2560_3,2560,3,43.0092,-74.5372,1.0,0.9,1.0,0.2,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2560_4,2560,4,43.0092,-74.5372,1.0,1.0,1.0,0.2,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2561_1,2561,1,44.7989,-74.9856,4.0,4.1,4.0,0.9,4.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2562_1,2562,1,44.527491,-74.849177,24.0,22.4,23.5,1.0,22.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2563_1,2563,1,44.2217,-75.0742,2.0,2.4,2.4,1.4,2.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2563_2,2563,2,44.2217,-75.0742,3.0,2.8,2.8,2.5,2.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2564_1,2564,1,44.4372,-73.9725,1.0,0.9,0.9,0.8,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2564_2,2564,2,44.4372,-73.9725,1.0,1.1,1.1,1.0,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2566_1,2566,1,43.32411,-76.418984,0.8,0.1,0.7,0.1,0.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2566_2,2566,2,43.32411,-76.418984,0.5,0.1,0.3,0.1,0.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2568_1,2568,1,43.2358,-78.3906,0.5,0.5,0.4,0.3,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2568_2,2568,2,43.2358,-78.3906,0.5,0.5,0.4,0.3,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2568_3,2568,3,43.2358,-78.3906,0.5,0.5,0.4,0.3,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2569_1,2569,1,43.323441,-76.420841,5.0,5.1,5.2,2.8,5.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2569_2,2569,2,43.323441,-76.420841,5.0,5.1,5.2,2.8,5.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2571_1,2571,1,44.6192,-74.9733,3.6,3.6,3.6,0.2,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2571_2,2571,2,44.6192,-74.9733,3.6,3.6,3.6,0.2,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2572_1,2572,1,44.0217,-75.6511,1.8,1.5,1.5,1.0,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2572_2,2572,2,44.0217,-75.6511,1.8,1.5,1.5,1.0,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2572_3,2572,3,44.0217,-75.6511,1.8,1.5,1.5,1.0,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2573_1,2573,1,44.6172,-75.4042,0.5,0.4,0.4,0.2,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2573_2,2573,2,44.6172,-75.4042,0.5,0.4,0.4,0.2,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2574_1,2574,1,43.4436,-76.4961,2.8,2.2,2.2,0.7,2.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2574_2,2574,2,43.4436,-76.4961,2.8,2.2,2.2,0.7,2.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2574_3,2574,3,43.4436,-76.4961,2.8,2.2,2.2,0.7,2.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2574_4,2574,4,43.4436,-76.4961,3.5,2.2,2.2,0.7,2.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2575_1,2575,1,43.9247,-75.3731,2.0,1.8,1.8,1.0,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2575_2,2575,2,43.9247,-75.3731,2.0,1.8,1.8,1.0,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2575_3,2575,3,43.9247,-75.3731,2.0,1.8,1.8,1.0,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2576_1N,2576,1N,44.5306,-74.9331,1.5,1.5,1.6,0.3,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2576_2N,2576,2N,44.5306,-74.9331,1.5,1.6,1.6,0.3,1.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2576_3N,2576,3N,44.5306,-74.9331,1.5,1.6,1.6,0.3,1.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2576_4N,2576,4N,44.5306,-74.9331,1.5,1.6,1.6,0.3,1.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2578_1,2578,1,43.170948,-78.691551,3.0,2.8,2.4,1.8,2.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,12.0
+EIA_2579_1,2579,1,43.061017,-74.764347,3.0,2.8,2.9,1.0,2.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2579_2,2579,2,43.061017,-74.764347,3.0,3.4,3.4,1.0,3.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2580_1,2580,1,42.920374,-73.508886,2.0,1.1,1.1,0.3,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2580_2,2580,2,42.920374,-73.508886,2.0,1.4,1.2,0.3,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2581_1,2581,1,44.0117,-75.7967,2.0,1.3,1.7,1.0,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2581_2,2581,2,44.0117,-75.7967,2.0,1.3,1.7,1.0,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2581_3,2581,3,44.0117,-75.7967,2.0,1.3,1.7,1.0,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2582_1,2582,1,43.524103,-75.970318,4.0,4.0,4.0,0.5,4.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2582_2,2582,2,43.524103,-75.970318,4.0,3.6,4.0,0.5,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2583_1,2583,1,44.877326,-74.306288,1.0,0.8,0.8,0.6,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2586_1,2586,1,43.4003,-76.4739,2.0,1.4,1.4,1.2,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2586_2,2586,2,43.4003,-76.4739,2.0,1.4,1.4,1.2,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2586_3,2586,3,43.4003,-76.4739,2.0,1.4,1.4,1.2,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2586_4,2586,4,43.4003,-76.4739,2.0,1.4,1.4,1.2,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2586_5,2586,5,43.4003,-76.4739,2.0,1.4,1.4,1.2,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2588_1,2588,1,43.8719,-75.1364,4.0,4.0,4.0,2.5,4.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2588_2,2588,2,43.8719,-75.1364,4.0,4.0,4.0,2.5,4.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2589_1,2589,1,43.5211,-76.41,641.8,620.9,626.5,105.0,620.9,NUC,Nuclear,ST,ST,Nuclear,345.0
+EIA_2589_2,2589,2,43.5211,-76.41,1259.3,1272.1,1293.9,75.0,1272.1,NUC,Nuclear,ST,ST,Nuclear,345.0
+EIA_2590_1,2590,1,44.8053,-74.9975,5.0,5.1,5.0,1.0,5.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2591_1,2591,1,44.7439,-75.0042,2.0,2.2,2.1,0.3,2.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2594_ST5,2594,ST5,43.4586,-76.5319,901.8,807.0,812.0,150.0,807.0,RFO,Oil,ST,ST,Petroleum Liquids,345.0
+EIA_2594_ST6,2594,ST6,43.4586,-76.5319,901.8,808.2,808.7,150.0,808.2,RFO,Oil,ST,ST,Petroleum Liquids,345.0
+EIA_2595_1,2595,1,43.3161,-76.4153,2.0,1.4,1.5,1.0,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2595_2,2595,2,43.3161,-76.4153,2.0,1.4,1.5,1.0,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2595_3,2595,3,43.3161,-76.4153,2.0,1.4,1.5,1.0,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2596_4,2596,4,43.3156,-76.4172,1.0,0.9,0.9,0.7,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2596_5,2596,5,43.3156,-76.4172,1.0,0.9,0.9,0.7,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2596_6,2596,6,43.3156,-76.4172,0.5,0.4,0.4,0.4,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2596_7,2596,7,43.3156,-76.4172,0.5,0.4,0.4,0.4,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2597_1,2597,1,44.63,-74.8258,3.0,2.3,2.4,0.8,2.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2598_1,2598,1,44.233419,-74.566217,1.5,1.6,1.6,1.0,1.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2598_2,2598,2,44.233419,-74.566217,0.6,0.6,0.6,0.4,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2598_3,2598,3,44.233419,-74.566217,0.6,0.6,0.6,0.4,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2599_1,2599,1,43.291861,-75.147734,19.0,18.3,18.1,4.0,18.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2600_1,2600,1,44.5178,-74.8228,25.0,24.0,23.8,1.0,24.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2601_1,2601,1,44.835,-74.9803,2.0,2.3,2.1,0.2,2.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2604_1,2604,1,44.2678,-75.1961,1.0,1.2,1.1,0.9,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2604_2,2604,2,44.2678,-75.1961,1.0,1.2,1.1,0.9,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2604_3,2604,3,44.2678,-75.1961,1.0,0.8,0.7,0.6,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2604_4,2604,4,44.2678,-75.1961,1.0,0.2,0.2,0.2,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2605_1,2605,1,42.78498,-73.707983,7.2,7.5,7.1,1.0,7.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2605_2,2605,2,42.78498,-73.707983,7.2,5.9,6.3,1.0,5.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2605_3,2605,3,42.78498,-73.707983,7.2,6.1,6.4,1.0,6.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2605_4,2605,4,42.78498,-73.707983,7.2,6.6,6.6,1.0,6.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2605_5,2605,5,42.78498,-73.707983,10.0,10.8,9.7,1.0,10.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2606_1,2606,1,42.8992,-73.5989,4.0,4.0,4.3,1.5,4.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2606_2,2606,2,42.8992,-73.5989,4.0,4.1,4.1,1.5,4.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2606_3,2606,3,42.8992,-73.5989,4.0,3.8,3.9,1.5,3.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2606_4,2606,4,42.8992,-73.5989,4.0,4.0,3.9,1.5,4.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2607_1,2607,1,43.096823,-73.582107,2.0,1.5,1.6,0.1,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2608_1,2608,1,43.9775,-75.8942,1.0,1.1,1.1,0.7,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2608_2,2608,2,43.9775,-75.8942,1.0,1.1,1.1,0.7,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2609_1,2609,1,43.2797,-73.7094,7.0,6.7,6.7,1.0,6.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2609_2,2609,2,43.2797,-73.7094,7.0,7.0,8.1,1.0,7.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2609_3,2609,3,43.2797,-73.7094,7.0,7.0,8.3,1.0,7.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2609_4,2609,4,43.2797,-73.7094,7.0,7.2,7.4,1.0,7.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2609_5,2609,5,43.2797,-73.7094,7.0,7.7,8.2,1.0,7.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2609_6,2609,6,43.2797,-73.7094,1.3,1.3,1.3,0.2,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2610_1,2610,1,43.9206,-75.2433,8.0,7.2,8.1,4.0,7.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2610_2,2610,2,43.9206,-75.2433,8.0,7.2,8.1,4.0,7.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2611_1,2611,1,44.5133,-74.8831,21.0,19.8,20.0,1.0,19.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2612_8,2612,8,43.2339,-73.7556,9.0,8.5,8.6,4.0,8.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2612_9,2612,9,43.2339,-73.7556,47.0,46.0,46.3,8.0,46.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2613_1,2613,1,44.4553,-74.7614,26.0,23.3,24.5,1.0,23.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2614_1,2614,1,43.2978,-73.8853,36.0,37.5,37.5,15.0,37.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2614_2,2614,2,43.2978,-73.8853,2.5,2.5,2.5,0.2,2.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2616_1,2616,1,44.642181,-74.976473,2.0,2.1,2.1,0.2,2.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2616_2,2616,2,44.642181,-74.976473,2.0,2.0,2.0,0.2,2.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_2617_1,2617,1,43.927002,-75.321877,1.0,1.1,1.1,0.9,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2617_2,2617,2,43.927002,-75.321877,1.0,0.9,0.9,0.9,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2617_3,2617,3,43.927002,-75.321877,1.0,1.1,1.1,0.9,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2617_4,2617,4,43.927002,-75.321877,1.0,1.3,1.3,1.1,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2619_5,2619,5,43.2758,-75.1567,6.8,8.1,6.8,2.0,8.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2619_6,2619,6,43.2758,-75.1567,6.4,8.1,6.4,2.0,8.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2619_7,2619,7,43.2758,-75.1567,8.7,9.7,8.7,2.0,9.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_2621_2,2621,2,43.4486,-76.5056,2.0,1.4,1.4,0.9,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2621_3,2621,3,43.4486,-76.5056,2.0,1.4,1.4,0.9,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2621_4,2621,4,43.4486,-76.5056,2.0,1.4,1.4,0.9,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2621_5,2621,5,43.4486,-76.5056,2.0,1.4,1.4,0.9,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2623_1,2623,1,43.3272,-78.2394,2.0,1.8,1.8,1.0,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2623_2,2623,2,43.3272,-78.2394,2.0,2.0,2.0,1.1,2.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2624_1,2624,1,44.7661,-74.9997,1.0,0.4,0.4,0.3,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2624_2,2624,2,44.7661,-74.9997,1.0,0.2,0.1,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_2625_1,2625,1,41.2044,-73.9689,621.0,586.0,593.2,80.0,586.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,345.0
+EIA_2625_2,2625,2,41.2044,-73.9689,621.0,573.6,568.8,100.0,573.6,NG,Gas,ST,ST,Natural Gas Steam Turbine,345.0
+EIA_2627_GRHM,2627,GRHM,41.8592,-74.5106,18.0,16.3,16.3,1.0,16.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2628_GEN1,2628,GEN1,41.1269,-74.1653,46.5,33.1,43.8,5.0,33.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_2630_GEN1,2630,GEN1,41.537722,-74.771383,4.0,4.3,4.3,0.4,4.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2630_GEN2,2630,GEN2,41.537722,-74.771383,1.1,1.1,1.1,0.4,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2630_GEN3,2630,GEN3,41.537722,-74.771383,1.1,1.1,1.1,0.4,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2630_GEN4,2630,GEN4,41.537722,-74.771383,1.1,1.1,1.1,0.4,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2631_RIO,2631,RIO,41.4625,-74.7578,10.0,10.1,10.1,4.0,10.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2631_RIO2,2631,RIO2,41.4625,-74.7578,0.8,0.8,0.8,0.4,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2632_SHOE,2632,SHOE,41.4278,-74.4186,41.9,33.0,40.0,5.0,33.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_2634_SWI2,2634,SWI2,41.5717,-74.7828,6.8,7.4,7.4,5.0,7.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2634_SWI3,2634,SWI3,41.5717,-74.7828,1.2,1.2,1.2,0.4,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_2638_1,2638,1,43.1522,-77.6098,3.0,3.0,3.0,0.0,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,11.5
+EIA_2678_2,2678,2,40.6561,-73.5922,2.9,2.2,2.2,2.2,2.2,DFO,Oil,IC,IC,Petroleum Liquids,13.8
+EIA_2678_3,2678,3,40.6561,-73.5922,3.1,2.0,2.0,2.0,2.0,DFO,Oil,IC,IC,Petroleum Liquids,13.8
+EIA_2679_3,2679,3,40.6447,-73.5683,18.1,16.8,18.0,5.0,16.8,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_2679_CT5,2679,CT5,40.6447,-73.5683,60.5,49.0,49.0,25.0,49.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_2681_4,2681,4,41.1055,-72.3758,1.2,1.2,1.2,0.3,1.2,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_2681_5,2681,5,41.1055,-72.3758,1.8,1.6,1.6,0.3,1.6,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_2681_6,2681,6,41.1055,-72.3758,3.8,2.6,2.6,0.4,2.6,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_2682_5,2682,5,42.0933,-79.2478,24.5,22.5,22.5,5.0,22.5,NG,Gas,ST,ST,Natural Gas Steam Turbine,15.0
+EIA_2682_6,2682,6,42.0933,-79.2478,24.5,22.5,22.5,5.0,22.5,NG,Gas,ST,ST,Natural Gas Steam Turbine,15.0
+EIA_2682_7,2682,7,42.0933,-79.2478,47.3,42.0,47.0,9.0,42.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,15.0
+EIA_2685_1,2685,1,42.8056,-73.72264,2.8,2.8,2.8,1.0,2.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2685_2,2685,2,42.8056,-73.72264,2.8,2.8,2.8,1.0,2.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2685_3,2685,3,42.8056,-73.72264,3.0,3.0,3.0,1.0,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2685_4,2685,4,42.8056,-73.72264,3.0,3.0,3.0,1.0,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2686_1,2686,1,42.80746,-73.84269,2.8,2.8,2.9,1.0,2.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2686_2,2686,2,42.80746,-73.84269,2.8,2.8,2.9,1.0,2.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2686_3,2686,3,42.80746,-73.84269,3.0,3.0,2.9,1.0,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2686_4,2686,4,42.80746,-73.84269,3.0,3.0,2.9,1.0,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_2693_1,2693,1,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_10,2693,10,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_11,2693,11,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_12,2693,12,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_13,2693,13,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_2,2693,2,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_3,2693,3,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_4,2693,4,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_5,2693,5,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_7,2693,7,43.1427,-79.0394,193.5,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_8,2693,8,43.1427,-79.0394,150.3,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2693_9,2693,9,43.1427,-79.0394,150.3,187.3,187.3,1.0,187.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,345.0
+EIA_2694_17,2694,17,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_18,2694,18,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_19,2694,19,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_20,2694,20,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_21,2694,21,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_22,2694,22,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_23,2694,23,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_24,2694,24,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_25,2694,25,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_27,2694,27,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_28,2694,28,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_29,2694,29,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_30,2694,30,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_31,2694,31,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2694_32,2694,32,45.0038,-74.7994,57.0,53.5,53.5,1.0,53.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,230.0
+EIA_2695_10,2695,10,40.658333,-73.640556,3.5,3.2,3.2,1.6,3.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_2695_11,2695,11,40.658333,-73.640556,5.2,5.2,5.2,2.6,5.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_2695_12,2695,12,40.658333,-73.640556,5.5,5.5,5.5,2.7,5.5,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_2695_13,2695,13,40.658333,-73.640556,5.5,5.5,5.5,2.7,5.5,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_2695_14,2695,14,40.658333,-73.640556,6.2,6.2,6.2,3.1,6.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_2695_9,2695,9,40.658333,-73.640556,3.5,3.2,3.2,1.6,3.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_2700_1,2700,1,43.975801,-75.874669,2.7,2.1,2.1,0.6,2.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_2700_2,2700,2,43.975801,-75.874669,2.7,2.1,2.1,0.6,2.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_2700_3,2700,3,43.975801,-75.874669,2.7,2.1,2.1,0.6,2.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_6110_1,6110,1,43.52139,-76.408394,883.3,831.3,853.4,125.0,831.3,NUC,Nuclear,ST,ST,Nuclear,345.0
+EIA_6122_1,6122,1,43.2777,-77.3099,614.0,580.3,582.0,121.0,580.3,NUC,Nuclear,ST,ST,Nuclear,115.0
+EIA_6456_1,6456,1,43.6262,-73.3073,1.3,1.3,1.3,0.2,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_6456_2,6456,2,43.6262,-73.3073,0.6,0.6,0.6,0.2,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_6486_1,6486,1,44.6967,-73.6122,1.0,1.0,1.0,0.0,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,6.72
+EIA_6486_2,6486,2,44.6967,-73.6122,1.2,1.2,1.2,0.0,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,6.72
+EIA_6486_3,6486,3,44.6967,-73.6122,3.8,3.8,3.8,0.0,3.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,6.72
+EIA_6526_2,6526,2,44.5236,-73.4617,1.3,1.3,1.3,0.0,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_6527_1,6527,1,43.318906,-73.920785,11.0,10.2,11.0,1.0,10.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_6527_2,6527,2,43.318906,-73.920785,11.0,10.4,11.1,1.0,10.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_7146_02,7146,02,40.956932,-72.877411,79.5,76.9,96.2,66.4,76.9,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_7146_03,7146,03,40.956932,-72.877411,79.5,81.7,99.0,65.9,81.7,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_7146_1,7146,1,40.956932,-72.877411,79.5,82.0,101.3,68.1,82.0,DFO,Oil,GT,GT,Petroleum Liquids,138.0
+EIA_7314_NA1,7314,NA1,40.8158,-73.064,170.0,135.5,160.0,1.0,135.5,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_7583_1,7583,1,44.3083,-75.3083,1.0,0.7,0.7,0.4,0.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_7583_2,7583,2,44.3083,-75.3083,0.1,0.1,0.1,0.1,0.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_7784_1,7784,1,42.5027,-78.0686,42.0,40.0,40.0,27.0,40.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_7784_2,7784,2,42.5027,-78.0686,25.0,20.0,20.0,10.0,20.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_7869_GT4,7869,GT4,40.8275,-73.6478,53.0,42.6,47.0,37.0,42.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_7869_GT5,7869,GT5,40.8275,-73.6478,53.0,42.5,47.0,37.0,42.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_7909_VG02,7909,VG02,40.7537,-73.9508,47.0,40.0,40.0,39.9,40.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7909_VG03,7909,VG03,40.7537,-73.9508,47.0,39.9,39.9,39.9,39.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7910_1,7910,1,40.6631,-74.0,47.0,40.0,40.0,39.9,40.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7910_2,7910,2,40.6631,-74.0,47.0,39.9,39.9,39.9,39.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7912_1,7912,1,40.787062,-73.293412,47.0,45.5,46.0,45.0,45.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_7913_HG01,7913,HG01,40.799,-73.9094,47.0,39.9,39.9,39.9,39.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7913_HG02,7913,HG02,40.799,-73.9094,47.0,40.0,40.0,39.9,40.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7914_HR01,7914,HR01,40.7991,-73.9156,47.0,39.9,39.9,39.9,39.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7914_HR02,7914,HR02,40.7991,-73.9156,47.0,40.0,40.0,39.9,40.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_7915_N01,7915,N01,40.7171,-73.9664,47.0,45.8,46.0,40.0,45.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_8006_1,8006,1,41.573783,-73.966269,621.0,614.8,594.2,140.0,614.8,NG,Gas,ST,ST,Natural Gas Steam Turbine,345.0
+EIA_8006_2,8006,2,41.573783,-73.966269,621.0,607.7,607.7,140.0,607.7,NG,Gas,ST,ST,Natural Gas Steam Turbine,345.0
+EIA_8007_1,8007,1,40.817037,-73.066265,56.7,55.5,62.1,37.6,55.5,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_10,8007,10,40.817037,-73.066265,56.7,54.1,65.6,40.1,54.1,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_2,8007,2,40.817037,-73.066265,56.7,55.6,61.3,35.1,55.6,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_3,8007,3,40.817037,-73.066265,56.7,51.0,64.8,35.8,51.0,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_4,8007,4,40.817037,-73.066265,56.7,52.4,64.3,35.9,52.4,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_5,8007,5,40.817037,-73.066265,56.7,53.4,65.0,40.3,53.4,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_6,8007,6,40.817037,-73.066265,56.7,50.4,65.4,38.5,50.4,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_7,8007,7,40.817037,-73.066265,56.7,49.2,64.8,36.8,49.2,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_8,8007,8,40.817037,-73.066265,56.7,55.4,66.8,41.8,55.4,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8007_9,8007,9,40.817037,-73.066265,56.7,55.3,69.1,40.4,55.3,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_8053_N01,8053,N01,40.6182,-74.06849,47.0,45.1,46.0,40.0,45.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_8906_1,8906,1,40.787674,-73.912561,15.0,15.7,20.5,12.0,15.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,138.0
+EIA_8906_2,8906,2,40.787674,-73.912561,180.0,177.0,177.0,60.0,177.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_8906_3,8906,3,40.787674,-73.912561,376.0,369.9,369.9,75.0,369.9,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_8906_ST5,8906,ST5,40.787674,-73.912561,387.0,376.3,376.3,75.0,376.3,NG,Gas,ST,ST,Natural Gas Steam Turbine,138.0
+EIA_10025_17TG,10025,17TG,43.1989,-77.6319,15.0,15.0,15.0,4.0,15.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,34.5
+EIA_10025_41TG,10025,41TG,43.1989,-77.6319,25.6,25.6,25.6,5.0,25.6,NG,Gas,ST,ST,Natural Gas Steam Turbine,34.5
+EIA_10025_42TG,10025,42TG,43.1989,-77.6319,25.6,25.6,25.6,5.0,25.6,NG,Gas,ST,ST,Natural Gas Steam Turbine,34.5
+EIA_10025_43TG,10025,43TG,43.1989,-77.6319,25.6,25.6,25.6,5.0,25.6,NG,Gas,ST,ST,Natural Gas Steam Turbine,34.5
+EIA_10025_44TG,10025,44TG,43.1989,-77.6319,25.6,25.6,25.6,5.0,25.6,NG,Gas,ST,ST,Natural Gas Steam Turbine,34.5
+EIA_10025_75TG,10025,75TG,43.1989,-77.6319,3.0,2.2,2.2,0.4,2.2,NG,Gas,ST,ST,Natural Gas Steam Turbine,34.5
+EIA_10025_KPR1,10025,KPR1,43.1989,-77.6319,0.4,0.4,0.4,0.1,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10116_05,10116,05,44.296544,-75.36645,3.4,1.8,2.7,0.4,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10124_HY2,10124,HY2,44.296453,-75.336142,0.5,0.3,0.3,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.4
+EIA_10190_GEN1,10190,GEN1,42.5375,-73.7433,47.0,67.7,76.6,50.0,67.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10190_GEN2,10190,GEN2,42.5375,-73.7433,25.0,,,0.0,25.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10196_GEN1,10196,GEN1,43.610664,-75.341325,12.6,12.1,11.8,2.5,12.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_10197_GEN1,10197,GEN1,44.158611,-75.708778,3.6,3.2,3.2,0.6,3.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,22.9
+EIA_10214_GEN1,10214,GEN1,44.6694,-73.5075,3.2,3.0,2.9,0.1,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_10214_GEN2,10214,GEN2,44.6694,-73.5075,3.2,3.0,2.9,0.1,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_10214_GEN3,10214,GEN3,44.6694,-73.5075,0.3,0.3,0.3,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_10218_HY1,10218,HY1,43.4833,-73.7986,2.9,2.9,2.9,0.1,2.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10219_HY1,10219,HY1,43.098711,-73.525271,1.1,1.1,1.1,0.1,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10219_HY2,10219,HY2,43.098711,-73.525271,1.1,1.1,1.1,0.1,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10220_HY1,10220,HY1,44.685589,-75.002868,3.0,3.0,3.0,0.1,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.8
+EIA_10221_GEN1,10221,GEN1,42.781779,-73.696096,5.7,5.7,5.7,0.1,5.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10221_GEN2,10221,GEN2,42.781779,-73.696096,5.7,5.7,5.7,0.1,5.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10237_GEN1,10237,GEN1,44.151944,-75.321725,1.8,1.7,1.8,0.4,1.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_10238_GEN1,10238,GEN1,43.090635,-74.766961,5.0,5.2,5.2,0.0,5.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_10286_1,10286,1,42.451922,-76.485092,0.8,0.5,0.7,0.2,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.4
+EIA_10286_2,10286,2,42.451922,-76.485092,1.1,1.1,1.1,0.2,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.4
+EIA_10305_GEN1,10305,GEN1,41.647,-73.943,9.2,7.2,7.4,4.0,7.2,MSW,Biomass,ST,ST,Municipal Solid Waste,13.8
+EIA_10467_1,10467,1,42.787575,-73.691676,3.3,3.3,3.3,0.1,3.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10490_1G,10490,1G,43.883611,-75.428056,1.5,1.5,1.5,0.3,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10503_GEN1,10503,GEN1,43.3056,-73.591447,14.4,11.5,11.5,2.0,11.5,MSW,Biomass,ST,ST,Municipal Solid Waste,115.0
+EIA_10511_GEN6,10511,GEN6,43.3084,-73.6376,29.0,23.0,27.0,3.0,23.0,WDL,Biomass,ST,ST,Wood/Wood Waste Biomass,34.5
+EIA_10521_3A,10521,3A,41.0772,-74.0181,1.5,1.5,1.5,0.1,1.5,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,34.5
+EIA_10521_GEN1,10521,GEN1,41.0772,-74.0181,8.3,8.3,8.3,4.5,8.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,34.5
+EIA_10521_GEN2,10521,GEN2,41.0772,-74.0181,8.3,8.3,8.3,4.5,8.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,34.5
+EIA_10521_GEN3,10521,GEN3,41.0772,-74.0181,2.2,2.2,2.2,0.1,2.2,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,34.5
+EIA_10521_TG4,10521,TG4,41.0772,-74.0181,3.1,1.4,1.4,0.1,1.4,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,34.5
+EIA_10530_1,10530,1,43.289874,-73.665834,1.0,0.9,1.0,0.5,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10530_2,10530,2,43.289874,-73.665834,1.0,0.9,1.0,0.5,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10530_3,10530,3,43.289874,-73.665834,1.0,1.0,1.0,0.5,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10530_4,10530,4,43.289874,-73.665834,1.0,0.9,1.0,0.5,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10530_5,10530,5,43.289874,-73.665834,1.0,1.0,1.0,0.5,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10531_1,10531,1,43.9767,-75.9072,4.0,4.3,4.4,2.8,4.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,4.8
+EIA_10531_2,10531,2,43.9767,-75.9072,5.0,4.3,4.4,2.4,4.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,4.8
+EIA_10538_GEN1,10538,GEN1,44.003984,-76.041277,0.5,0.5,0.5,0.1,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_10538_GEN2,10538,GEN2,44.003984,-76.041277,0.5,0.5,0.5,0.1,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_10538_GEN3,10538,GEN3,44.003984,-76.041277,0.2,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_10538_GEN4,10538,GEN4,44.003984,-76.041277,0.2,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_10538_GEN5,10538,GEN5,44.003984,-76.041277,0.2,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_10538_GEN6,10538,GEN6,44.003984,-76.041277,1.3,1.2,1.2,0.1,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_10538_GEN7,10538,GEN7,44.003984,-76.041277,1.3,1.2,1.2,0.1,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.3
+EIA_10539_GEN1,10539,GEN1,44.21742,-75.795173,1.0,1.0,0.9,0.1,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10539_GEN2,10539,GEN2,44.21742,-75.795173,0.3,0.3,0.3,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10540_GEN1,10540,GEN1,43.978626,-75.886102,0.4,0.4,0.4,0.1,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10540_GEN2,10540,GEN2,43.978626,-75.886102,0.4,0.4,0.4,0.1,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10540_GEN3,10540,GEN3,43.978626,-75.886102,0.4,0.4,0.4,0.1,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10544_GEN1,10544,GEN1,44.311681,-75.444992,0.8,0.8,0.7,0.1,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10544_GEN2,10544,GEN2,44.311681,-75.444992,0.6,0.6,0.6,0.1,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10545_GEN1,10545,GEN1,43.899745,-75.660268,1.5,1.4,1.4,0.1,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10545_GEN2,10545,GEN2,43.899745,-75.660268,1.5,1.4,1.4,0.1,1.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10545_GEN3,10545,GEN3,43.899745,-75.660268,0.3,0.3,0.3,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10547_GEN1,10547,GEN1,44.522043,-75.188108,1.2,1.1,1.1,0.1,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10547_GEN2,10547,GEN2,44.522043,-75.188108,3.5,3.3,3.2,0.1,3.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10547_GEN3,10547,GEN3,44.522043,-75.188108,3.5,3.3,3.2,0.1,3.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10617_GEN1,10617,GEN1,43.8861,-75.4342,65.5,47.5,59.4,30.0,47.5,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,230.0
+EIA_10617_GEN2,10617,GEN2,43.8861,-75.4342,42.3,30.6,31.8,15.0,30.6,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,230.0
+EIA_10620_GEN1,10620,GEN1,43.9842,-75.6225,40.9,40.1,45.0,25.0,40.1,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10620_GEN2,10620,GEN2,43.9842,-75.6225,22.0,21.0,21.5,10.0,21.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10621_GEN1,10621,GEN1,43.0667,-76.2246,65.5,54.4,74.0,30.0,54.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10621_GEN2,10621,GEN2,43.0667,-76.2246,37.2,28.8,28.8,15.0,28.8,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10642_GEN1,10642,GEN1,40.7389,-73.5906,78.6,71.8,71.8,24.0,71.8,MSW,Biomass,ST,ST,Municipal Solid Waste,69.0
+EIA_10687_DE1,10687,DE1,43.591246,-75.344207,1.6,1.5,1.5,0.1,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10687_RI1,10687,RI1,43.591246,-75.344207,1.9,1.8,1.8,0.1,1.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,24.0
+EIA_10725_GEN1,10725,GEN1,42.5744,-73.8592,95.2,76.9,105.5,45.0,76.9,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10725_GEN3,10725,GEN3,42.5744,-73.8592,95.2,272.3,333.1,45.0,272.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10725_GEN4,10725,GEN4,42.5744,-73.8592,95.2,,,45.0,95.2,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10725_GEN5,10725,GEN5,42.5744,-73.8592,148.4,,,11.0,148.4,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_10752_GEN1,10752,GEN1,43.849029,-73.420701,3.8,3.6,3.5,0.1,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_10753_GEN1,10753,GEN1,43.843869,-73.431207,5.2,4.9,4.8,0.1,4.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_10817_GEN1,10817,GEN1,43.583611,-75.339167,0.5,0.5,0.5,0.2,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10817_GEN2,10817,GEN2,43.583611,-75.339167,0.5,0.5,0.5,0.5,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_10848_GEN1,10848,GEN1,41.55998,-74.195154,1.2,1.1,1.1,0.1,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,12.47
+EIA_10848_GEN2,10848,GEN2,41.55998,-74.195154,0.8,0.8,0.7,0.1,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,12.47
+EIA_10848_GEN3,10848,GEN3,41.55998,-74.195154,0.4,0.4,0.4,0.1,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,12.47
+EIA_10853_1,10853,1,43.096677,-73.460172,0.4,0.3,0.4,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10853_2,10853,2,43.096677,-73.460172,0.4,0.3,0.4,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_10872_1,10872,1,43.917267,-75.633822,1.6,0.2,0.1,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,5.0
+EIA_10902_GEN1,10902,GEN1,42.9197,-76.5477,1.7,1.6,1.6,0.1,1.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,4.8
+EIA_50031_3983,50031,3983,42.721326,-73.680608,1.5,1.5,1.5,0.2,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50031_3986,50031,3986,42.721326,-73.680608,1.5,1.5,1.5,0.2,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50034_GEN1,50034,GEN1,42.9044,-73.5625,2.5,2.5,2.5,0.4,2.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50079_GEN1,50079,GEN1,42.502473,-74.98356,0.8,0.8,0.7,0.1,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.8
+EIA_50079_GEN2,50079,GEN2,42.502473,-74.98356,0.6,0.6,0.6,0.1,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.8
+EIA_50093_WT,50093,WT,44.909915,-74.085798,1.7,1.6,1.6,0.1,1.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50123_GEN1,50123,GEN1,42.712356,-73.957324,1.2,1.2,1.2,0.5,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,4.8
+EIA_50136_CG1,50136,CG1,40.6853,-73.4258,0.2,0.1,0.1,0.1,0.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_50136_CG2,50136,CG2,40.6853,-73.4258,0.2,0.1,0.1,0.1,0.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_50136_CG3,50136,CG3,40.6853,-73.4258,0.2,0.1,0.1,0.1,0.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_50136_CG4,50136,CG4,40.6853,-73.4258,0.2,0.1,0.1,0.1,0.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_50136_CG5,50136,CG5,40.6853,-73.4258,0.2,0.1,0.1,0.1,0.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_50176_GEN1,50176,GEN1,44.510739,-73.913079,1.3,1.3,1.3,0.1,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_50176_GEN2,50176,GEN2,44.510739,-73.913079,1.3,1.3,1.3,0.1,1.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_50203_GEN1,50203,GEN1,43.0647,-78.2972,5.8,4.9,5.7,0.5,4.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,12.47
+EIA_50268_HY1,50268,HY1,44.705167,-75.007933,3.0,2.2,2.2,0.2,2.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_50269_HY1,50269,HY1,44.714518,-74.996581,3.0,2.2,2.2,0.3,2.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_50280_GEN1,50280,GEN1,43.1033,-73.5369,10.5,1.5,4.4,1.2,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,32.0
+EIA_50292_GEN2,50292,GEN2,40.7469,-73.4994,33.7,22.2,23.8,15.0,22.2,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,69.0
+EIA_50292_GEN3,50292,GEN3,40.7469,-73.4994,16.2,10.6,11.4,5.0,10.6,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,69.0
+EIA_50292_GEN5,50292,GEN5,40.7469,-73.4994,60.0,47.0,49.6,5.0,47.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_50292_GEN6,50292,GEN6,40.7469,-73.4994,60.0,49.0,50.0,5.0,49.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,69.0
+EIA_50292_GEN7,50292,GEN7,40.7469,-73.4994,36.0,33.0,34.0,5.0,33.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,69.0
+EIA_50315_1100,50315,1100,44.9318,-74.1125,1.0,0.5,0.8,0.2,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50315_2600,50315,2600,44.9318,-74.1125,0.6,0.5,0.6,0.5,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50354_1,50354,1,43.1853,-75.0169,0.8,0.8,0.8,0.2,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_50354_2,50354,2,43.1853,-75.0169,0.8,0.8,0.8,0.2,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_50354_3,50354,3,43.1853,-75.0169,0.1,0.1,0.1,0.0,0.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_50368_CT1,50368,CT1,42.4428,-76.4764,15.0,12.3,14.5,8.0,12.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50368_CT2,50368,CT2,42.4428,-76.4764,15.0,12.3,14.5,8.0,12.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50368_TG2,50368,TG2,42.4428,-76.4764,5.7,5.3,5.7,0.4,5.3,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50416_GEN1,50416,GEN1,43.98,-75.6131,0.3,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_50416_GEN2,50416,GEN2,43.98,-75.6131,0.3,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_50416_GEN3,50416,GEN3,43.98,-75.6131,0.3,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_50416_GEN4,50416,GEN4,43.98,-75.6131,0.3,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_50416_GEN5,50416,GEN5,43.98,-75.6131,0.3,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_50427_GEN3,50427,GEN3,40.844114,-73.876888,1.1,1.1,1.1,0.8,1.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_50427_GEN4,50427,GEN4,40.844114,-73.876888,1.5,1.5,1.5,1.0,1.5,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,4.16
+EIA_50449_GEN1,50449,GEN1,42.6544,-78.0772,39.4,34.7,45.1,34.0,34.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50449_GEN2,50449,GEN2,42.6544,-78.0772,17.2,17.2,17.2,10.0,17.2,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50450_GEN1,50450,GEN1,43.471745,-76.493474,41.2,51.8,60.6,34.5,51.8,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50450_GEN2,50450,GEN2,43.471745,-76.493474,16.2,,,10.0,16.2,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50451_GEN1,50451,GEN1,42.9671,-78.9182,40.6,43.8,56.5,42.0,43.8,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50451_GEN2,50451,GEN2,42.9671,-78.9182,19.3,,,,19.3,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50458_GEN1,50458,GEN1,43.25,-73.8125,92.0,74.8,91.2,74.8,74.8,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50458_GEN2,50458,GEN2,43.25,-73.8125,55.0,54.2,44.0,39.2,54.2,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50472_GEN1,50472,GEN1,43.0839,-79.0056,25.0,18.0,18.0,3.0,18.0,MSW,Biomass,ST,ST,Municipal Solid Waste,115.0
+EIA_50472_GEN2,50472,GEN2,43.0839,-79.0056,25.0,18.0,18.0,3.0,18.0,MSW,Biomass,ST,ST,Municipal Solid Waste,115.0
+EIA_50512_GEN1,50512,GEN1,44.000608,-75.961156,14.5,14.5,14.5,2.2,14.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_50512_GEN2,50512,GEN2,44.000608,-75.961156,14.5,14.5,14.5,2.2,14.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_50512_GEN3,50512,GEN3,44.000608,-75.961156,3.6,3.6,3.6,0.5,3.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_50513_GEN1,50513,GEN1,43.897386,-75.04,1.8,2.5,2.5,0.3,2.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50514_GEN1,50514,GEN1,43.160868,-73.584076,2.5,2.5,2.5,2.5,2.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50514_GEN2,50514,GEN2,43.160868,-73.584076,2.5,2.5,2.5,2.5,2.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_50568_GEN1,50568,GEN1,43.081667,-77.381667,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50568_GEN2,50568,GEN2,43.081667,-77.381667,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50568_GEN3,50568,GEN3,43.081667,-77.381667,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50568_GEN4,50568,GEN4,43.081667,-77.381667,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50568_GEN5,50568,GEN5,43.081667,-77.381667,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50568_GEN6,50568,GEN6,43.081667,-77.381667,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50568_GEN7,50568,GEN7,43.081667,-77.381667,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50568_GEN8,50568,GEN8,43.081667,-77.381667,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_50649_GEN1,50649,GEN1,40.7348,-73.3868,17.0,14.4,14.4,1.0,14.4,MSW,Biomass,ST,ST,Municipal Solid Waste,69.0
+EIA_50652_GEN1,50652,GEN1,43.618874,-75.30546,1.5,1.5,1.5,0.1,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_50652_GEN2,50652,GEN2,43.618874,-75.30546,1.5,1.5,1.5,0.1,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_50656_GEN1,50656,GEN1,40.8814,-73.2906,28.0,24.5,24.5,8.0,24.5,MSW,Biomass,ST,ST,Municipal Solid Waste,69.0
+EIA_50662_GEN1,50662,GEN1,43.0047,-76.1149,39.5,30.0,30.0,3.5,30.0,MSW,Biomass,ST,ST,Municipal Solid Waste,115.0
+EIA_50744_GEN1,50744,GEN1,43.080338,-75.600963,47.7,38.8,47.6,35.0,38.8,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50744_GEN2,50744,GEN2,43.080338,-75.600963,16.5,16.0,16.5,12.0,16.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50744_GEN3,50744,GEN3,43.080338,-75.600963,1.1,1.1,1.1,0.2,1.1,DFO,Oil,IC,IC,Petroleum Liquids,115.0
+EIA_50759_GEN1,50759,GEN1,43.98289,-75.620583,2.2,2.1,2.0,0.3,2.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_50759_GEN2,50759,GEN2,43.98289,-75.620583,2.2,2.1,2.0,0.3,2.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_50768_1,50768,1,43.442468,-75.215946,3.4,3.4,3.4,0.5,3.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_50882_GEN1,50882,GEN1,41.277129,-73.942344,59.7,51.0,53.7,7.0,51.0,MSW,Biomass,ST,ST,Municipal Solid Waste,138.0
+EIA_50907_UNT1,50907,UNT1,43.348808,-76.425169,1.8,1.7,1.7,0.4,1.7,MSW,Biomass,ST,ST,Municipal Solid Waste,34.5
+EIA_50907_UNT2,50907,UNT2,43.348808,-76.425169,1.8,1.7,1.7,0.4,1.7,MSW,Biomass,ST,ST,Municipal Solid Waste,34.5
+EIA_50978_GEN1,50978,GEN1,43.06132,-76.08239,48.8,35.0,40.0,16.0,35.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50978_GEN2,50978,GEN2,43.06132,-76.08239,48.8,35.0,40.0,16.0,35.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_50978_GEN3,50978,GEN3,43.06132,-76.08239,25.0,23.0,25.0,10.0,23.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_51033_GEN1,51033,GEN1,41.859601,-74.510259,7.5,7.0,7.6,5.0,7.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,69.0
+EIA_51034_GEN1,51034,GEN1,43.040335,-74.850621,6.5,6.5,6.5,0.8,6.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_51034_GEN2,51034,GEN2,43.040335,-74.850621,6.5,6.5,6.5,0.8,6.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,46.0
+EIA_51038_GEN1,51038,GEN1,40.7869,-73.1064,12.5,11.0,11.0,1.0,11.0,MSW,Biomass,ST,ST,Municipal Solid Waste,13.8
+EIA_52058_01,52058,01,44.704089,-75.487049,0.7,0.2,0.2,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_52058_02,52058,02,44.704089,-75.487049,0.7,0.2,0.1,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_52058_03,52058,03,44.704089,-75.487049,0.7,0.2,0.1,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_52058_04,52058,04,44.704089,-75.487049,0.7,0.2,0.1,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_52058_05,52058,05,44.704089,-75.487049,0.7,0.2,0.1,0.1,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_52091_01-8N,52091,01-8N,40.6679,-73.9787,0.8,0.8,0.8,0.1,0.8,DFO,Oil,IC,IC,Petroleum Liquids,480.0
+EIA_52091_02-8P,52091,02-8P,40.6679,-73.9787,1.0,1.0,1.0,0.1,1.0,DFO,Oil,IC,IC,Petroleum Liquids,480.0
+EIA_52091_03-8L,52091,03-8L,40.6679,-73.9787,1.0,1.0,1.0,0.1,1.0,DFO,Oil,IC,IC,Petroleum Liquids,480.0
+EIA_52168_GEN2,52168,GEN2,40.869972,-73.824437,16.0,16.0,16.0,3.0,16.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,26.4
+EIA_52168_GEN3,52168,GEN3,40.869972,-73.824437,12.9,12.3,12.6,10.3,12.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,26.4
+EIA_52168_GEN4,52168,GEN4,40.869972,-73.824437,12.9,12.3,12.6,10.3,12.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,26.4
+EIA_52168_U0007,52168,U0007,40.869972,-73.824437,1.7,1.5,1.5,0.3,1.5,DFO,Oil,IC,IC,Petroleum Liquids,26.4
+EIA_54034_GEN1,54034,GEN1,42.625325,-73.749955,49.2,47.0,57.0,45.0,47.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54034_GEN2,54034,GEN2,42.625325,-73.749955,39.0,32.4,27.0,15.0,32.4,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54041_GEN1,54041,GEN1,43.161947,-78.744971,48.7,43.3,48.3,30.0,43.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54041_GEN2,54041,GEN2,43.161947,-78.744971,48.7,43.3,48.3,30.0,43.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54041_GEN3,54041,GEN3,43.161947,-78.744971,48.7,43.3,48.3,30.0,43.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54041_GEN4,54041,GEN4,43.161947,-78.744971,75.2,78.0,80.0,14.0,78.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54076_GEN1,54076,GEN1,42.085944,-78.45425,46.0,34.1,43.2,29.0,34.1,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54076_GEN2,54076,GEN2,42.085944,-78.45425,44.6,44.6,44.6,34.0,44.6,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54099_GEN1,54099,GEN1,43.891437,-73.396998,42.1,41.0,39.0,2.0,41.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,115.0
+EIA_54114_GEN1,54114,GEN1,40.6417,-73.7778,47.1,49.0,51.1,30.0,49.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_54114_GEN2,54114,GEN2,40.6417,-73.7778,47.1,51.7,50.0,30.0,51.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_54114_GEN3,54114,GEN3,40.6417,-73.7778,27.0,26.0,24.9,6.0,26.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_54131_GEN1,54131,GEN1,43.0483,-78.8539,48.7,37.4,44.7,30.6,37.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54131_GEN2,54131,GEN2,43.0483,-78.8539,17.0,20.0,20.0,10.0,20.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54149_GEN1,54149,GEN1,40.916833,-73.129056,47.0,44.5,47.1,23.0,44.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_54391_1,54391,1,44.519153,-73.464752,1.5,1.5,1.5,0.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_54391_2,54391,2,44.519153,-73.464752,0.6,0.7,0.7,0.1,0.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_54395_1,54395,1,42.937465,-73.654393,1.7,1.7,1.7,0.4,1.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_54395_2,54395,2,42.937465,-73.654393,1.7,1.7,1.7,0.4,1.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_54547_1,54547,1,43.495,-76.4511,169.2,155.7,194.4,90.0,155.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_54547_2,54547,2,43.495,-76.4511,169.2,155.7,194.4,90.0,155.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_54547_3,54547,3,43.495,-76.4511,169.2,155.7,194.4,90.0,155.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_54547_4,54547,4,43.495,-76.4511,169.5,155.7,194.4,90.0,155.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_54547_5,54547,5,43.495,-76.4511,204.5,167.9,209.7,45.0,167.9,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_54547_6,54547,6,43.495,-76.4511,204.5,167.9,209.7,45.0,167.9,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_54548_1,54548,1,43.980806,-75.624677,3.3,3.0,3.0,1.0,3.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_54573_1,54573,1,41.598395,-73.922036,1.0,1.0,0.9,1.0,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,14.0
+EIA_54574_GEN1,54574,GEN1,44.7132,-73.4557,95.2,79.4,92.0,40.0,79.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54574_GEN2,54574,GEN2,44.7132,-73.4557,95.2,73.5,92.0,40.0,73.5,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54574_GEN3,54574,GEN3,44.7132,-73.4557,95.2,85.9,86.5,10.0,85.9,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54580_C1,54580,C1,43.2469,-73.8281,2.6,2.5,2.5,0.9,2.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54580_C2,54580,C2,43.2469,-73.8281,2.6,2.5,2.5,0.9,2.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54580_C3,54580,C3,43.2469,-73.8281,2.6,2.4,2.4,2.3,2.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54580_C4,54580,C4,43.2469,-73.8281,1.0,1.1,1.1,0.2,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54580_C5,54580,C5,43.2469,-73.8281,1.0,1.1,1.1,0.2,1.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54580_P1,54580,P1,43.2469,-73.8281,24.6,25.0,25.0,6.0,25.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54580_P2,54580,P2,43.2469,-73.8281,24.6,25.0,25.0,6.0,25.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54592_GEN1,54592,GEN1,44.9503,-74.8928,66.5,46.0,56.0,46.0,46.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54592_GEN2,54592,GEN2,44.9503,-74.8928,35.6,35.0,35.0,30.0,35.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54593_GEN1,54593,GEN1,42.9828,-78.1592,47.7,34.3,44.3,34.3,34.3,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54593_GEN2,54593,GEN2,42.9828,-78.1592,18.5,14.5,14.8,14.5,14.5,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,115.0
+EIA_54691_2G,54691,2G,43.884444,-75.430556,0.5,0.5,0.5,0.1,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_54691_3G,54691,3G,43.884444,-75.430556,0.5,0.5,0.5,0.1,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,23.0
+EIA_54772_GEN1,54772,GEN1,43.304413,-73.63993,6.9,6.9,6.9,0.1,6.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_54772_GEN2,54772,GEN2,43.304413,-73.63993,6.9,6.9,6.9,0.1,6.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_54782_GE10,54782,GE10,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE11,54782,GE11,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE12,54782,GE12,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE13,54782,GE13,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE14,54782,GE14,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE15,54782,GE15,42.9281,-76.8408,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE16,54782,GE16,42.9281,-76.8408,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE17,54782,GE17,42.9281,-76.8408,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GE18,54782,GE18,42.9281,-76.8408,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN1,54782,GEN1,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN2,54782,GEN2,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN3,54782,GEN3,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN4,54782,GEN4,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN5,54782,GEN5,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN6,54782,GEN6,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN7,54782,GEN7,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN8,54782,GEN8,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54782_GEN9,54782,GEN9,42.9281,-76.8408,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_54808_GT1,54808,GT1,40.7899,-73.9233,5.5,5.5,5.5,3.0,5.5,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,13.2
+EIA_54808_GT2,54808,GT2,40.7899,-73.9233,5.5,5.5,5.5,3.0,5.5,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,13.2
+EIA_54865_1-02,54865,1-02,43.227058,-76.302137,1.6,1.2,1.2,0.3,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.4
+EIA_54865_2-01,54865,2-01,43.227058,-76.302137,1.6,1.2,1.2,0.3,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,2.4
+EIA_54878_01,54878,01,44.336358,-75.50274,0.4,0.4,0.4,0.1,0.4,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54878_02,54878,02,44.336358,-75.50274,0.3,0.3,0.3,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54878_03,54878,03,44.336358,-75.50274,0.3,0.3,0.3,0.1,0.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_54914_01,54914,01,40.699357,-73.976392,121.0,95.0,110.0,90.0,95.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_54914_02,54914,02,40.699357,-73.976392,121.0,95.0,110.0,90.0,95.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_54914_03,54914,03,40.699357,-73.976392,40.0,35.0,38.0,35.0,35.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_54914_04,54914,04,40.699357,-73.976392,40.0,35.0,38.0,35.0,35.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_54953_GEN1,54953,GEN1,43.2958,-73.5956,22.0,22.0,22.0,0.1,22.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_54953_GEN2,54953,GEN2,43.2958,-73.5956,22.0,22.0,22.0,0.1,22.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_55155_UNT1,55155,UNT1,42.704391,-73.850866,0.9,0.9,0.9,0.7,0.9,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55155_UNT2,55155,UNT2,42.704391,-73.850866,0.9,0.9,0.9,0.7,0.9,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55155_UNT3,55155,UNT3,42.704391,-73.850866,0.9,0.9,0.9,0.7,0.9,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55155_UNT4,55155,UNT4,42.704391,-73.850866,1.6,1.6,1.6,1.2,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55155_UNT5,55155,UNT5,42.704391,-73.850866,1.6,1.6,1.6,1.2,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55368_V47,55368,V47,42.678819,-78.243792,6.6,6.6,6.6,0.1,6.6,WND,Wind,WT,WT,Onshore Wind Turbine,34.5
+EIA_55375_CT1,55375,CT1,40.7825,-73.8964,170.0,165.0,189.0,100.0,165.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_55375_CT2,55375,CT2,40.7825,-73.8964,170.0,165.0,189.0,100.0,165.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_55375_ST1,55375,ST1,40.7825,-73.8964,255.0,228.0,266.0,120.0,228.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_55405_CT1,55405,CT1,42.2728,-73.8492,270.3,218.7,272.8,153.1,218.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_55405_CT2,55405,CT2,42.2728,-73.8492,270.3,221.5,273.6,155.1,221.5,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_55405_CT3,55405,CT3,42.2728,-73.8492,270.3,222.1,286.5,155.5,222.1,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_55405_ST1,55405,ST1,42.2728,-73.8492,136.9,110.7,139.0,77.5,110.7,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_55405_ST2,55405,ST2,42.2728,-73.8492,136.9,111.8,136.4,78.2,111.8,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_55405_ST3,55405,ST3,42.2728,-73.8492,136.9,109.0,121.4,76.3,109.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_55699_1,55699,1,40.610654,-73.762218,60.5,55.8,50.0,26.0,55.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_55757_GEN1,55757,GEN1,43.2094,-78.9836,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55757_GEN2,55757,GEN2,43.2094,-78.9836,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55757_GEN3,55757,GEN3,43.2094,-78.9836,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55757_GEN4,55757,GEN4,43.2094,-78.9836,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55757_GEN5,55757,GEN5,43.2094,-78.9836,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55757_GEN6,55757,GEN6,43.2094,-78.9836,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55757_GEN7,55757,GEN7,43.2094,-78.9836,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_55769_MADW,55769,MADW,42.894722,-75.451666,11.5,11.5,11.5,0.1,11.5,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_55786_CT01,55786,CT01,40.7861,-73.2931,50.0,42.5,47.0,25.0,42.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_55786_CT02,55786,CT02,40.7861,-73.2931,50.0,42.5,47.0,25.0,42.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_55787_CT01,55787,CT01,40.957053,-72.865877,50.0,42.5,47.0,25.0,42.5,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_55787_CT02,55787,CT02,40.957053,-72.865877,50.0,42.5,47.0,25.0,42.5,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_55790_1,55790,1,42.988989,-75.762536,30.0,30.0,30.0,0.1,30.0,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_55969_U-01,55969,U-01,41.10603,-72.376155,54.0,53.4,54.1,20.0,53.4,KER,Oil,GT,GT,Petroleum Liquids,69.0
+EIA_56032_0001,56032,0001,40.6439,-73.5683,60.0,45.9,47.1,28.0,45.9,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_56032_001,56032,001,40.6439,-73.5683,60.0,48.1,49.7,28.0,48.1,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_56141_2,56141,2,40.6097,-73.7622,60.5,55.8,60.0,26.0,55.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,69.0
+EIA_56188_CTG,56188,CTG,40.736611,-73.388424,50.0,47.0,47.0,40.0,47.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,69.0
+EIA_56188_STG,56188,STG,40.736611,-73.388424,32.0,27.5,30.1,5.0,27.5,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,69.0
+EIA_56196_CA01,56196,CA01,40.7889,-73.9069,188.0,,,,188.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_56196_CT01,56196,CT01,40.7889,-73.9069,170.0,238.0,270.2,135.0,238.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_56196_CT02,56196,CT02,40.7889,-73.9069,170.0,238.0,270.2,135.0,238.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_56234_CT01,56234,CT01,40.8142,-72.9403,196.2,187.7,216.0,150.0,187.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_56234_ST01,56234,ST01,40.8142,-72.9403,152.7,129.6,149.2,80.0,129.6,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,138.0
+EIA_56250_GEN1,56250,GEN1,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN10,56250,GEN10,42.8586,-77.0872,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN11,56250,GEN11,42.8586,-77.0872,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN2,56250,GEN2,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN3,56250,GEN3,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN4,56250,GEN4,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN5,56250,GEN5,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN6,56250,GEN6,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN7,56250,GEN7,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN8,56250,GEN8,42.8586,-77.0872,0.8,0.8,0.8,0.6,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56250_GEN9,56250,GEN9,42.8586,-77.0872,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56259_CT11,56259,CT11,42.625239,-73.750021,179.0,155.0,190.0,90.0,155.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_56259_CT12,56259,CT12,42.625239,-73.750021,179.0,155.0,190.0,90.0,155.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_56259_ST13,56259,ST13,42.625239,-73.750021,295.7,270.0,295.7,135.0,270.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_56290_1,56290,1,43.7853,-75.5753,137.0,137.0,137.0,1.1,137.0,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56290_1A,56290,1A,43.7853,-75.5753,61.1,61.1,61.1,0.5,61.1,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56290_2,56290,2,43.7853,-75.5753,33.0,33.0,33.0,0.3,33.0,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56290_3,56290,3,43.7853,-75.5753,90.1,91.0,91.0,0.7,91.0,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56323_GEN1,56323,GEN1,43.2094,-78.9836,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56323_GEN2,56323,GEN2,43.2094,-78.9836,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56324_GEN1,56324,GEN1,42.803325,-73.726741,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56324_GEN2,56324,GEN2,42.803325,-73.726741,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56324_GEN3,56324,GEN3,42.803325,-73.726741,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56324_GEN4,56324,GEN4,42.803325,-73.726741,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56526_GEN1,56526,GEN1,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56526_GEN2,56526,GEN2,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56526_GEN3,56526,GEN3,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56526_GEN4,56526,GEN4,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56526_GEN5,56526,GEN5,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56526_GEN6,56526,GEN6,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56526_GEN7,56526,GEN7,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56526_GEN8,56526,GEN8,42.5831,-78.4864,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,35.0
+EIA_56575_1,56575,1,42.8167,-78.8675,20.0,20.0,20.0,0.0,20.0,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_56594_MU1,56594,MU1,42.9086,-75.5697,34.5,34.5,34.5,0.0,34.5,WND,Wind,WT,WT,Onshore Wind Turbine,46.0
+EIA_56618_1,56618,1,44.8914,-74.0061,100.5,100.5,100.5,0.0,100.5,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56619_1,56619,1,44.8914,-74.0061,81.0,81.0,81.0,0.0,81.0,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56620_1,56620,1,42.5367,-78.3047,100.5,100.5,100.5,0.0,100.5,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_56633_1,56633,1,42.5456,-77.4967,37.5,37.5,37.5,0.0,37.5,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56634_1,56634,1,42.45,-77.52,87.5,87.5,87.5,0.0,87.5,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56703_1,56703,1,43.61863,-75.358577,1.0,1.0,1.0,0.1,1.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56703_6,56703,6,43.61863,-75.358577,1.2,1.2,1.2,0.1,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56703_7,56703,7,43.61863,-75.358577,1.2,1.2,1.2,0.1,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56703_8,56703,8,43.61863,-75.358577,1.3,1.2,1.2,0.1,1.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56703_9,56703,9,43.61863,-75.358577,0.9,0.9,0.9,0.1,0.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56704_3,56704,3,43.612619,-75.339072,2.0,2.0,2.0,0.1,2.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56705_4,56705,4,43.614218,-75.332705,0.5,0.5,0.5,0.1,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56705_5,56705,5,43.614218,-75.332705,0.5,0.5,0.5,0.1,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,115.0
+EIA_56857_GEN1,56857,GEN1,44.975833,-73.929722,215.3,215.3,215.3,1.5,215.3,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56901_1,56901,1,44.8216,-73.6509,97.5,97.5,97.5,0.0,97.5,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_56902_1,56902,1,42.6697,-78.2278,126.0,126.0,126.0,0.0,126.0,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56904_1,56904,1,44.8917,-74.0299,106.5,106.5,106.5,0.0,106.5,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56936_GEN1,56936,GEN1,43.308505,-73.636584,2.4,2.3,2.4,1.0,2.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_56936_GEN2,56936,GEN2,43.308505,-73.636584,2.0,1.9,2.0,1.0,1.9,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_56936_GEN3,56936,GEN3,43.308505,-73.636584,2.2,2.1,2.2,1.0,2.1,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_56936_GEN4,56936,GEN4,43.308505,-73.636584,2.4,2.3,2.4,1.0,2.3,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_56936_GEN5,56936,GEN5,43.308505,-73.636584,2.8,2.7,2.8,1.0,2.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_56940_CTG1,56940,CTG1,41.4122,-74.4378,235.0,188.7,219.0,137.3,188.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_56940_CTG2,56940,CTG2,41.4122,-74.4378,235.0,188.7,219.0,134.7,188.7,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_56940_STG,56940,STG,41.4122,-74.4378,300.0,297.0,302.3,163.4,297.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_56953_1,56953,1,42.7794,-78.4269,112.5,112.0,112.0,0.0,112.0,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_56958_GEN1,56958,GEN1,43.82,-75.9175,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,115.0
+EIA_56958_GEN2,56958,GEN2,43.82,-75.9175,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,115.0
+EIA_56958_GEN3,56958,GEN3,43.82,-75.9175,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,115.0
+EIA_56958_GEN4,56958,GEN4,43.82,-75.9175,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,115.0
+EIA_56986_GEN1,56986,GEN1,44.6917,-73.5944,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,46.0
+EIA_56986_GEN2,56986,GEN2,44.6917,-73.5944,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,46.0
+EIA_56986_GEN3,56986,GEN3,44.6917,-73.5944,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,46.0
+EIA_56986_GEN4,56986,GEN4,44.6917,-73.5944,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,46.0
+EIA_56987_GEN1,56987,GEN1,42.2853,-78.0061,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56987_GEN2,56987,GEN2,42.2853,-78.0061,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_56987_GEN3,56987,GEN3,42.2853,-78.0061,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_57003_GEN1,57003,GEN1,43.0142,-74.4739,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,69.0
+EIA_57003_GEN2,57003,GEN2,43.0142,-74.4739,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,69.0
+EIA_57078_1,57078,1,42.8072,-78.8617,15.0,15.0,15.0,0.0,15.0,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_57185_U001,57185,U001,41.676111,-73.581111,174.2,143.3,150.3,,143.3,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57185_U002,57185,U002,41.676111,-73.581111,174.2,143.3,150.3,,143.3,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57185_U003,57185,U003,41.676111,-73.581111,174.2,143.3,150.3,,143.3,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57185_U004,57185,U004,41.676111,-73.581111,263.3,195.4,229.1,,195.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57185_U005,57185,U005,41.676111,-73.581111,263.3,195.4,229.1,,195.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57185_U006,57185,U006,41.676111,-73.581111,263.3,195.4,229.1,,195.4,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57186_GEN1,57186,GEN1,42.1989,-79.3186,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_57186_GEN2,57186,GEN2,42.1989,-79.3186,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_57186_GEN3,57186,GEN3,42.1989,-79.3186,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_57186_GEN4,57186,GEN4,42.1989,-79.3186,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_57186_GEN5,57186,GEN5,42.1989,-79.3186,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_57186_GEN6,57186,GEN6,42.1989,-79.3186,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_57287_1,57287,1,43.112222,-74.878888,74.0,74.0,74.0,0.0,74.0,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_57404_GEN1,57404,GEN1,43.462222,-75.418333,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,13.2
+EIA_57404_GEN2,57404,GEN2,43.462222,-75.418333,1.6,1.6,1.6,0.8,1.6,LFG,Biomass,IC,IC,Landfill Gas,13.2
+EIA_57589_9WUBN,57589,9WUBN,40.861111,-72.847777,31.5,31.5,31.5,,31.5,SUN,Solar,PV,PV,Solar Photovoltaic,69.0
+EIA_57600_FI1,57600,FI1,41.268611,-72.01,2.6,2.5,2.5,1.5,2.5,DFO,Oil,IC,IC,Petroleum Liquids,8.32
+EIA_57648_WT1,57648,WT1,42.886944,-76.968333,1.7,1.7,1.7,0.5,1.7,WND,Wind,WT,WT,Onshore Wind Turbine,12.5
+EIA_57648_WT2,57648,WT2,42.886944,-76.968333,1.7,1.7,1.7,0.5,1.7,WND,Wind,WT,WT,Onshore Wind Turbine,12.5
+EIA_57664_CT3,57664,CT3,40.781321,-73.896618,200.0,156.0,188.0,100.0,156.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57664_CT4,57664,CT4,40.781321,-73.896618,200.0,156.0,188.0,100.0,156.0,NG,Gas,CT,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57664_ST2,57664,ST2,40.781321,-73.896618,250.0,228.0,236.0,120.0,228.0,NG,Gas,CA,CC,Natural Gas Fired Combined Cycle,345.0
+EIA_57789_GEN1,57789,GEN1,40.751111,-73.991667,2.1,2.0,2.0,0.5,2.0,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,480.0
+EIA_57789_GEN2,57789,GEN2,40.751111,-73.991667,2.1,2.0,2.0,0.5,2.0,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,480.0
+EIA_57789_GEN3,57789,GEN3,40.751111,-73.991667,2.1,2.0,2.0,0.5,2.0,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,480.0
+EIA_57798_1OBP,57798,1OBP,40.754865,-73.983248,4.6,4.6,4.6,0.0,4.6,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,13.8
+EIA_57867_1,57867,1,42.315278,-77.538333,51.3,51.3,51.3,0.0,51.3,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_57867_2,57867,2,42.315278,-77.538333,4.1,4.1,4.1,0.0,4.1,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_58088_1,58088,1,42.767614,-78.415843,94.4,94.4,94.4,0.0,94.4,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_58157_HP,58157,HP,43.123889,-77.628889,18.2,17.0,17.0,2.0,17.0,NG,Gas,ST,ST,Natural Gas Steam Turbine,11.5
+EIA_58157_LP,58157,LP,43.123889,-77.628889,7.2,7.2,7.2,1.0,7.2,NG,Gas,ST,ST,Natural Gas Steam Turbine,11.5
+EIA_58167_GEN1,58167,GEN1,40.776944,-72.850833,1.3,1.3,1.3,0.1,1.3,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_58167_GEN2,58167,GEN2,40.776944,-72.850833,1.3,1.3,1.3,0.1,1.3,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_58186_CG01,58186,CG01,42.696944,-73.68,0.9,0.8,0.9,0.7,0.8,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_58186_CG02,58186,CG02,42.696944,-73.68,0.9,0.8,0.9,0.7,0.8,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_58186_CG03,58186,CG03,42.696944,-73.68,1.4,1.3,1.4,1.1,1.3,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_58186_CG04,58186,CG04,42.696944,-73.68,1.4,1.2,1.4,1.1,1.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_58186_CG06,58186,CG06,42.696944,-73.68,1.4,1.3,1.4,1.0,1.3,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.2
+EIA_58507_ES006,58507,ES006,40.881389,-73.880278,5.3,4.8,4.8,3.5,4.8,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,13.8
+EIA_58507_ES007,58507,ES007,40.881389,-73.880278,3.5,3.5,3.5,3.5,3.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,13.8
+EIA_58507_S0001,58507,S0001,40.881389,-73.880278,1.6,1.2,1.2,1.2,1.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_58507_S0002,58507,S0002,40.881389,-73.880278,1.6,1.2,1.2,1.2,1.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_58507_S0003,58507,S0003,40.881389,-73.880278,1.6,1.2,1.2,1.2,1.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_58550_PV1,58550,PV1,42.586944,-73.865,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_58647_1,58647,1,40.638056,-74.126111,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,4.0
+EIA_58678_1,58678,1,44.27,-75.199167,0.9,0.8,0.8,0.5,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_58678_2,58678,2,44.27,-75.199167,0.9,0.8,0.8,0.5,0.8,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_58679_2,58679,2,44.214444,-74.991389,0.6,0.6,0.5,0.3,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_58679_3,58679,3,44.214444,-74.991389,0.6,0.6,0.5,0.3,0.6,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_58679_4,58679,4,44.214444,-74.991389,0.3,0.2,0.2,0.2,0.2,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_58768_1,58768,1,42.163889,-77.528889,16.2,16.2,16.2,0.0,16.2,WND,Wind,WT,WT,Onshore Wind Turbine,34.5
+EIA_58777_1,58777,1,42.338333,-79.195556,124.0,124.0,124.0,25.0,124.0,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_58785_BRT1,58785,BRT1,40.781389,-73.243889,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_58786_DRP1,58786,DRP1,40.760833,-73.193889,2.5,2.5,2.5,,2.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_58787_DNN1,58787,DNN1,40.763056,-73.323611,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_58788_NRT1,58788,NRT1,40.763056,-73.323611,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_58789_RVH1,58789,RVH1,40.826111,-73.232222,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_58790_CLN1,58790,CLN1,40.762465,-73.194441,2.5,2.5,2.5,,2.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_58790_CLN2,58790,CLN2,40.762465,-73.194441,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_58873_UNIT1,58873,UNIT1,42.351389,-73.733889,3.0,2.0,3.0,0.3,2.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_58873_UNIT2,58873,UNIT2,42.351389,-73.733889,3.0,2.0,3.0,0.3,2.0,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_58979_CPHGN,58979,CPHGN,43.913056,-75.698611,79.9,79.9,79.9,0.0,79.9,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_59274_SUTTG,59274,SUTTG,40.928056,-72.771111,5.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.0
+EIA_59275_STERG,59275,STERG,41.0675,-72.440278,1.3,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.0
+EIA_59276_LEAVG,59276,LEAVG,40.925278,-72.763333,9.5,9.5,9.3,,9.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.0
+EIA_59453_GTG1A,59453,GTG1A,42.655,-73.7777,4.3,4.0,4.4,4.0,4.0,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,34.5
+EIA_59470_CSR1,59470,CSR1,42.4975,-76.46,1.8,1.8,1.4,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_59613_TWLL,59613,TWLL,43.244444,-77.174722,1.2,1.2,1.2,,1.2,SUN,Solar,PV,PV,Solar Photovoltaic,12.0
+EIA_59623_CSPV,59623,CSPV,44.671944,-74.949444,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_59629_GEN1,59629,GEN1,44.888889,-74.103333,77.7,77.7,77.7,1.0,77.7,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_59705_SSUN2,59705,SSUN2,42.812811,-78.845313,2.0,2.0,1.7,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,155.0
+EIA_59789_PV1,59789,PV1,41.84581,-73.619485,1.4,1.4,1.4,,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_59816_BR12,59816,BR12,42.243704,-75.982533,4.0,4.0,4.0,0.8,4.0,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_59880_KIPS1,59880,KIPS1,40.868294,-73.249281,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_59881_KIPS2,59881,KIPS2,40.868294,-73.249281,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60004_INV#1,60004,INV#1,41.100409,-73.951593,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60004_INV#2,60004,INV#2,41.100409,-73.951593,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60045_GEN1,60045,GEN1,40.934411,-72.888511,24.9,24.9,24.9,,24.9,SUN,Solar,PV,PV,Solar Photovoltaic,69.0
+EIA_60097_PV1,60097,PV1,43.183782,-76.224075,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60098_PV1,60098,PV1,43.172719,-76.130123,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60114_PV1,60114,PV1,43.150761,-75.371258,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60115_PV1,60115,PV1,42.834978,-73.675675,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60150_ARGOS,60150,ARGOS,42.866,-77.031,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60229_PV1,60229,PV1,41.404879,-74.359495,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60232_PV1,60232,PV1,42.986644,-76.064219,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60365_VULC,60365,VULC,42.005874,-76.61935,1.6,1.6,1.6,,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_60425_SO049,60425,SO049,43.093682,-73.81132,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,15.0
+EIA_60431_TC3,60431,TC3,42.5025,-76.2865,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_60452_CALV,60452,CALV,40.921086,-72.743701,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,2.87
+EIA_60453_CUMM,60453,CUMM,42.08124,-79.36125,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.71
+EIA_60454_HOUGH,60454,HOUGH,42.426731,-78.156589,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,1.96
+EIA_60455_ONS,60455,ONS,43.166353,-75.386866,1.9,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60456_ONW,60456,ONW,43.169617,-75.404866,1.9,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60462_PV1,60462,PV1,43.429317,-76.515717,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60463_PV1,60463,PV1,42.294823,-74.00076,1.6,1.6,1.6,,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60477_BE,60477,BE,42.539006,-73.824295,1.7,1.7,1.7,,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60478_BW,60478,BW,42.539006,-73.824295,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60507_NORTH,60507,NORTH,42.104731,-75.93073,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,1.0
+EIA_60507_SOUTH,60507,SOUTH,42.104731,-75.93073,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,1.0
+EIA_60596_1,60596,1,42.375,-77.593,130.0,130.0,130.0,0.1,130.0,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_60677_TRSP,60677,TRSP,43.239004,-75.534588,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60817_PV1,60817,PV1,41.7966,-74.708077,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60818_PV1,60818,PV1,43.342437,-76.34325,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_60819_PV1,60819,PV1,43.970958,-75.969805,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_60904_PV1,60904,PV1,42.337435,-77.375323,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,1.0
+EIA_60967_10016,60967,10016,43.18413,-75.476724,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61003_CMUSW,61003,CMUSW,42.731496,-76.663665,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_61012_GEN1,61012,GEN1,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61012_GEN2,61012,GEN2,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61012_GEN3,61012,GEN3,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61012_GEN4,61012,GEN4,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61012_GEN5,61012,GEN5,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61012_GEN6,61012,GEN6,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61012_GEN7,61012,GEN7,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61012_GEN8,61012,GEN8,43.063706,-77.932902,0.8,0.8,0.8,0.5,0.8,LFG,Biomass,IC,IC,Landfill Gas,34.5
+EIA_61015_CMUSW,61015,CMUSW,42.731496,-76.663665,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_61030_CMUSW,61030,CMUSW,42.448,-76.245,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_61041_WT1,61041,WT1,43.709597,-75.616219,79.7,79.7,79.7,0.0,79.7,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_61042_PV1,61042,PV1,42.869086,-77.28446,1.3,1.3,1.3,,1.3,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61043_PV1,61043,PV1,42.86887,-77.284561,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61207_UNIT1,61207,UNIT1,42.748106,-73.69022,1.5,1.5,1.5,0.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_61207_UNIT2,61207,UNIT2,42.748106,-73.69022,1.5,1.5,1.5,0.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_61207_UNIT3,61207,UNIT3,42.748106,-73.69022,1.5,1.5,1.5,0.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_61207_UNIT4,61207,UNIT4,42.748106,-73.69022,1.5,1.5,1.5,0.5,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_61210_FLS1,61210,FLS1,42.814025,-77.045631,1.9,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_61238_CGTB,61238,CGTB,40.764396,-73.95393,7.7,7.7,7.7,0.7,7.7,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,4.16
+EIA_61376_CEDR1,61376,CEDR1,40.64889,-73.506672,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61389_PV1,61389,PV1,42.618969,-78.17952,1.2,1.2,1.2,,1.2,SUN,Solar,PV,PV,Solar Photovoltaic,12.6
+EIA_61414_GEN1,61414,GEN1,40.775397,-73.830918,2.0,2.0,2.0,0.6,2.0,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_61414_GEN2,61414,GEN2,40.775397,-73.830918,2.0,2.0,2.0,0.6,2.0,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_61414_GEN3,61414,GEN3,40.775397,-73.830918,2.0,2.0,2.0,0.6,2.0,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_61414_GEN4,61414,GEN4,40.775397,-73.830918,2.0,2.0,2.0,0.6,2.0,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_61414_GEN5,61414,GEN5,40.775397,-73.830918,2.0,2.0,2.0,0.6,2.0,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_61414_GEN6,61414,GEN6,40.775397,-73.830918,2.0,2.0,2.0,0.6,2.0,DFO,Oil,IC,IC,Petroleum Liquids,4.16
+EIA_61469_LIC01,61469,LIC01,43.020053,-78.158181,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61470_CFM11,61470,CFM11,43.037794,-78.187295,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61471_CFM31,61471,CFM31,43.023046,-78.178591,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61487_SLBAB,61487,SLBAB,40.730844,-73.375833,9.0,9.0,9.0,,9.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_61488_GT,61488,GT,40.746778,-73.972226,7.5,7.5,7.5,4.0,7.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,0.48
+EIA_61509_MONA,61509,MONA,43.174071,-77.392234,1.7,1.7,1.7,,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61509_MONB,61509,MONB,43.174071,-77.392234,1.7,1.7,1.7,,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61510_MONC,61510,MONC,43.31879,-77.740208,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61510_MOND,61510,MOND,43.31879,-77.740208,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61510_MONE,61510,MONE,43.31879,-77.740208,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61575_BAL01,61575,BAL01,43.151537,-76.414844,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61576_JF01,61576,JF01,41.379107,-74.263804,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61577_MRT01,61577,MRT01,43.183689,-75.43048,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61578_MIN01,61578,MIN01,41.293747,-74.554452,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61579_SUT01,61579,SUT01,43.932397,-75.872257,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61604_1,61604,1,43.312306,-75.695263,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61641_23,61641,23,42.915299,-76.78672,1.7,1.7,1.7,0.6,1.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_61641_24,61641,24,42.915299,-76.78672,1.7,1.7,1.7,0.6,1.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_61641_25,61641,25,42.915299,-76.78672,1.7,1.7,1.7,0.6,1.7,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_61642_10,61642,10,42.901914,-76.86233,0.5,0.5,0.5,0.2,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_61642_11,61642,11,42.901914,-76.86233,0.5,0.5,0.5,0.2,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_61642_12,61642,12,42.901914,-76.86233,0.5,0.5,0.5,0.2,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_61673_WT,61673,WT,42.414911,-79.242681,78.4,78.4,78.4,7.1,78.4,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_61717_SSIRE,61717,SSIRE,44.3,-75.5,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_61719_LWCJ1,61719,LWCJ1,44.7,-75.3,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,23.0
+EIA_61720_LECOU,61720,LECOU,44.7,-75.3,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,23.0
+EIA_61724_10254,61724,10254,43.096874,-73.744855,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61725_PV1,61725,PV1,43.028289,-75.700978,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61734_1,61734,1,42.5809,-79.1027,1.5,1.5,1.5,0.1,1.5,WND,Wind,WT,WT,Onshore Wind Turbine,34.5
+EIA_61764_SNWH2,61764,SNWH2,43.543378,-73.32307,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61765_SNWH1,61765,SNWH1,43.543716,-73.325257,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61804_ROC01,61804,ROC01,43.176918,-77.678512,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_61847_10046,61847,10046,43.061306,-74.154885,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61863_10048,61863,10048,42.762173,-74.201552,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61888_10049,61888,10049,42.999179,-74.314787,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61898_SOLEA,61898,SOLEA,42.086926,-78.448212,4.0,4.0,4.0,4.0,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_61899_LINC,61899,LINC,40.78144,-73.083437,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61900_BLYD,61900,BLYD,40.815331,-73.182407,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61902_HOLTS,61902,HOLTS,40.797667,-73.033977,1.2,1.2,1.2,,1.2,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61903_10116,61903,10116,42.775105,-74.567145,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61904_10044,61904,10044,42.953622,-74.119802,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61905_10045,61905,10045,42.948957,-74.126159,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61917_OPPEN,61917,OPPEN,43.060223,-74.736424,1.4,1.4,1.4,,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61922_BEACO,61922,BEACO,41.494632,-73.981635,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_61958_BAP1,61958,BAP1,43.018029,-74.191836,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62017_RIV1,62017,RIV1,40.922992,-72.7645,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,138.0
+EIA_62029_5515,62029,5515,42.453307,-76.594813,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62034_7,62034,7,41.797,-75.068,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62145_MINI1,62145,MINI1,41.321224,-74.514084,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62146_MINI2,62146,MINI2,41.319351,-74.515278,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62154_12,62154,12,41.775422,-74.776464,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,4.8
+EIA_62155_9,62155,9,41.774772,-75.036074,1.4,1.4,1.4,,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62156_15,62156,15,42.542175,-75.083378,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62157_235,62157,235,42.088,-76.713,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62158_11,62158,11,41.38251,-74.43526,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,4.8
+EIA_62159_20,62159,20,41.38251,-74.43526,1.7,1.7,1.7,1.7,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,4.8
+EIA_62160_300,62160,300,42.09305,-76.67848,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62303_MF01,62303,MF01,42.893714,-74.216251,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62322_MG8,62322,MG8,42.876535,-73.680169,2.0,1.5,2.0,0.3,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_62322_MG9,62322,MG9,42.876535,-73.680169,2.0,1.5,2.0,0.3,1.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,34.5
+EIA_62357_08158,62357,08158,43.052981,-74.308356,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62389_PASTO,62389,PASTO,42.210028,-76.523763,16.0,16.0,16.0,,16.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62412_DAUM,62412,DAUM,42.760799,-77.247333,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,4.8
+EIA_62413_ELLIS,62413,ELLIS,42.444628,-76.433237,18.0,18.0,18.0,,18.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62456_RGP00,62456,RGP00,41.077952,-73.820649,1.5,1.5,1.5,0.1,1.5,NG,Gas,FC,FC,Other Natural Gas,12.0
+EIA_62471_1034,62471,1034,43.175,-77.849,2.5,2.5,2.5,,2.5,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62472_617,62472,617,43.173,-77.846,2.2,2.2,2.2,,2.2,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62473_1035,62473,1035,43.172,-77.844,2.5,2.5,2.5,,2.5,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62474_928,62474,928,42.116,-76.183,5.0,5.0,5.0,5.0,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62476_607,62476,607,42.766,-78.559,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,4.8
+EIA_62477_372,62477,372,42.487821,-76.319983,1.3,1.3,1.3,1.3,1.3,SUN,Solar,PV,PV,Solar Photovoltaic,4.8
+EIA_62479_175,62479,175,41.594,-75.027,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,4.8
+EIA_62480_635,62480,635,43.275,-77.764,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62486_CMRSL,62486,CMRSL,41.561847,-74.345912,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62496_1268,62496,1268,42.561672,-78.17953,3.8,3.8,3.8,3.8,3.8,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62498_1413,62498,1413,42.559475,-78.179411,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62500_1258,62500,1258,42.534,-78.151,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62502_1415,62502,1415,42.533807,-78.15377,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62504_1159,62504,1159,43.099866,-77.34513,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62507_1419,62507,1419,44.935,-73.677,4.1,4.1,4.1,,4.1,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62508_1420,62508,1420,43.241,-77.27,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62517_1142,62517,1142,43.017848,-77.26049,2.3,2.3,2.3,,2.3,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62518_1181,62518,1181,43.016419,-77.26091,2.3,2.3,2.3,,2.3,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62519_1244,62519,1244,43.015301,-77.260662,2.3,2.3,2.3,,2.3,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62521_1442,62521,1442,43.099893,-77.343495,1.4,1.4,1.4,1.4,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62524_1444,62524,1444,44.725076,-73.467034,3.7,3.7,3.7,3.7,3.7,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62525_40,62525,40,41.757083,-74.960959,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62526_41,62526,41,41.756217,-74.961191,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62527_390,62527,390,41.754421,-74.96152,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62528_391,62528,391,41.754435,-74.958625,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62530_496,62530,496,44.934274,-73.672382,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62531_1010,62531,1010,44.933177,-73.67122,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62532_1011,62532,1011,44.933525,-73.66933,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62533_1023,62533,1023,44.928987,-73.666505,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62549_JOHNN,62549,JOHNN,43.066012,-74.360177,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62556_JOHNS,62556,JOHNS,43.064422,-74.360221,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62572_ATT49,62572,ATT49,40.830219,-73.352241,1.0,1.0,1.0,0.0,1.0,NG,Gas,FC,FC,Other Natural Gas,24.0
+EIA_62576_MER01,62576,MER01,40.7345,-73.870942,1.2,1.2,1.2,0.0,1.2,NG,Gas,FC,FC,Other Natural Gas,12.0
+EIA_62580_6081,62580,6081,42.815086,-77.046128,4.0,4.0,3.3,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62582_5216,62582,5216,42.39131,-76.564236,6.0,6.0,5.3,,6.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62582_5465,62582,5465,42.39131,-76.564236,2.0,2.0,1.8,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62582_5466,62582,5466,42.39131,-76.564236,2.0,2.0,1.8,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62582_5467,62582,5467,42.39131,-76.564236,2.0,2.0,1.8,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62613_CBPB1,62613,CBPB1,41.266188,-73.946882,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_62614_KMFO1,62614,KMFO1,40.542557,-74.236582,1.7,1.7,1.7,,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_62721_SS29,62721,SS29,42.81849,-78.855377,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62722_SS24,62722,SS24,42.811146,-78.854217,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62723_SS22,62723,SS22,42.809003,-78.85337,2.0,2.0,2.0,2.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62724_HSW,62724,HSW,42.098128,-78.442286,1.6,1.6,1.6,1.6,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62725_HSE,62725,HSE,42.099342,-78.44095,1.6,1.6,1.6,1.6,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62736_850KW,62736,850KW,43.22731,-77.364092,0.9,0.9,0.9,0.0,0.9,WND,Wind,WT,WT,Onshore Wind Turbine,15.0
+EIA_62736_CPH,62736,CPH,43.22731,-77.364092,0.5,0.5,0.5,0.0,0.5,NG,Gas,GT,GT,Natural Gas Fired Combustion Turbine,15.0
+EIA_62737_WVW,62737,WVW,42.442927,-78.632137,5.0,5.0,5.0,0.5,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62738_WVE,62738,WVE,42.443632,-78.632127,5.0,5.0,5.0,0.5,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62759_GV,62759,GV,41.356,-74.622,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62761_CH,62761,CH,41.339,-74.288,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62764_WT,62764,WT,41.345,-74.561,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62777_ULSTE,62777,ULSTE,41.961896,-73.981234,1.4,1.4,1.4,,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_62784_FRANK,62784,FRANK,44.86832,-74.306523,1.6,1.6,1.6,,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62785_MALON,62785,MALON,44.870858,-74.307248,1.1,1.1,1.1,,1.1,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62788_X0040,62788,X0040,42.822572,-73.84853,4.7,4.7,4.7,,4.7,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62810_13500,62810,13500,43.076198,-77.66724,1.6,1.6,1.6,,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,124.7
+EIA_62831_25,62831,25,42.186827,-76.845064,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62832_309,62832,309,42.186,-76.845,1.7,1.7,1.7,,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_62834_871,62834,871,42.46806,-76.65289,2.2,2.2,2.2,2.0,2.2,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62843_PV1,62843,PV1,43.723851,-74.062378,1.9,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_62860_263,62860,263,42.187443,-76.894394,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_62920_CG-1,62920,CG-1,43.09534,-75.278357,1.1,1.1,1.1,0.7,1.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_62920_CG-2,62920,CG-2,43.09534,-75.278357,1.1,1.1,1.1,0.7,1.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_62920_CG-3,62920,CG-3,43.09534,-75.278357,1.1,1.1,1.1,0.7,1.1,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_62920_CG-4,62920,CG-4,43.09534,-75.278357,0.3,0.3,0.3,0.2,0.3,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,13.8
+EIA_62998_ASHDO,62998,ASHDO,42.8826,-73.879,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_62999_FINCH,62999,FINCH,41.4565,-74.5465,5.0,5.0,5.0,0.0,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63000_WALDN,63000,WALDN,41.5841,-74.2163,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_63012_SWANN,63012,SWANN,43.1994,-78.949837,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63013_STATE,63013,STATE,43.0724,-74.3228,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63051_32,63051,32,43.26034,-76.7217,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63052_106,63052,106,42.727288,-74.000814,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63055_26,63055,26,43.63481,-76.08921,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63056_131,63056,131,42.82395,-74.07086,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63057_114,63057,114,42.91408,-73.59598,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63058_199,63058,199,43.96414,-75.98679,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63059_19,63059,19,42.764688,-77.343879,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63060_28,63060,28,42.981335,-78.290418,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63060_29,63060,29,42.981335,-78.290418,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63079_157,63079,157,42.601145,-73.887416,1.7,1.7,1.7,,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63086_1731,63086,1731,41.739327,-74.496708,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63106_21,63106,21,41.680879,-73.576568,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63107_1725,63107,1725,41.265258,-74.312978,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63108_30,63108,30,42.891451,-76.993915,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63112_22,63112,22,42.899313,-73.709799,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63129_ALLIS,63129,ALLIS,43.2205,-78.3574,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63130_BEALS,63130,BEALS,43.2256,-78.3559,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63161_TNWDA,63161,TNWDA,42.9971,-78.9017,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,23.0
+EIA_63224_X0140,63224,X0140,43.955471,-75.618066,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63230_KNAGG,63230,KNAGG,42.73035,-73.9691,3.9,3.9,0.5,,3.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63236_DG2,63236,DG2,40.610181,-73.920008,3.2,3.2,3.2,0.1,3.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,26.4
+EIA_63236_DG3,63236,DG3,40.610181,-73.920008,3.2,3.2,3.2,0.1,3.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,26.4
+EIA_63236_DG4,63236,DG4,40.610181,-73.920008,3.2,3.2,3.2,0.1,3.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,26.4
+EIA_63236_DG5,63236,DG5,40.610181,-73.920008,3.2,3.2,3.2,0.1,3.2,NG,Gas,IC,IC,Natural Gas Internal Combustion Engine,26.4
+EIA_63279_PV1,63279,PV1,43.251388,-75.177222,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63291_GPS,63291,GPS,41.21125,-73.72252,1.6,1.6,1.6,,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_63292_BHD,63292,BHD,41.09305,-73.9828,2.0,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_63297_GATES,63297,GATES,42.86228,-77.05058,1.9,1.8,0.2,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63337_6004,63337,6004,42.59251,-76.56563,5.0,5.0,4.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_63339_6609,63339,6609,43.01827,-74.32918,5.0,3.6,2.9,,3.6,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63340_6609,63340,6609,43.078888,-75.77222,5.0,5.0,4.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63341_6608,63341,6608,43.08748,-75.77959,5.0,5.0,4.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63369_RILE1,63369,RILE1,41.469132,-74.078372,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,14.4
+EIA_63369_RILE2,63369,RILE2,41.469132,-74.078372,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,14.4
+EIA_63371_BRUNS,63371,BRUNS,42.726428,-73.602129,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,15.0
+EIA_63372_CATLI,63372,CATLI,42.285942,-76.953981,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,35.0
+EIA_63373_SARAT,63373,SARAT,43.07377,-73.903954,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_63405_29,63405,29,42.981336,-78.290419,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63407_101,63407,101,43.058633,-77.346042,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63408_300,63408,300,43.150002,-77.861396,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63409_100,63409,100,43.1401,-77.0908,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63410_304,63410,304,42.9352,-77.47107,1.4,1.4,1.4,,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63411_RTE40,63411,RTE40,43.0783,-73.5331,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63415_CENTR,63415,CENTR,41.3902,-74.5199,1.6,1.6,1.6,0.0,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63450_PV1,63450,PV1,42.198167,-75.927282,4.9,4.9,4.9,,4.9,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_63497_NORTH,63497,NORTH,40.8224,-72.875,1.3,1.3,1.3,,1.3,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63498_SOUTH,63498,SOUTH,40.811524,-72.857053,1.2,1.2,1.2,,1.2,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63511_PV1,63511,PV1,42.767228,-73.956847,1.1,1.1,1.1,,1.1,SUN,Solar,PV,PV,Solar Photovoltaic,13.52
+EIA_63647_SDM00,63647,SDM00,40.65511,-73.94415,1.8,1.8,1.8,1.8,1.8,NG,Gas,FC,FC,Other Natural Gas,0.48
+EIA_63648_NHH03,63648,NHH03,40.65653,-73.94278,1.1,1.1,1.1,1.1,1.1,NG,Gas,FC,FC,Other Natural Gas,0.48
+EIA_63649_NHH04,63649,NHH04,40.656847,-73.946662,1.0,1.0,1.0,1.0,1.0,NG,Gas,FC,FC,Other Natural Gas,0.48
+EIA_63661_SWM-1,63661,SWM-1,40.79,-72.93,2.8,2.8,2.8,1.1,2.8,NG,Gas,FC,FC,Other Natural Gas,13.2
+EIA_63661_SWM-2,63661,SWM-2,40.79,-72.93,2.8,2.8,2.8,1.1,2.8,NG,Gas,FC,FC,Other Natural Gas,13.2
+EIA_63661_SWM-3,63661,SWM-3,40.79,-72.93,2.8,2.8,2.8,1.1,2.8,NG,Gas,FC,FC,Other Natural Gas,13.2
+EIA_63675_TROYL,63675,TROYL,42.698335,-73.67174,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63729_MT1,63729,MT1,41.885716,-74.102718,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63747_GRA,63747,GRA,41.508729,-74.349999,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_63748_MHW,63748,MHW,41.466974,-74.509417,1.9,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63749_MHE,63749,MHE,41.467654,-74.509646,1.9,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63750_BLU,63750,BLU,41.987467,-74.030193,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_63751_UND,63751,UND,41.716281,-73.884263,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63752_GRA,63752,GRA,41.578731,-74.17967,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63772_1394,63772,1394,44.893641,-73.841731,1.1,1.1,0.7,,1.1,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_63774_KRS,63774,KRS,41.195478,-73.73606,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63780_JOHN2,63780,JOHN2,43.04232,-74.37876,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63781_LIV4,63781,LIV4,42.9199,-77.7642,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63800_23,63800,23,42.899691,-73.707473,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_63854_8175C,63854,8175C,42.466286,-74.099533,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63855_8175E,63855,8175E,41.552749,-74.145471,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63856_8175D,63856,8175D,41.345455,-74.52377,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63857_8175B,63857,8175B,41.40888,-74.509799,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_63858_8175A,63858,8175A,42.43822,-74.015894,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64017_7405,64017,7405,42.755594,-73.580034,4.0,4.0,3.2,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64030_GEN1,64030,GEN1,41.772796,-74.666717,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,480.0
+EIA_64041_4683,64041,4683,41.56544,-73.937972,2.0,2.0,1.6,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64044_7141,64044,7141,41.785648,-74.229036,4.0,4.0,3.2,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64046_7140,64046,7140,41.787555,-74.288885,4.0,4.0,3.2,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_64084_BR1CS,64084,BR1CS,44.25479,-76.01178,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64087_BR2CS,64087,BR2CS,44.25479,-76.01178,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64090_NYR12,64090,NYR12,44.25479,-76.01178,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64091_MROCS,64091,MROCS,43.213,-78.903,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64092_GLSCS,64092,GLSCS,44.25479,-76.01178,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64102_GE19H,64102,GE19H,42.985644,-74.313086,7.7,7.7,7.7,,7.7,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64125_TWNSD,64125,TWNSD,42.415067,-78.23753,5.0,5.0,5.0,5.0,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64126_ORNGE,64126,ORNGE,42.3771,-76.9022,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64127_PODNQ,64127,PODNQ,42.350101,-76.938014,3.7,3.7,3.7,3.7,3.7,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64143_BLA,64143,BLA,40.76119,-73.49435,2.0,2.0,2.0,1.0,2.0,NG,Gas,FC,FC,Other Natural Gas,0.48
+EIA_64291_A1,64291,A1,40.816971,-73.92411,2.0,2.0,2.0,2.0,2.0,DFO,Oil,IC,IC,Petroleum Liquids,0.48
+EIA_64291_A2,64291,A2,40.816971,-73.92411,1.0,1.0,1.0,1.0,1.0,DFO,Oil,IC,IC,Petroleum Liquids,0.48
+EIA_64291_A3,64291,A3,40.816971,-73.92411,1.0,1.0,1.0,1.0,1.0,DFO,Oil,IC,IC,Petroleum Liquids,0.48
+EIA_64310_CORN,64310,CORN,43.001066,-78.91407,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,23.0
+EIA_64350_OBFC,64350,OBFC,40.819031,-72.965736,6.0,6.0,6.0,6.0,6.0,NG,Gas,FC,FC,Other Natural Gas,34.5
+EIA_64351_JFK8,64351,JFK8,40.618892,-74.187521,4.9,4.9,3.0,,4.9,SUN,Solar,PV,PV,Solar Photovoltaic,33.0
+EIA_64371_CORT1,64371,CORT1,42.606794,-76.154486,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64372_SNGFD,64372,SNGFD,42.924419,-75.42005,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64373_CLAY1,64373,CLAY1,43.194525,-76.21195,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64374_NRWCH,64374,NRWCH,42.552861,-75.529572,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64421_DEWIT,64421,DEWIT,43.0447,-76.0419,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64442_MPPV,64442,MPPV,41.09999,-73.77155,0.5,0.5,0.5,,0.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_64445_PV1,64445,PV1,41.631398,-73.876845,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,33.3
+EIA_64451_1583,64451,1583,41.71133,-74.54163,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_64453_VOLNE,64453,VOLNE,43.341,-76.354,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64525_TB1,64525,TB1,42.0121,-77.3751,7.0,7.0,7.0,,7.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_64542_1,64542,1,42.33337,-73.8475,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64554_BF,64554,BF,42.46,-77.73832,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64555_BO,64555,BO,43.033,-78.24481,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64556_BH,64556,BH,42.46723,-77.70378,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64557_RV,64557,RV,42.06724,-78.47783,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64560_TSS,64560,TSS,42.14134,-76.28797,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64561_TSN,64561,TSN,42.14134,-76.28797,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64562_WAS,64562,WAS,41.424,-74.167,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64577_MIN,64577,MIN,41.353476,-74.515411,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64578_SLT,64578,SLT,41.363,-74.503,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64593_B1,64593,B1,42.449783,-76.121116,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64594_B1,64594,B1,42.451944,-76.121116,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64595_B1,64595,B1,42.452956,-76.13176,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_64679_HS1,64679,HS1,43.30141,-77.94429,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64680_CP1,64680,CP1,42.839013,-73.834722,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64681_CP2,64681,CP2,42.84037,-73.83546,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64692_533,64692,533,42.453047,-79.3408,1.1,1.1,1.1,,1.1,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64715_DSNBR,64715,DSNBR,42.7677,-73.6247,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64716_KNPPE,64716,KNPPE,43.0134,-78.4601,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64717_MAINR,64717,MAINR,42.9976,-78.5047,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64718_RDMNN,64718,RDMNN,43.2752,-77.966,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64719_GLNMR,64719,GLNMR,41.3698,-74.366,2.0,2.0,2.0,0.0,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64720_KNPPW,64720,KNPPW,43.0148,-78.4609,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64721_RWEAV,64721,RWEAV,42.0687,-78.3752,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64722_RDMNS,64722,RDMNS,43.2743,-77.965,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64724_TWNLN,64724,TWNLN,43.0421,-78.1337,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64725_WLMRD,64725,WLMRD,43.204,-78.943,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64746_GSCS,64746,GSCS,42.76573,-73.75055,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_64747_C3245,64747,C3245,40.87317,-73.85519,5.0,5.0,5.0,0.1,5.0,NG,Gas,FC,FC,Other Natural Gas,13.8
+EIA_64748_CR18A,64748,CR18A,40.540377,-74.17676,3.6,3.5,3.5,0.1,3.5,NG,Gas,FC,FC,Other Natural Gas,13.8
+EIA_64749_CR18B,64749,CR18B,40.540457,-74.176559,4.2,4.0,4.0,0.1,4.0,NG,Gas,FC,FC,Other Natural Gas,13.8
+EIA_64788_FRHOL,64788,FRHOL,42.370433,-74.038047,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64931_531,64931,531,42.685295,-73.824937,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,15.0
+EIA_64964_ROCKI,64964,ROCKI,44.369913,-75.456999,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_64965_BULLS,64965,BULLS,42.836293,-78.572791,4.5,4.5,4.5,,4.5,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65071_PV1,65071,PV1,42.859297,-78.8418,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,115.0
+EIA_65090_CORT3,65090,CORT3,42.60575,-76.132472,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65121_GEN1,65121,GEN1,42.973,-74.321,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,69.0
+EIA_65122_GEN1,65122,GEN1,42.962972,-73.586739,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,115.0
+EIA_65123_GEN1,65123,GEN1,42.453939,-75.931033,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65124_GEN1,65124,GEN1,42.95474,-74.313115,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,69.0
+EIA_65125_GEN1,65125,GEN1,42.252664,-75.834078,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65155_DEK2,65155,DEK2,44.488156,-75.244375,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65156_DEK1,65156,DEK1,44.492092,-75.2448,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65159_VOL1,65159,VOL1,43.328217,-76.358997,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65163_ORIOL,65163,ORIOL,42.426,-73.817,5.6,5.6,5.6,,5.6,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_65165_ONSUN,65165,ONSUN,43.644,-76.156,2.4,2.4,2.4,,2.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65201_CTS0A,65201,CTS0A,40.540416,-74.176847,2.0,2.0,2.0,2.0,2.0,NG,Gas,FC,FC,Other Natural Gas,0.5
+EIA_65201_CTS0B,65201,CTS0B,40.540416,-74.176847,1.5,1.5,1.5,1.5,1.5,NG,Gas,FC,FC,Other Natural Gas,0.5
+EIA_65201_CTS0C,65201,CTS0C,40.540416,-74.176847,2.0,2.0,2.0,2.0,2.0,NG,Gas,FC,FC,Other Natural Gas,0.5
+EIA_65201_CTS0D,65201,CTS0D,40.540416,-74.176847,2.0,2.0,2.0,2.0,2.0,NG,Gas,FC,FC,Other Natural Gas,0.5
+EIA_65212_ATC04,65212,ATC04,40.759984,-73.504192,2.0,2.0,2.0,2.0,2.0,NG,Gas,FC,FC,Other Natural Gas,13.8
+EIA_65217_SGOSH,65217,SGOSH,41.3927,-74.3478,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.7
+EIA_65222_AFTON,65222,AFTON,42.27842,-75.5415,3.3,3.3,3.3,3.3,3.3,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65232_GEN1,65232,GEN1,43.78013,-75.49986,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65233_GEN1,65233,GEN1,42.93284,-78.55716,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_65297_81722,65297,81722,43.164033,-75.304087,3.8,3.8,3.8,,3.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65298_81724,65298,81724,41.738928,-74.368626,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65299_81721,65299,81721,42.929982,-78.55481,5.0,5.0,5.0,5.0,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_65300_81723,65300,81723,41.578415,-73.72058,3.7,3.7,3.7,,3.7,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65309_532,65309,532,42.99208,-78.79084,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65337_MAYBK,65337,MAYBK,41.463056,-74.247778,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65378_NY002,65378,NY002,44.26323,-75.99105,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65379_NY001,65379,NY001,44.922,-74.265,4.5,4.5,4.5,,4.5,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65385_AIRPT,65385,AIRPT,41.42827,-74.39665,3.4,3.4,3.4,,3.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65399_U1,65399,U1,42.252975,-73.897951,0.5,0.5,0.5,0.5,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_65399_U2,65399,U2,42.252975,-73.897951,0.5,0.5,0.5,0.5,0.5,WAT,Hydro,HY,HY,Conventional Hydroelectric,13.2
+EIA_65434_NY003,65434,NY003,44.017,-75.922,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65435_NY004,65435,NY004,43.583,-76.18,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65436_NY006,65436,NY006,42.875,-77.877,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65450_18002,65450,18002,40.772982,-73.874722,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,21.0
+EIA_65459_NY005,65459,NY005,43.19133,-76.38954,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65487_WASH,65487,WASH,42.821552,-73.949911,4.6,4.6,4.6,,4.6,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65495_BALLH,65495,BALLH,42.265261,-79.072522,107.5,107.5,107.5,1.0,107.5,WND,Wind,WT,WT,Onshore Wind Turbine,230.0
+EIA_65496_BLUES,65496,BLUES,42.111758,-75.457779,111.8,111.8,111.8,1.0,111.8,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_65522_65013,65522,65013,43.839599,-75.569885,106.0,106.0,106.0,,106.0,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_65587_7105,65587,7105,42.44623,-74.01607,5.0,5.0,4.8,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65597_CLWB,65597,CLWB,41.345272,-74.561334,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_65613_JBTB2,65613,JBTB2,41.68963,-73.80517,1.6,1.6,1.6,,1.6,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65620_100LR,65620,100LR,41.294,-74.539,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65621_456LR,65621,456LR,41.311,-74.522,1.4,1.4,1.4,,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65624_US40,65624,US40,42.85,-76.65,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.22
+EIA_65625_US963,65625,US963,42.85,-76.65,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65626_NEV,65626,NEV,43.05,-75.95,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65627_GL,65627,GL,43.05,-75.95,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65628_JR,65628,JR,43.15,-75.35,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_65643_CASTN,65643,CASTN,42.523,-73.703,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65647_CROT,65647,CROT,41.280404,-73.867575,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.6
+EIA_65679_11933,65679,11933,40.91367,-72.750359,22.9,22.9,22.9,,22.9,SUN,Solar,PV,PV,Solar Photovoltaic,138.0
+EIA_65721_7104,65721,7104,42.44506,-74.01609,5.0,5.0,4.8,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65723_15557,65723,15557,43.12163,-78.91409,5.0,5.0,4.8,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65724_15889,65724,15889,43.09723,-78.75382,5.0,5.0,4.8,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65752_EFK,65752,EFK,41.571,-73.829,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65753_GRPRT,65753,GRPRT,42.237,-73.782,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,15.0
+EIA_65754_KDRHK,65754,KDRHK,42.464,-73.691,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65755_MYER,65755,MYER,42.041,-73.978,1.9,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65757_SGRTS,65757,SGRTS,42.04,-74.074,1.9,1.9,1.9,,1.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65775_5324,65775,5324,41.75596,-73.87539,2.0,2.0,1.8,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65776_5939,65776,5939,43.05899,-74.88603,2.0,2.0,1.8,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65777_5779,65777,5779,43.05414,-74.85455,2.0,2.0,1.8,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65785_19822,65785,19822,43.04296,-74.24935,4.0,4.0,3.8,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65786_19823,65786,19823,43.04296,-74.24935,2.5,2.5,2.3,,2.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_65815_MPRES,65815,MPRES,41.27803,-73.86612,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.8
+EIA_65839_GEN1,65839,GEN1,42.970331,-73.573258,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,115.0
+EIA_65841_GEN1,65841,GEN1,42.926231,-73.711468,20.0,20.0,20.0,,20.0,SUN,Solar,PV,PV,Solar Photovoltaic,115.0
+EIA_66034_19826,66034,19826,42.83259,-73.84255,5.0,5.0,4.8,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66036_20205,66036,20205,42.9994,-78.27517,3.0,3.0,2.8,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66037_20206,66037,20206,43.00024,-78.26818,4.0,4.0,3.8,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66040_23204,66040,23204,43.1191,-79.00705,3.5,3.5,3.3,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66052_EPW01,66052,EPW01,42.101642,-77.701111,101.2,101.2,101.2,1.1,101.2,WND,Wind,WT,WT,Onshore Wind Turbine,115.0
+EIA_66061_A1,66061,A1,42.30639,-78.070392,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66062_A2,66062,A2,42.304408,-78.076676,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66063_A3,66063,A3,42.301546,-78.074922,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66064_A4,66064,A4,42.303015,-78.070922,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66065_WVS1,66065,WVS1,42.449,-78.652,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66065_WVS2,66065,WVS2,42.449,-78.652,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66074_4942,66074,4942,41.66398,-73.97007,2.0,2.0,1.8,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66081_8211,66081,8211,43.11064,-75.77579,3.3,3.3,3.1,,3.3,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66094_561,66094,561,43.00008,-78.793752,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66150_EQX36,66150,EQX36,41.071199,-73.819205,1.7,1.7,1.7,1.7,1.7,NG,Gas,FC,FC,Other Natural Gas,0.5
+EIA_66176_10891,66176,10891,41.90066,-74.027773,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66177_10896,66177,10896,43.014985,-74.683403,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66187_10992,66187,10992,41.401253,-74.179076,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66206_MOVSO,66206,MOVSO,42.9412,-74.372177,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66207_VEPSO,66207,VEPSO,42.93404,-74.3782,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66209_10986,66209,10986,43.070426,-74.730767,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66210_10887,66210,10887,42.209593,-73.995085,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66211_10889,66211,10889,43.201698,-76.968078,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_66212_10965,66212,10965,42.85206,-76.8001,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_66213_10907,66213,10907,42.460556,-74.069444,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66214_10967,66214,10967,42.027157,-77.582546,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66215_10996,66215,10996,42.081843,-76.112885,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_66217_10968,66217,10968,42.944796,-76.790886,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66218_10892,66218,10892,41.598889,-74.285833,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66219_11008,66219,11008,42.35131,-78.848243,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66220_10999,66220,10999,42.979546,-74.275082,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66221_10972,66221,10972,43.021133,-77.7068,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_66222_10895,66222,10895,41.900186,-74.024392,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66223_11000,66223,11000,41.33695,-74.55504,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66224_10890,66224,10890,41.892424,-74.093599,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66225_10970,66225,10970,42.552187,-77.967989,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66226_10991,66226,10991,43.205594,-75.382968,4.8,4.8,4.8,,4.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66227_10886,66227,10886,41.743505,-74.514615,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66228_10888,66228,10888,41.741126,-73.882065,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66229_10975,66229,10975,42.947327,-76.785599,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66230_10997,66230,10997,42.740808,-77.072419,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66231_10988,66231,10988,41.682259,-74.876541,4.4,4.4,4.4,,4.4,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_66232_10894,66232,10894,41.535043,-74.322869,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66233_10995,66233,10995,42.192559,-76.259349,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66234_10971,66234,10971,43.017211,-77.798702,4.5,4.5,4.5,,4.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66235_10961,66235,10961,43.015501,-77.798643,4.5,4.5,4.5,,4.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66236_10982,66236,10982,42.358381,-77.304225,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66256_P4726,66256,P4726,44.191729,-75.060901,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,23.0
+EIA_66258_P5569,66258,P5569,43.191807,-75.185477,3.2,3.2,3.2,,3.2,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66272_GEN1,66272,GEN1,42.55,-79.15,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.0
+EIA_66274_GEN1,66274,GEN1,43.160278,-76.283611,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.0
+EIA_66275_GEN1,66275,GEN1,43.37,-76.464722,2.2,2.2,2.2,,2.2,SUN,Solar,PV,PV,Solar Photovoltaic,12.0
+EIA_66322_GEN1,66322,GEN1,43.46,-76.464722,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.0
+EIA_66360_RUSP1,66360,RUSP1,44.656306,-75.497111,4.9,4.9,4.9,,4.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66361_ROSP1,66361,ROSP1,44.656306,-75.498444,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66380_83022,66380,83022,43.134,-77.38,5.0,4.9,2.8,,4.9,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_66387_NECA,66387,NECA,43.472383,-76.340961,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66388_NECA,66388,NECA,43.193134,-75.427581,5.0,3.5,3.5,1.0,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66424_LIV,66424,LIV,42.169,-73.76708,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66425_CLAV,66425,CLAV,42.248364,-73.738017,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66442_ORANG,66442,ORANG,42.30895,-77.0403,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66457_APP18,66457,APP18,40.552176,-74.232565,5.0,5.0,5.0,5.0,5.0,NG,Gas,FC,FC,Other Natural Gas,13.2
+EIA_66460_APP21,66460,APP21,40.536563,-74.240941,5.0,5.0,5.0,5.0,5.0,NG,Gas,FC,FC,Other Natural Gas,13.2
+EIA_66473_WALTO,66473,WALTO,42.157714,-75.045106,2.3,2.3,2.3,,2.3,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66481_UVALE,66481,UVALE,41.661,-73.742,1.7,1.7,1.7,,1.7,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66482_GHENT,66482,GHENT,42.277433,-73.709201,3.3,3.3,3.3,,3.3,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66483_SNFRD,66483,SNFRD,41.865,-73.703,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66488_10958,66488,10958,41.42453,-74.36029,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66489_10951,66489,10951,43.31085,-77.78582,3.7,3.7,3.7,,3.7,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_66490_10998,66490,10998,43.19567,-75.26312,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66501_CCPV1,66501,CCPV1,43.147448,-76.086772,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66503_CCPV2,66503,CCPV2,43.151269,-76.08879,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66504_SS1,66504,SS1,42.836275,-73.943953,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66522_18208,66522,18208,43.049931,-78.746052,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66583_05658,66583,05658,41.65,-73.75,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66586_06945,66586,06945,42.35,-73.85,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66645_KIPP,66645,KIPP,42.20193,-73.78298,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66729_P3101,66729,P3101,42.87657,-73.91048,1.4,1.4,1.4,,1.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66731_P4450,66731,P4450,41.7754,-73.8758,3.9,3.9,3.9,,3.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66732_P4451,66732,P4451,41.807744,-73.903508,2.1,2.1,2.1,,2.1,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66734_P4739,66734,P4739,43.0832,-75.7351,4.4,4.4,4.4,,4.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66749_HERR1,66749,HERR1,42.873378,-73.622029,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66752_NGVB2,66752,NGVB2,43.1,-76.294,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66762_P3599,66762,P3599,42.83447,-73.89808,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66763_P3600,66763,P3600,42.841167,-73.916454,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66764_3954,66764,3954,42.85,-74.05,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66765_3595,66765,3595,42.884182,-74.080778,2.5,2.5,2.5,,2.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66766_P3608,66766,P3608,42.791847,-73.95683,2.8,2.8,2.8,,2.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66767_4725,66767,4725,43.511296,-76.119554,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66769_P4468,66769,P4468,42.517279,-79.221323,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66771_P4471,66771,P4471,43.0832,-75.7351,2.9,2.9,2.9,,2.9,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66777_GEN1,66777,GEN1,42.821,-77.72,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_66812_P5570,66812,P5570,41.71525,-74.79739,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.4
+EIA_66816_GLEN,66816,GLEN,42.83949,-73.93256,4.3,4.3,4.3,4.1,4.3,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66822_NECA,66822,NECA,43.997512,-75.662935,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66823_NECB,66823,NECB,43.990287,-75.661256,3.3,3.3,3.3,,3.3,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66835_P4453,66835,P4453,42.09927,-73.95526,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66836_P5567,66836,P5567,43.12198,-76.04235,3.7,3.7,3.7,,3.7,SUN,Solar,PV,PV,Solar Photovoltaic,15.0
+EIA_66846_JOGEE,66846,JOGEE,41.399969,-74.502206,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_66940_HAL20,66940,HAL20,42.069077,-76.35324,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67181_HUN21,67181,HUN21,42.053168,-76.320493,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_67202_AVON2,67202,AVON2,42.927,-77.738,4.0,4.0,4.0,,4.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67212_SWED1,67212,SWED1,43.17,-77.941,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67213_HAM1,67213,HAM1,43.33,-77.965,4.5,4.5,4.5,,4.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67227_NYRWY,67227,NYRWY,43.281,-78.37,3.0,3.0,3.0,,3.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67228_BROAD,67228,BROAD,42.904125,-78.714255,5.0,5.0,5.0,4.9,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67268_P5648,67268,P5648,43.334376,-75.17795,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67271_P3879,67271,P3879,41.028481,-73.759073,1.0,1.0,1.0,,1.0,SUN,Solar,PV,PV,Solar Photovoltaic,0.5
+EIA_67275_4072C,67275,4072C,41.008926,-73.757657,0.5,0.5,0.5,,0.5,SUN,Solar,PV,PV,Solar Photovoltaic,4.3
+EIA_67275_4072G,67275,4072G,41.008926,-73.757657,1.5,1.5,1.5,,1.5,SUN,Solar,PV,PV,Solar Photovoltaic,4.3
+EIA_67293_71334,67293,71334,41.066468,-73.822512,1.8,1.8,1.8,,1.8,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_67293_71335,67293,71335,41.066468,-73.822512,0.3,0.3,0.3,,0.3,SUN,Solar,PV,PV,Solar Photovoltaic,0.48
+EIA_67295_P5564,67295,P5564,42.613905,-76.16685,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67335_SC,67335,SC,42.58319,-75.47034,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,15.5
+EIA_67345_SMI21,67345,SMI21,42.053168,-76.320493,3.8,3.8,3.8,,3.8,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_67456_7BPV1,67456,7BPV1,41.849012,-74.089932,1.1,1.1,1.1,,1.1,SUN,Solar,PV,PV,Solar Photovoltaic,12.5
+EIA_67468_FOX,67468,FOX,43.200586,-75.258084,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,15.5
+EIA_67470_TWEL,67470,TWEL,42.841631,-76.445347,4.7,4.7,4.7,,4.7,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67471_LBN,67471,LBN,44.344964,-75.486061,4.8,4.8,4.8,,4.8,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67472_LBS,67472,LBS,44.344964,-75.486061,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67475_SARA3,67475,SARA3,43.07072,-73.898068,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67476_SARA4,67476,SARA4,43.068154,-73.920141,3.5,3.5,3.5,,3.5,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67479_PORT1,67479,PORT1,42.39101,-79.42755,2.5,2.5,2.5,,2.5,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_67481_LWRD2,67481,LWRD2,41.338012,-74.481046,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67482_LWRD3,67482,LWRD3,41.333041,-74.484514,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67550_SR5,67550,SR5,43.070724,-75.4944,4.4,4.4,4.4,,4.4,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67574_SS2,67574,SS2,42.836275,-73.943953,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67604_TRY03,67604,TRY03,42.659,-76.927,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67605_TRY02,67605,TRY02,42.659,-76.931,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67606_TRY01,67606,TRY01,42.659,-76.935,4.6,4.6,4.6,,4.6,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67611_10993,67611,10993,42.108829,-76.297208,4.9,4.9,4.9,,4.9,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67612_10994,67612,10994,42.106054,-76.290717,2.2,2.2,2.2,,2.2,SUN,Solar,PV,PV,Solar Photovoltaic,34.5
+EIA_67618_11054,67618,11054,43.203233,-77.206878,2.3,2.3,2.3,,2.3,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_67619_10898,67619,10898,41.409555,-74.587813,2.0,2.0,2.0,,2.0,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67620_11018,67620,11018,43.189133,-77.742717,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47
+EIA_67621_11012,67621,11012,45.50275,-79.281723,4.6,4.6,4.6,,4.6,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67745_4075,67745,4075,41.021546,-73.758915,1.2,1.2,1.2,,1.2,SUN,Solar,PV,PV,Solar Photovoltaic,13.2
+EIA_67908_RICH1,67908,RICH1,42.792865,-77.526792,5.0,5.0,5.0,,5.0,SUN,Solar,PV,PV,Solar Photovoltaic,12.47

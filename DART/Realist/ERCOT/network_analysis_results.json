@@ -1,0 +1,313 @@
+{
+  "analysis_1_attack_curves": {
+    "f_star": {
+      "random": 0.21,
+      "degree": 0.05,
+      "eigenvector": 0.24,
+      "population": 0.38,
+      "betweenness": 0.09
+    },
+    "gcc_fraction_at_f": {
+      "random": {
+        "f=0.10": 0.8375,
+        "f=0.20": 0.5677
+      },
+      "degree": {
+        "f=0.10": 0.1149,
+        "f=0.20": 0.0195
+      },
+      "eigenvector": {
+        "f=0.10": 0.7911,
+        "f=0.20": 0.5502
+      },
+      "population": {
+        "f=0.10": 0.8547,
+        "f=0.20": 0.7245
+      },
+      "betweenness": {
+        "f=0.10": 0.2414,
+        "f=0.20": 0.0769
+      }
+    }
+  },
+  "analysis_2_n1_stress": {
+    "base_case_overloads": 191,
+    "base_case_max_ratio": 5.9522,
+    "base_case_toy_dispatch_note": "Base case uses generation distributed proportional to PMax, not economic dispatch. High base overload counts reflect this simplification; N-1 results should be read as relative rankings, not absolute MW.",
+    "n_tested": 199,
+    "n_non_islanding": 186,
+    "n_islanding_contingencies": 13,
+    "n_bridges_in_sample": 13,
+    "corr_total_mw_over_vs_edge_betweenness": 0.3184,
+    "top_10_stress_lines": [
+      {
+        "line": "L1947_2323_345",
+        "max_overload_ratio": 5.9551,
+        "n_overloaded": 199.0,
+        "total_mw_over_rating": 31081.03,
+        "is_bridge": false
+      },
+      {
+        "line": "L2323_2325_345",
+        "max_overload_ratio": 5.9551,
+        "n_overloaded": 199.0,
+        "total_mw_over_rating": 31081.03,
+        "is_bridge": false
+      },
+      {
+        "line": "L1538_3213_345",
+        "max_overload_ratio": 5.9563,
+        "n_overloaded": 204.0,
+        "total_mw_over_rating": 31062.4,
+        "is_bridge": false
+      },
+      {
+        "line": "L2325_2326_345",
+        "max_overload_ratio": 5.955,
+        "n_overloaded": 199.0,
+        "total_mw_over_rating": 31028.76,
+        "is_bridge": false
+      },
+      {
+        "line": "L1538_3235_345",
+        "max_overload_ratio": 5.9558,
+        "n_overloaded": 204.0,
+        "total_mw_over_rating": 30881.43,
+        "is_bridge": false
+      },
+      {
+        "line": "L3077_3235_345",
+        "max_overload_ratio": 5.9558,
+        "n_overloaded": 204.0,
+        "total_mw_over_rating": 30878.3,
+        "is_bridge": false
+      },
+      {
+        "line": "L777_3439_345",
+        "max_overload_ratio": 5.9478,
+        "n_overloaded": 199.0,
+        "total_mw_over_rating": 30708.91,
+        "is_bridge": false
+      },
+      {
+        "line": "L1533_2326_345",
+        "max_overload_ratio": 5.9546,
+        "n_overloaded": 200.0,
+        "total_mw_over_rating": 30516.23,
+        "is_bridge": false
+      },
+      {
+        "line": "L1003_2292_345",
+        "max_overload_ratio": 6.1089,
+        "n_overloaded": 198.0,
+        "total_mw_over_rating": 30433.17,
+        "is_bridge": false
+      },
+      {
+        "line": "L1632_2842_345",
+        "max_overload_ratio": 5.9522,
+        "n_overloaded": 197.0,
+        "total_mw_over_rating": 30145.37,
+        "is_bridge": false
+      }
+    ]
+  },
+  "analysis_3_null_model": {
+    "ercot_lambda2": 0.001045,
+    "ercot_ap_fraction": 0.1936,
+    "ercot_gcc_after_top5_removal": 0.3273,
+    "null_mean_lambda2": 0.024205,
+    "null_mean_ap_fraction": 0.2043,
+    "null_mean_gcc_after_top5_removal": 0.8697,
+    "z_score_lambda2": -3.422,
+    "z_score_ap_fraction": -1.448,
+    "z_score_gcc_after_top5_removal": -79.225,
+    "interpretation_note": "The configuration model rewires edges randomly while preserving the degree sequence. It contains NO spatial constraint: it will freely connect Lubbock to Houston. Any geographically embedded network will therefore look 'fragile' versus this null, because the null cannot exhibit the long-range weak coupling that makes real grids hard to route across. Our large negative z-scores (e.g. z = -79 on hub-removal) quantify ERCOT's spatial embedding cost, NOT an unusual pathology. They should be read as 'ERCOT is geographic' rather than 'ERCOT is broken.'"
+  },
+  "analysis_4_spectral": {
+    "algebraic_connectivity_lambda2": 0.001045,
+    "bipartition_sizes": {
+      "positive_side": 2174,
+      "negative_side": 1612
+    },
+    "fiedler_bipartition_zone_split": {
+      "NORTH": {
+        "total": 1319,
+        "positive_side": 1250,
+        "negative_side": 69
+      },
+      "HOUSTON": {
+        "total": 477,
+        "positive_side": 0,
+        "negative_side": 477
+      },
+      "SOUTH": {
+        "total": 1081,
+        "positive_side": 24,
+        "negative_side": 1057
+      },
+      "WEST": {
+        "total": 909,
+        "positive_side": 900,
+        "negative_side": 9
+      }
+    },
+    "fiedler_bipartition_groups": {
+      "positive_side_dominant_zones": [
+        "NORTH",
+        "WEST"
+      ],
+      "negative_side_dominant_zones": [
+        "HOUSTON",
+        "SOUTH"
+      ]
+    },
+    "bottleneck_n_edges": 20,
+    "bottleneck_total_mva": 2020298.0,
+    "bottleneck_fraction_of_grid_mva": 0.0026,
+    "fiedler_cut_conductance": 0.004833,
+    "cheeger_lower_bound": 0.000523,
+    "cheeger_upper_bound": 0.151651,
+    "interpretation_note": "The Fiedler vector produces one bipartition, not a 4-way clustering. We report which zones fall on each side of that single cut and the MVA capacity crossing it. We dropped the Louvain-vs-zone modularity comparison because Louvain's 37 communities vs the zones' 4 made Q comparison apples-to-oranges.",
+    "bottleneck_n_edges_real_rating": 18,
+    "bottleneck_real_rating_mva_sum": 20300.0,
+    "bottleneck_sentinel_rated_edges": 2,
+    "bottleneck_fraction_of_real_grid_mva": 0.0055,
+    "bottleneck_rating_correction_note": "767 of 4817 branches have Cont Rating=999999 (sentinel for 'unknown' \u2014 used by build_osm_branch_table.py when no published rating exists). Previous bottleneck_total_mva summed these sentinels and was meaningless. We report MVA only over branches with real ratings below 99999."
+  },
+  "analysis_5_upgrade_ranking": {
+    "total_articulation_points_with_load": 352,
+    "top_10_upgrades": [
+      {
+        "ap_bus": 1235,
+        "ap_name": "Davson_Substation",
+        "from_bus": 3134,
+        "from_name": "OSM_3134",
+        "to_bus": 1191,
+        "to_name": "Strawberry_Belt_Substation",
+        "distance_km": 2.3,
+        "mw_saved": 582.73,
+        "efficiency_mw_per_km": 252.87
+      },
+      {
+        "ap_bus": 1192,
+        "ap_name": "South_Channel_Substation",
+        "from_bus": 3134,
+        "from_name": "OSM_3134",
+        "to_bus": 3133,
+        "to_name": "OSM_3133",
+        "distance_km": 2.02,
+        "mw_saved": 416.23,
+        "efficiency_mw_per_km": 206.45
+      },
+      {
+        "ap_bus": 1742,
+        "ap_name": "Hardy_Substation",
+        "from_bus": 1207,
+        "from_name": "Bertwood_Substation",
+        "to_bus": 1688,
+        "to_name": "Berry_Substation",
+        "distance_km": 3.86,
+        "mw_saved": 665.98,
+        "efficiency_mw_per_km": 172.33
+      },
+      {
+        "ap_bus": 1377,
+        "ap_name": "Blodgett_Substation",
+        "from_bus": 1869,
+        "from_name": "East_Side_Substation",
+        "to_bus": 1881,
+        "to_name": "Garrott_Substation",
+        "distance_km": 3.55,
+        "mw_saved": 499.48,
+        "efficiency_mw_per_km": 140.7
+      },
+      {
+        "ap_bus": 2487,
+        "ap_name": "OSM_2487",
+        "from_bus": 2246,
+        "from_name": "OSM_2246",
+        "to_bus": 3782,
+        "to_name": "OSM_3782",
+        "distance_km": 1.49,
+        "mw_saved": 200.51,
+        "efficiency_mw_per_km": 134.28
+      },
+      {
+        "ap_bus": 1869,
+        "ap_name": "East_Side_Substation",
+        "from_bus": 1377,
+        "from_name": "Blodgett_Substation",
+        "to_bus": 1890,
+        "to_name": "University_Substation_1890",
+        "distance_km": 3.17,
+        "mw_saved": 416.23,
+        "efficiency_mw_per_km": 131.31
+      },
+      {
+        "ap_bus": 1368,
+        "ap_name": "Crockett_Substation_1368",
+        "from_bus": 1866,
+        "from_name": "Downtown_Substation",
+        "to_bus": 1347,
+        "to_name": "Franklin_Substation",
+        "distance_km": 1.35,
+        "mw_saved": 166.49,
+        "efficiency_mw_per_km": 123.21
+      },
+      {
+        "ap_bus": 1048,
+        "ap_name": "North_Lake_Substation",
+        "from_bus": 1054,
+        "from_name": "Coppell_Switching_Station",
+        "to_bus": 2622,
+        "to_name": "OSM_2622",
+        "distance_km": 2.78,
+        "mw_saved": 248.29,
+        "efficiency_mw_per_km": 89.41
+      },
+      {
+        "ap_bus": 2842,
+        "ap_name": "OSM_2842",
+        "from_bus": 2589,
+        "from_name": "OSM_2589",
+        "to_bus": 2855,
+        "to_name": "OSM_2855",
+        "distance_km": 4.05,
+        "mw_saved": 331.05,
+        "efficiency_mw_per_km": 81.78
+      },
+      {
+        "ap_bus": 1890,
+        "ap_name": "University_Substation_1890",
+        "from_bus": 1869,
+        "from_name": "East_Side_Substation",
+        "to_bus": 1867,
+        "to_name": "Magnolia_Park_Substation",
+        "distance_km": 4.1,
+        "mw_saved": 332.99,
+        "efficiency_mw_per_km": 81.28
+      }
+    ]
+  },
+  "graph_summary": {
+    "n_buses": 3786,
+    "n_branches": 4817,
+    "n_nodes_gcc": 3786,
+    "n_edges_gcc": 4817,
+    "n_connected_components": 1,
+    "total_computed_load_mw": 52000.0,
+    "zones": [
+      "NORTH",
+      "HOUSTON",
+      "SOUTH",
+      "WEST"
+    ],
+    "zone_load_mw": {
+      "NORTH": 23000.0,
+      "HOUSTON": 11500.0,
+      "SOUTH": 10500.0,
+      "WEST": 7000.0
+    }
+  }
+}

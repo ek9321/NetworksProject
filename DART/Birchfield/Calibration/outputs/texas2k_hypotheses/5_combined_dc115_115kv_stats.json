@@ -1,0 +1,18 @@
+{
+  "num_nodes": 1549,
+  "num_edges": 2580,
+  "mn_ratio": 1.6656,
+  "mean_degree": 3.331,
+  "meshedness": 0.3337,
+  "deg1_frac": 0.0291,
+  "deg2_frac": 0.2647,
+  "deg3plus_frac": 0.7063,
+  "mean_length_km": 18.88,
+  "median_length_km": 13.63,
+  "intersection_rate": 0.0484,
+  "composite_error": 0.1837,
+  "experiment": "5_combined_dc115",
+  "voltage_class": "115kv",
+  "elapsed_sec": 15.3,
+  "description": "Combined + DC flow enabled at 115 kV, K=5"
+}

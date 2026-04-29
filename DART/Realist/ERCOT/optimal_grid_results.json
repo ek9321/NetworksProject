@@ -1,0 +1,82 @@
+{
+  "real_grid": {
+    "total_cost_billions": 115.4249,
+    "n_nodes": 3786,
+    "n_nodes_real_subs": 3000,
+    "n_edges": 4817,
+    "total_route_km": 44352.6,
+    "mean_edge_length_km": 9.21,
+    "lambda2_full_graph": 0.001045,
+    "lambda2_real_sub_only": 0.0,
+    "lambda2_note": "real-sub subgraph is disconnected (431 components) because split nodes are removed; full-graph lambda2 used for comparison",
+    "fstar_random": 0.26,
+    "fstar_degree": 0.06,
+    "fstar_betweenness": 0.08,
+    "fstar_population": 0.48,
+    "cost_by_tier_billions": {
+      "138 kV": 40.9962,
+      "345 kV single": 7.124,
+      "345 kV double": 67.3047
+    }
+  },
+  "optimal_grid": {
+    "total_cost_billions": 115.4248,
+    "n_nodes": 3000,
+    "n_edges": 4413,
+    "n_mst_edges": 2999,
+    "n_greedy_edges": 1414,
+    "total_route_km": 56563.6,
+    "mean_edge_length_km": 12.82,
+    "lambda2": 0.00332,
+    "fstar_random": 0.24,
+    "fstar_degree": 0.14,
+    "fstar_betweenness": 0.08,
+    "fstar_population": 0.46,
+    "cost_by_tier_billions": {
+      "138 kV": 95.1611,
+      "345 kV single": 11.706,
+      "345 kV double": 8.5577
+    }
+  },
+  "comparison": {
+    "cost_difference_billions": -0.0001,
+    "row_multiplier_applied_to_both": 1.3,
+    "lambda2_real_full": 0.001045,
+    "lambda2_optimal": 0.00332,
+    "lambda2_comparison_caveat": "The real graph has 3786 nodes (3000 real substations + 786 OSM split nodes inserted during geometry extraction), while the optimal graph has 3000 nodes. lambda_2 depends on graph size: adding degree-2 or degree-3 pass-through nodes reduces lambda_2. The raw ratio (lam2_opt / lam2_real_full) therefore OVERSTATES the resilience gain. We report it only as an upper bound. The attack-curve comparison (fractions of 3000 real substations removed in BOTH grids) is the fair comparison and the one we emphasize in the paper.",
+    "lambda2_improvement_ratio_RAW": 3.18,
+    "fstar_improvement": {
+      "random": -0.02,
+      "degree": 0.08,
+      "betweenness": 0.0,
+      "population": -0.02
+    },
+    "attack_methodology_note": "Both grids attacked with f = fraction of real substations removed. Real grid: splits stay in graph as topology, not attackable. Optimal grid: all 3000 nodes are real subs (no splits). GCC normalized by attackable-node count in each case."
+  },
+  "gcc_snapshots": {
+    "real_random_f0.05": 0.9323296354992076,
+    "opt_random_f0.05": 0.9287333333333333,
+    "real_random_f0.10": 0.8740623349181194,
+    "opt_random_f0.10": 0.867,
+    "real_random_f0.20": 0.6660327522451136,
+    "opt_random_f0.20": 0.6468666666666667,
+    "real_degree_f0.05": 0.32857897517168516,
+    "opt_degree_f0.05": 0.9213333333333333,
+    "real_degree_f0.10": 0.21922873745377708,
+    "opt_degree_f0.10": 0.757,
+    "real_degree_f0.20": 0.03169572107765452,
+    "opt_degree_f0.20": 0.23566666666666666,
+    "real_betweenness_f0.05": 0.9020073956682515,
+    "opt_betweenness_f0.05": 0.88,
+    "real_betweenness_f0.10": 0.36370839936608557,
+    "opt_betweenness_f0.10": 0.24,
+    "real_betweenness_f0.20": 0.08082408874801902,
+    "opt_betweenness_f0.20": 0.14666666666666667,
+    "real_population_f0.05": 0.9220813523507659,
+    "opt_population_f0.05": 0.9356666666666666,
+    "real_population_f0.10": 0.8811410459587956,
+    "opt_population_f0.10": 0.8896666666666667,
+    "real_population_f0.20": 0.7762810353935552,
+    "opt_population_f0.20": 0.7853333333333333
+  }
+}

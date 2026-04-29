@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Data files (keep structure, ignore large files)
+data/*.pdf
+data/*.csv
+data/*.xlsx
+
+# Output files
+output/*.csv
+output/*.png
+output/*.jpg
+output/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep directory structure
+!data/.gitkeep
+!output/.gitkeep

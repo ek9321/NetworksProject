@@ -1,0 +1,12 @@
+{
+  "total_substations": 630,
+  "total_buses": 724,
+  "total_transformers": 94,
+  "voltage_levels": [
+    345,
+    115
+  ],
+  "requested_pct_345kv": 0.15,
+  "actual_pct_345kv": 0.1492063492063492,
+  "count_345kv": 94
+}

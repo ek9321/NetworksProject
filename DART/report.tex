@@ -35,7 +35,6 @@
 \author{
     Jack Hasker \quad Emmett Souder \quad Eddie Kong\\[0.3em]
     \textit{ORF 387: Networks, Princeton University}\\[0.3em]
-    Advisor: Professor Ronnie Sircar
 }
 \date{Spring 2026}
 
@@ -45,7 +44,7 @@
 \thispagestyle{empty}
 
 \begin{abstract}
-We build a 3{,}786-bus, 4{,}817-branch graph of the ERCOT transmission network from OpenStreetMap geometry and public ERCOT data, and use it to ask a single question: where is this grid fragile, and what would it cost to fix the specific fragilities we can identify? Four complementary diagnostics agree on one region. (1) Articulation-point analysis finds 352 load-carrying cut vertices, concentrated in the Houston 138~kV sub-transmission. (2) Spectral bisection via the Fiedler vector cleanly separates \{\textsc{North}, \textsc{West}\} from \{\textsc{Houston}, \textsc{South}\}; the cut is crossed by only 18 rated branches totaling 20{,}300 MVA, about 0.55\% of the grid's rated capacity. (3) Attack-curve analysis shows the grid is robust to random failure ($f^* = 0.21$) but brittle under degree-targeted removal ($f^* = 0.05$). (4) A single-step (N--1) stress test on 199 lines identifies the same Houston 345~kV cluster as the top post-contingency overload source, with a positive correlation between edge betweenness and post-trip stress ($r = +0.32$). We then rank 352 articulation-bypass candidates by MW-at-risk per kilometer of new line: the top ten upgrades clear 4{,}000~MW of isolation risk over 29 km of right-of-way---an order of magnitude cheaper than a grid redesign. As an upper bound on what pure topology optimization can buy, we show that the same \$88.8~B budget, reallocated from long-haul 345~kV to local 138~kV mesh, roughly doubles degree-attack resilience, with caveats about what this comparison does and does not prove.
+The resilience of electrical power grids is vital in preventing electricity loss during natural disasters, targeted attacks, or structural failures. The identification of vulnerabilities is key to understanding the overall resilience and often requires balancing topological analysis with constraints. In this project, we created a mock Electric Reliability Council of Texas (ERCOT) power grid to evaluate structural fragility and quantify the cost and benefits of mitigating vulnerabilities identified through diagnostics. Using public data, we constructed a network and analyzed it using the following methods: articulation-point mapping, attack curves, spectral analysis, simulations, and N--1 contingency stress testing. These methods converge on two major vulnerabilities: the 138~kV sub-transmission network around Houston and the narrow 345~kV corridor connecting it to the rest of Texas. We evaluated bypass/connection upgrades by ranking them based on additional MW supplied per kilometer of new line. Our findings reveal that the top ten upgrades can eliminate roughly 4{,}000~MW of isolation risk by adding just 29~km of new line. At an estimated cost of \$45~M, these targeted interventions are two orders of magnitude smaller than the grid's \$88.8~B replacement cost. The most important finding is a shift in strategy: upgrading local 138~kV mesh roughly doubles the grid's resilience to coordinated hub-targeted attacks when compared to the long-haul 345~kV lines.
 \end{abstract}
 
 \newpage
@@ -56,22 +55,62 @@ We build a 3{,}786-bus, 4{,}817-branch graph of the ERCOT transmission network f
 \section{Introduction}
 %% ============================================================
 
-Winter Storm Uri (February 2021) left more than 4.5 million Texans without power and killed at least 246 people. Post-event reports focused---correctly---on generation: frozen gas wellheads, uninsulated wind turbines, and a near-complete loss of thermal supply margin. But the outages that lasted longest were not generation outages. They were transmission and distribution outages, concentrated in specific pockets of the Houston metropolitan area and the Gulf Coast, where losing a single substation could strand load with no other path to the grid.
+Winter Storm Uri (February 2021) left more than 4.5 million Texans without power and killed at least 246 people~\cite{uri2021}. The post-event reports claimed that a large portion of the outages were due to generation issues like frozen gas wellheads and uninsulated wind turbines. However, the outages that lasted longest were not generation outages. They were transmission and distribution outages, concentrated in specific pockets of the Houston metropolitan area and the Gulf Coast, where losing a single substation disconnected entire sections of the grid.
 
-This paper does not re-litigate Uri. It asks a narrower question: \emph{independent of the generation crisis, where does the topology of the ERCOT transmission network itself create concentrated failure risk, and what would it cost to address the specific risks we can find?} The answer we develop---through four independent network-analytic lenses---is that ERCOT's resilience problem is not uniform. It is concentrated in a small number of articulation points in the Houston 138~kV sub-transmission and in a handful of 345~kV corridors between the North/West and Houston/South halves of the grid. Those are the places where targeted upgrades have the largest leverage, and where policy should look before considering a broader redesign.
+This paper does not reconstruct Storm Uri and its consequences; rather, it draws on it for motivation. The paper is focused on a narrower question: \emph{what topology features of the ERCOT transmission network create risk of failure?} After identifying these points of risk, this paper analyses what it would cost to address the specific risks.
 
 \subsection{What this paper contributes}
 
 \begin{itemize}
-    \item \textbf{A reproducible ERCOT transmission graph} (3{,}786 buses, 4{,}817 branches) built entirely from public data, validated against published ERCOT structural metrics.
-    \item \textbf{Four complementary diagnostics} (articulation-point mapping, attack curves with configuration-model null, Fiedler-vector spectral bisection with Cheeger bounds, and N--1 DC-flow stress) that are each individually imperfect, but converge on a common geographic answer.
-    \item \textbf{A ranked list of 352 articulation-bypass upgrades} with MW-of-load-at-risk and required right-of-way length for each, expressed in MW-cleared per new-line kilometer.
-    \item \textbf{An upper-bound topology-only optimization} as a reference point for what pure network design (holding cost fixed) could achieve, with explicit limitations.
+    \item \textbf{A reproducible ERCOT transmission graph} (3{,}786 nodes---3{,}000 real substations plus 786 synthetic split junctions---and 4{,}817 branches) built entirely from public data, validated against published ERCOT structural metrics.
+    \item \textbf{Four complementary diagnostics} (articulation-point mapping, attack curves with configuration-model null, spectral analysis with simulations, and N--1 DC-flow stress). Each is imperfect, but together they shed light on some common structural risks.
+    \item \textbf{A ranked list of 352 articulation-bypass upgrades} with MW of load at risk and suggested upgrades.
+    \item \textbf{An ideal rebuilt ERCOT graph} that maintains nodes and optimizes new edge placements and capacities rebuilt from a ground-up perspective with cost constraints.
 \end{itemize}
 
 \subsection{What this paper does not claim}
 
-The DC power-flow model used in Section~\ref{sec:n1} is a linearization, and the base-case dispatch is a toy (generation allocated proportional to installed capacity, not to economic merit order). N--1 results should be read as \emph{relative rankings} of post-contingency stress across lines, not as absolute MW numbers or as predictions of actual ERCOT operation. Similarly, the optimal grid in Section~\ref{sec:optimal} is a purely topological exercise---it ignores voltage support, thermal limits at substations, ancillary services, and every non-topological engineering constraint a real planner faces. We use it as a best-case bound on what reshuffling the same \$88.8~B of wire could buy under a single metric, not as a policy recommendation.
+Since this project is limited in scope, there were certain parts of a real power grid network that we chose to simplify. The DC power-flow model used in Section~\ref{sec:n1} is a linearization, and the base-case dispatch is not based in the dynamics of electricity flow. Rather, generation is allocated proportional to installed capacity. Also, the N--1 results should be read as \emph{relative rankings} of post-contingency stress across lines, not as absolute MW numbers or as predictions of actual ERCOT operation due to our assumptions. Similarly, the optimal grid in Section~\ref{sec:optimal} is a purely theoretical exercise. It ignores voltage support, thermal limits at substations, ancillary services, and every non-topological engineering constraint a real planner faces. Yet the underlying strategy of prioritizing lower-voltage connections may still have merit. We use it as a best-case scenario for what reshuffling the same \$88.8~B of wire could buy in our simplified world.
+
+%% ============================================================
+\section{Background: How a Transmission Grid Works}
+\label{sec:background}
+%% ============================================================
+
+The following definitions and explanations are necessary for a broad understanding of an electrical grid, and we tried to apply as many realistic constraints to the model as possible.
+
+\subsection{Substations, lines, and voltage tiers}
+
+A transmission grid is a graph whose nodes and edges---in power-systems usage a node is also called a \emph{bus} and an edge a \emph{branch}---we use these terms interchangeably. Nodes/buses are \emph{substations, generation sites, and load centers}. Substations are switch-yards where lines meet and voltages are stepped up or down and where power is routed. Generation sites are where power is produced and supplied, and load centers are where electricity is used. The edges are \emph{transmission lines}. The lines come in voltage tiers, and the tier indirectly links to the amount of electricity a line can transport:
+
+\begin{itemize}
+    \item \textbf{345~kV} is for long-hauling electricity. They are thick conductors that move GW-scale power hundreds of kilometers from generation regions (West Texas wind, Gulf Coast gas) to the load centers (Dallas--Fort Worth, Houston, San Antonio).
+    \item \textbf{138~kV} is the \emph{sub-transmission} layer: shorter, lower-capacity lines that fan out from the large 345~kV lines and deliver power to urban and suburban load pockets. Below 138~kV is local distribution (poles, transformers, and the wires visible on city streets). Our model does not include these lines.
+\end{itemize}
+
+Topologically, the 345~kV lines are well-meshed (multiple paths between any two nodes), while the 138~kV layer is more sparse: it has tree-like fingers reaching out from the main network, and in many cases downstream substations have only one path back. Those single-path substations are exactly the articulation points that Section~\ref{sec:structural} flags.
+
+\subsection{Capacity and flow units}
+
+Line capacity is rated in \textbf{MVA} (mega-volt-amperes), the maximum the conductor can thermally sustain. Real-time power flow is measured in \textbf{MW}. The two are within a few percent of each other for transmission-level analysis, and we treat them as interchangeable when comparing flow to capacity for simplicity. ERCOT's total system load is on the order of 50--80~\textbf{GW} (1~GW $=$ 1{,}000~MW).
+
+\subsection{Operational geography: the four load zones}
+
+ERCOT divides Texas into four \emph{load zones}---\textsc{North}, \textsc{Houston}, \textsc{South}, \textsc{West}---used for market settlement and dispatch. They are roughly the regions served by sub-grids that historically developed around various cities. \textsc{North} is Dallas--Fort Worth, \textsc{Houston} is the Houston metro and the upper Gulf Coast, \textsc{South} is San Antonio south to the border, and \textsc{West} is the wind-heavy Permian Basin and the Panhandle. Since these are the divisions that ERCOT uses, we also adopted their boundaries.
+
+\subsection{Failures, contingencies, and N--1}
+
+When a line is removed from service due to a fault, weather, or planned maintenance, the industry term is that the line \emph{trips}. Power that was flowing on the tripped line redistributes onto whatever other paths exist between the same two endpoints. If those alternate paths are also near their thermal limit they may trip too, producing a \emph{cascade}. If a trip leaves a region with no path back to a generator, that region is \emph{islanded} and its load is \emph{stranded}.
+
+The standard reliability criterion that NERC (the North American grid regulator) and ERCOT plan for is the N--1 scenario. The grid must survive the loss of any single component without dropping load. Section~\ref{sec:n1} runs an N--1 stress test in this sense.
+
+\subsection{DC power flow in one paragraph}
+
+To predict how power redistributes after a trip, we use the \emph{DC power flow} approximation. In order to avoid complex electrical modeling we treat each line as a resistor whose ``resistance'' is its electrical reactance $x_{ij}$, treat each bus as having a net injection (positive for generators, negative for loads), and solve a Kirchhoff-like linear system $\mathbf{B}\boldsymbol{\theta} = \mathbf{P}$ for the bus phase angles $\theta$. Flow on a line is then $f_{ij} = (\theta_i - \theta_j)/x_{ij}$. A designated \emph{slack bus} absorbs any residual imbalance. This is a linearization of the full AC power flow equations that drops voltage magnitude, reactive power, and resistive losses. All of this is important at the distribution level but not as vital at the transmission level. ERCOT uses DC flow in its own real-time market dispatch, so from our model we can rank which contingency stresses the grid most. However, we \emph{cannot} predict absolute MW on a specific line, especially when (as in our case) the base-case generator dispatch is itself simplified.
+
+\subsection{Dispatch}
+
+A real grid does not pick generators uniformly. Every five minutes ERCOT's Security-Constrained Economic Dispatch (\emph{SCED}) solves an optimization problem that matches generation to demand at lowest cost subject to transmission limits. Our model uses a deliberately simple dispatch (each generator allocated load proportional to its nameplate capacity), which is fine for ranking topological stress but inflates the absolute MW numbers reported in Section~\ref{sec:n1}.
 
 %% ============================================================
 \section{Network Construction}
@@ -89,13 +128,13 @@ Three public sources:
 
 \subsection{Topology extraction}
 
-OSM represents transmission as coordinate sequences, not as a graph: it does not record which lines connect at which substations. Our V3 pipeline (inspired by PyPSA-Eur's OSM extractor~\cite{xiong2025}) projects every substation onto every line's full geometry and splits the line where it passes within 50~m of a substation, capturing mid-span connections that endpoint-based snapping misses. Remaining endpoints are assigned to the nearest substation within 500~m; remaining unsnapped ends that cluster together within 150~m form synthetic T-junction nodes (786 of them, degrees 2 through 12), which represent real branching points where transmission lines fork without a named substation.
+OSM represents transmission as coordinate sequences, not as a graph. Therefore, it does not record which lines connect at which substations. Our V3 pipeline (inspired by PyPSA-Eur's OSM extractor~\cite{xiong2025}) projects every substation onto every line's full geometry and splits the line where it passes within 50~m of a substation, capturing mid-span connections that endpoint-based snapping misses. The remaining endpoints are assigned to the nearest substation within 500~m. For the remaining unsnapped ends that were within 150~m of each other, we constructed synthetic T-junction nodes (786 of them, with degrees varying from 2 through 12). These T-junctions represent real branching points where transmission lines fork without a named substation.
 
-The V3 result---one connected component of 3{,}786 nodes and 4{,}817 edges, bridge ratio 14.4\%---matches published ERCOT structural benchmarks (Table~\ref{tab:topo_health}).
+The V3 result was one connected component of 3{,}786 nodes and 4{,}817 edges with a bridge ratio of 14.4\%. This matches published ERCOT structural benchmarks (Table~\ref{tab:topo_health}).
 
 \begin{table}[h]
 \centering
-\caption{V3 topology vs.\ published ERCOT benchmarks (Aksoy 2018).}
+\caption{V3 topology vs.\ published ERCOT benchmarks~\cite{aksoy2018}.}
 \label{tab:topo_health}
 \begin{tabular}{@{}lrr@{}}
 \toprule
@@ -103,8 +142,8 @@ The V3 result---one connected component of 3{,}786 nodes and 4{,}817 edges, brid
 \midrule
 Substations / real-substation count & 3{,}000 & 3{,}827 \\
 Total nodes (incl.\ split junctions) & 3{,}786 & --- \\
-Edge/node ratio & 1.46 & 1.31 \\
-Mean degree & 2.93 & 2.61 \\
+Edge/node ratio & 1.27 & 1.31 \\
+Mean degree & 2.55 & 2.61 \\
 138 kV E/N ratio & 1.35 & 1.18 \\
 Main-component coverage & 100\% & 100\% \\
 \bottomrule
@@ -113,20 +152,38 @@ Main-component coverage & 100\% & 100\% \\
 
 \subsection{Load and generation}
 
-Load is allocated to 138~kV non-split buses proportional to their county's 2020 population, scaled so that zone totals match published ERCOT system load on the simulation date (52{,}000~MW total; \textsc{North} 23.0~GW, \textsc{Houston} 11.5~GW, \textsc{South} 10.5~GW, \textsc{West} 7.0~GW). The file \texttt{bus\_load.csv} makes this population-weighted load available to every downstream analysis, so every tool in this paper uses the same load surface. Generators are matched to buses via a four-stage pipeline (ERCOT settlement point, EIA-860 coordinates, county, geographic fallback); 1{,}185 units totaling 159~GW nameplate.
+Load is allocated to 138~kV (non-split) buses proportional to their county's 2020 population. It is scaled so that the zone totals match published ERCOT system load on the simulation date (Table~\ref{tab:zone_loads}). Every tool in this paper uses the same load data that was generated. The power generators are matched to buses via a four-stage pipeline (ERCOT market settlement point, then EIA-860 plant coordinates, then county, then geographic fallback); 1{,}185 units totaling 159~GW of capacity.
+
+\begin{table}[h]
+\centering
+\caption{Population-weighted load by ERCOT zone, scaled to 52~GW total on the simulation date.}
+\label{tab:zone_loads}
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Zone} & \textbf{Allocated load (GW)} \\
+\midrule
+\textsc{North}   & 23.0 \\
+\textsc{Houston} & 11.5 \\
+\textsc{South}   & 10.5 \\
+\textsc{West}    & 7.0 \\
+\midrule
+\textbf{Total}   & \textbf{52.0} \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 %% ============================================================
 \section{Structural Diagnosis}
 \label{sec:structural}
 %% ============================================================
 
-This section uses three pure-topology diagnostics (no power-flow physics). Each has a well-known blind spot; together they triangulate the same answer.
+This section uses three topology diagnostics (no power-flow physics). Each has an overly simplified view, but together they reveal a consistent risk.
 
 \subsection{Articulation points and population at risk}
 
-An articulation point is a node whose removal disconnects the graph. Among the 3{,}000 non-synthetic substations in the V3 graph, \textbf{352 are articulation points that carry real load}. These are the nodes where a single failure strands downstream demand entirely---not just reducing capacity, but severing connectivity. Nearly all of them are 138~kV substations in the Houston metropolitan area, where radial sub-transmission runs from the 345~kV backbone out to urban and suburban load pockets.
+An articulation point is a node whose removal disconnects the graph. Among the 3{,}000 non-synthetic substations in the V3 graph, \textbf{352 are articulation points}. These are the nodes where a single failure strands demand. Nearly all of them are 138~kV substations in the Houston metropolitan area, where radial sub-transmission runs from the 345~kV network out to urban and suburban pockets.
 
-This is a pure graph-theoretic finding. It does not require DC flow, a dispatch, or a cascade model. But it does require the correct graph: a bridge ratio of 66\% (the V1/V2 pipelines) would have mis-classified too many buses as articulation points, and a bridge ratio of 0\% (ignoring synthetic junctions) would have understated the count. The V3 ratio of 14.4\% is in the published range for real power grids.
+This analysis is one of the simplest algorithms that we ran and it does not require DC flow, a dispatch, or a cascade model. However, it does require the correct graph. If the nodes and edges were not properly assigned in the construction stage like a bridge ratio of 66\% (the V1/V2 pipelines). This analysis would have misclassified too many buses as articulation points, and a bridge ratio of 0\% (ignoring synthetic junctions) would have understated the count. The V3 ratio of 14.4\% is consistent with a network that mixes a meshed high-voltage network with lower-voltage lines and is well-documented in the physical structure of ERCOT~\cite{aksoy2018}.
 
 \subsection{Attack curves}
 
@@ -134,7 +191,7 @@ Following Albert-Barab\'asi-Jeong~\cite{abj2000}, we track the fraction of nodes
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.85\textwidth]{Realist/ERCOT/figures/attack_curves.png}
+\includegraphics[width=0.85\textwidth]{figures/attack_curves.png}
 \caption{GCC fraction vs.\ fraction of nodes removed, five strategies. The gap between random and degree-targeted removal is the resilience asymmetry.}
 \label{fig:attack_curves}
 \end{figure}
@@ -156,20 +213,56 @@ Population-weighted & 0.38 & 0.855 & 0.725 \\
 \end{tabular}
 \end{table}
 
-Two findings stand out. First, the grid is about 4$\times$ more vulnerable to degree-targeted removal than to random failure: removing the top 5\% of nodes by degree is enough to shatter the GCC. Second, population-targeted removal is the \emph{least} effective attack strategy. High-load substations in the Dallas-Fort Worth and Houston cores are well-meshed precisely because they have been built up to serve dense populations---they are not the network's weak points. The weak points are the low-degree radial nodes downstream of them.
+After running these tests, two findings stand out. First, the grid is about 4$\times$ more vulnerable to degree-targeted removal than to random failure. This makes sense because targeted malicious attacks will prey on preexisting weaknesses. However, the disparity is much greater than we expected. We found that removing the top 5\% of nodes by degree is enough to disrupt the GCC. Second, population-targeted removal is the \emph{least} effective attack strategy. High-load substations in the Dallas--Fort Worth and Houston cores are well-meshed precisely because they have been built up to serve dense populations. In short, they are not the network's weak points.
 
 \subsubsection*{A caveat on the configuration-model null}
 
 For context we compare ERCOT to 20 configuration-model random graphs with the same degree sequence (edges reshuffled while preserving every node's degree). ERCOT's algebraic connectivity is 3.4 standard deviations below the null ($\lambda_2 = 0.001045$ vs.\ null mean $0.024$); GCC after top-5\% degree removal is 79 standard deviations below the null (0.33 vs.\ 0.87).
 
-Those numbers look alarming in isolation, and they are commonly reported this way. But they should not be read as evidence of a uniquely pathological grid. The configuration model has \emph{no} spatial constraint: it freely wires Lubbock to Houston at zero cost. Any real, geographically embedded network---road networks, water distribution, other power grids---looks pathologically fragile against this null because the null cannot express the cost of long-distance edges. We report the z-scores because they are standard in the literature, but we read them as a measurement of ERCOT's \emph{spatial embedding}, not of whether its design is anomalous among real grids. The population-weighted attack curve ($f^* = 0.38$), which is indifferent to embedding, is the more policy-relevant resilience headline.
+These numbers look alarming, but these models are not geographically constrained. They freely wire Lubbock to Houston at zero cost. Any real, geographically embedded network, like road networks, water distribution, and other power grids, perform equally poorly when compared to this metric because these models cannot express the cost of long-distance edges.
+
+\subsection{Unsupervised Link Prediction and Simulated Line Trips}
+To devise a plan of action for locations to make the grid more robust, we ran unsupervised link prediction algorithms using various metrics to find new potential edges to build on the graph. To evaluate the effectiveness of each potential edge, we built a simulation pipeline that assigns failure probabilities to \textit{edges} using Eq. \ref{eq:failure}. $V_{norm}, L_{norm},$ and $C_{norm}$ denote the normalized voltage, length, and capacities of the lines, as all factors contribute to the probability of line failure. The heuristic we use is that failure probability increases proportionally to length (longer lines mean more failure points), and inversely proportionally to voltage and capacity (smaller lines are used less). Weightings of the three factors were chosen arbitrarily. Finally, the simulation operates by randomly sampling line failures for every line given the assigned probabilities, and the total load loss is calculated.
+
+\begin{equation}
+\label{eq:failure}
+ P_{fail} = 0.01 + 0.14 \times [0.4(1-V_{norm}) + 0.3L_{norm} + 0.3(1-C_{norm})]
+\end{equation}
+
+After finding the best 5 candidates for a new edge using Jaccard Coefficient and Common Neighbors, we ran 50 trials with the given simulation setup. Values for the power loss reduced as well as the network connectivity improvement as a result of their construction can be found in Fig \ref{fig:sim}. Power loss reduction was defined by how much average power was lost in the 50 trials relative to the 50 baseline trials that did not contain any of the new links. Network connectivity improvement is defined by $1-|CC|/|N|$ where $CC$ represents the largest connected component. Nodes are listed with their IDs for space conservation; the table of their names can be found in Table \ref{tab:node_pairs}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{sim.png}
+    \caption{Network Connectivity Improvement and Power Loss Reduction in 5 Best Predicted Links}
+    \label{fig:sim}
+\end{figure}
+\begin{table}[h]
+\centering
+\caption{Selected node pairs and corresponding substations by region.}
+\label{tab:node_pairs}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Region} & \textbf{Node pair} & \textbf{Substation pair} \\
+\midrule
+North & 2602 -- 4157 & OSM\_2602 $\leftrightarrow$ OSM\_4157 \\
+North & 347 -- 1485  & Loyola\_Substation $\leftrightarrow$ F\_Yturria\_Substation \\
+\midrule
+South & 280 -- 3633  & Heidelberg\_Substation $\leftrightarrow$ OSM\_3633 \\
+South & 2550 -- 2687 & OSM\_2550 $\leftrightarrow$ OSM\_2687 \\
+South & 2362 -- 2366 & OSM\_2362 $\leftrightarrow$ OSM\_2366 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The most notable finding is that the links predicted through the two described metrics perform quite poorly under the simulation setup. The range of results varies from edge 2602--4157 improving grid connection by more than 12{,}000~MW to 2362--2366 performing 16{,}000~MW worse than the baseline. This is incredibly counterintuitive, as adding lines should hypothetically increase the connectivity of the grid. However, this could be a manifestation of Braess's Paradox in the context of electric grids. The network connectivity graph tells a similar story, albeit the magnitude of change is so small that we can conclude that differences are due to simulation noise and not an inherently advantageous connection brought on by one of the links.
+
+Moreover, these results could generally be affected by the limited number of simulations and failure probabilities inflated to higher-than-real values. Compute times were high and rerunning simulations of the given trial size were not possible within our scope. It is also important to remember that, like the attack curves, these predicted links ignore geography and may not be realistic to build under economic constraints.
 
 \subsection{Spectral bisection and bottleneck capacity}
 \label{sec:spectral}
 
-The graph Laplacian $\mathbf{L} = \mathbf{D} - \mathbf{A}$ has smallest eigenvalue 0 (the trivial eigenvector of all 1s). The second eigenvalue $\lambda_2$ (the algebraic connectivity) measures how hard the graph is to bisect: $\lambda_2 = 0$ means the graph is already disconnected. For ERCOT $\lambda_2 = 1.045 \times 10^{-3}$.
-
-The Fiedler vector (the eigenvector associated with $\lambda_2$) partitions the graph into two groups by the sign of each node's component. For ERCOT, the bipartition is:
+From the graph Laplacian $\mathbf{L} = \mathbf{D} - \mathbf{A}$, we use the second eigenvalue $\lambda_2$ (the algebraic connectivity) to measure how hard the graph is to bisect: $\lambda_2 = 0$ means the graph is already disconnected, and small $\lambda_2$ means there is a low-conductance cut somewhere. The Fiedler vector (the eigenvector associated with $\lambda_2$) partitions the graph into two groups by the sign of each node's component. For ERCOT, the bipartition lines up cleanly with the four operational zones (Table~\ref{tab:fiedler}).
 
 \begin{table}[h]
 \centering
@@ -189,18 +282,25 @@ Total & 3{,}786 & 2{,}174 & 1{,}612 \\
 \end{tabular}
 \end{table}
 
-We emphasize what this means and what it does not mean. The Fiedler vector produces \emph{one} cut, not a four-way clustering. An earlier draft of this work reported that the Fiedler vector ``recovers the four ERCOT zones with $>$95\% purity.'' That was a misinterpretation: one bipartition cannot recover four clusters. What is actually true is that the single minimum-conductance cut runs between the North/West and Houston/South halves of Texas, and the zones on each side are close to unanimous about which side they belong to.
-
-The cut is crossed by \textbf{20 bottleneck edges}, of which 18 have published MVA ratings (the other two inherit the build-pipeline's ``unknown rating'' sentinel of 999{,}999 MVA, which we exclude from the sum). The 18 rated edges carry $\Sigma = 20{,}300$~MVA, roughly \textbf{0.55\%} of the grid's total rated capacity (exclusive of sentinel ratings). The Fiedler cut conductance is $\phi = 4.83 \times 10^{-3}$, and the Cheeger inequality $\lambda_2/2 \leq \phi \leq \sqrt{2\lambda_2}$ gives the bounds $[5.23 \times 10^{-4},\, 0.152]$.
+It is easy to misinterpret these findings. The Fiedler vector produces \emph{one} cut, not a four-way clustering. What is actually true is that the minimum-conductance cut runs between the North/West and Houston/South halves of Texas, and the zones on each side are close to unanimous about which side they belong to.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{Realist/ERCOT/figures/spectral_analysis.png}
-\caption{Left: Fiedler bipartition coloring (red = positive side, blue = negative side). Right: the 20 bottleneck edges. The geographic interpretation is that the backbone is loosely stitched between the \{\textsc{North}, \textsc{West}\} and \{\textsc{Houston}, \textsc{South}\} regions; 18 rated edges carrying 20~GVA mediate that coupling.}
-\label{fig:spectral}
+\includegraphics[width=0.75\linewidth]{figures/spectral_fiedler.png}
+\caption{Fiedler value distribution by zone. Each bar shows the node count at a given Fiedler vector value, colored by ERCOT operational zone. The dashed vertical line marks the Fiedler cut at zero, which cleanly separates \{\textsc{Houston}, \textsc{South}\} (negative side) from \{\textsc{North}, \textsc{West}\} (positive side). The cut is 2-way, not 4-way.}
+\label{fig:spectral_fiedler}
 \end{figure}
 
-The spectral picture agrees with the articulation-point picture in a geographically specific way: the half of the grid that contains the articulation-point concentration (\textsc{Houston}/\textsc{South}) is separated from the other half by a narrow capacity corridor.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/spectral_bottleneck.png}
+\caption{Fiedler bipartition and bottleneck edges plotted geographically. Red nodes belong to the \{\textsc{North}, \textsc{West}\} positive side; blue nodes belong to the \{\textsc{Houston}, \textsc{South}\} negative side. The 20 bottleneck edges (shown as black lines) cross the Fiedler cut and collectively carry approximately 20~GVA, mediating nearly all coupling between the two halves of the network.}
+\label{fig:spectral_bottleneck}
+\end{figure}
+\newpage
+
+
+The spectral picture (Fig \ref{fig:spectral_fiedler}) agrees with the articulation-point picture in a geographically specific way: the half of the grid that contains the articulation-point concentration (\textsc{Houston}/\textsc{South}) is separated from the other half by a narrow capacity corridor.
 
 %% ============================================================
 \section{N--1 Contingency Stress}
@@ -209,28 +309,23 @@ The spectral picture agrees with the articulation-point picture in a geographica
 
 \subsection{Why N--1, not cascade}
 
-An earlier version of this work ran iterative DC-flow cascade simulations, tripping lines until convergence. The cascades routinely terminated with 200+ lines tripped after a single contingency, and MW shed was weakly \emph{negatively} correlated with edge betweenness. Both outcomes traced to a base-case dispatch problem: our toy dispatch (generation proportional to PMax) leaves 191 branches already overloaded before any contingency, so the first trip pushes the system into an unrecoverable feedback loop. Iterative cascade dynamics on a badly initialized base case do not measure what they are supposed to measure.
+In our earlier work, we tried to simulate how a single failure could cause a massive chain reaction across the grid, but the results did not hold up. The problem started with how we set up the power plants (generation nodes). Since we could not use real-world economic data, we simplified and assigned power based on the maximum capacity of each plant. This created a situation where 191 transmission lines were already overloaded before we even started the simulation. OOPS! Since the grid technically already broken, turning off just one line pushed the entire system into a loop that caused over 200 lines to fail instantly.
 
-We replaced the iterative cascade with a single-step N--1 stress test, which is the standard reliability criterion NERC and ERCOT use for transmission planning. For each of 199 sampled lines (top 100 by edge betweenness plus 100 uniformly random), we trip the line, re-solve DC power flow once on the reduced network, and record the post-trip maximum overload ratio, the number of overloaded branches, the total MW-over-rating, and whether the trip islanded any load. We do \emph{not} iterate further trips. This gives a clean, reproducible ranking of which contingencies stress the grid most on the first domino, without the pathological feedback of cascade iteration on a toy base case.
+This led to some strange findings, such as minor lines appearing more dangerous than the major transmission highways for electricity. We realized that trying to study a chain reaction on a grid that was already failing would not provide a clear picture of how the system actually works. To fix this, we moved away from this style of simulation in favor of a single-step $N-1$ stress test. This is the standard method used by professional organizations like ERCOT and NERC to ensure the grid can handle a single unexpected failure without failing entirely.
+
+For each of 200 sampled lines (top 100 by edge betweenness plus 100 uniformly random), we trip the line, re-solve DC power flow once on the reduced network, and record the post-trip maximum overload ratio, the number of overloaded branches, the total MW-over-rating, and whether the trip islanded (disconnected entirely) any load. We do \emph{not} iterate further trips. This gives a clean, reproducible ranking of which contingencies stress the grid most on the first domino, without the feedback of cascade iteration on a the original tests.
 
 \subsection{What the DC model does and does not capture}
 
-The DC approximation holds $f_{ij} = (\theta_i - \theta_j)/x_{ij}$ with $\mathbf{B}\boldsymbol{\theta} = \mathbf{P}$. It ignores reactive power, voltage magnitude, line losses, and thermal transients; it linearizes the sine in the power flow equations; and it assumes a slack bus absorbs any imbalance. For high-voltage transmission-level economic dispatch these assumptions are standard (ERCOT's own real-time SCED uses DC flow). They are acceptable for ranking contingencies by topological-plus-impedance severity, which is what we want here. They are \emph{not} acceptable for predicting actual MW flows on specific lines in real ERCOT operation, because our dispatch is a toy.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\textwidth]{Realist/ERCOT/figures/n1_stress.png}
-\caption{N--1 stress distribution across 199 sampled contingencies. Left: histogram of post-contingency total MW-over-rating. Right: scatter of post-contingency stress against initiating-line edge betweenness (Pearson $r = +0.32$).}
-\label{fig:n1}
-\end{figure}
+Section~\ref{sec:background} introduces the DC power flow approximation in general terms. The relevant caveat for this section's results is narrower: our base-case dispatch is a model (Section~\ref{sec:background}.6), so absolute MW flows on specific lines are not faithful to real ERCOT operation. The post-trip overload \emph{ranking} across the 199 sampled contingencies is what we ask the model to provide, and DC flow with a uniform-share dispatch is sufficient for that.
 
 \subsection{Results}
 
-Of the 199 contingencies sampled, 13 islanded load (bridge removals---these are articulation-edge contingencies and by definition strand their downstream side). The remaining 186 non-islanding contingencies produced varying levels of post-trip stress. The top-ranked lines by total MW-over-rating are:
+Of the 199 contingencies sampled, 13 islanded load (these were bridge removals and were previously identified as articulation-edges, so by definition strand their downstream side). The remaining 186 non-islanding contingencies produced varying levels of post-trip stress. The top-ranked lines by total MW-over-rating are:
 
 \begin{table}[h]
 \centering
-\caption{Top 10 single-contingency stress contributors (of 199 sampled). All ten are 345~kV lines clustered in the Houston backbone.}
+\caption{Top 10 single-contingency stress contributors (of 199 sampled). All ten are 345~kV lines clustered in the Houston network.}
 \label{tab:n1}
 \begin{tabular}{@{}lrrrl@{}}
 \toprule
@@ -250,64 +345,35 @@ L1632\_2842\_345 & 5.95 & 197 & 30{,}145 & no \\
 \end{tabular}
 \end{table}
 
-Two observations. First, the top ten are a geographically tight cluster of 345~kV lines in the Houston backbone---the same region Sections~\ref{sec:structural} flagged. Second, the correlation between post-trip stress and the initiating line's edge betweenness is $r = +0.32$ (positive, modest). This is physically intuitive: the lines that carry the most load in the base case are the ones whose loss stresses the rest of the system. A strong negative correlation (as reported in the earlier cascade draft) would have required a physical explanation; a modest positive correlation is what first principles expect.
+Two observations. First, the top ten are a geographically tight cluster of 345~kV lines in the Houston network---the same region Section~\ref{sec:structural} flagged. Second, the correlation between post-trip stress and the initiating line's edge betweenness is $r = +0.32$ (positive, modest). This is physically intuitive: the lines that carry the most load in the base case are the ones whose loss stresses the rest of the system. A strong negative correlation (as reported in the earlier cascade draft) would have required a physical explanation; a modest positive correlation is what first principles expect.
 
-The absolute MW-over-rating numbers (30~GW) should not be read as predictions of real ERCOT cascade size. They are inflated by the base-case dispatch toy (191 branches overloaded at $t=0$, worst ratio 5.95$\times$) and should be interpreted as severity \emph{ranks}, not absolute values.
-
-%% ============================================================
-\section{Upgrade Ranking: Articulation Bypasses}
-\label{sec:upgrades}
-%% ============================================================
-
-The three diagnostics above all point at the same failure mode: a small number of high-leverage nodes and corridors whose loss disproportionately hurts the grid. This section asks the concrete follow-up: \emph{which upgrades have the highest ratio of MW-at-risk cleared to new line kilometers?}
-
-For each of the 352 load-carrying articulation points, we identify the cheapest feasible bypass: a new edge between two nodes on opposite sides of the cut that the articulation point currently mediates. Cost is proxied by the haversine distance between the two endpoints (we avoid committing to a voltage tier; the ranking is by length, not dollars). Value is the MW of downstream population-weighted load that would no longer be stranded if the articulation point failed.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\textwidth]{Realist/ERCOT/figures/upgrade_ranking.png}
-\caption{Top 30 articulation-bypass candidates ranked by MW-per-kilometer efficiency. Houston-area 138~kV substations dominate: adding a single 2.3~km line next to Davson Substation clears 583 MW of isolation risk.}
-\label{fig:upgrades}
-\end{figure}
-
-\begin{table}[h]
-\centering
-\caption{Top 10 articulation-bypass upgrades, ranked by MW-cleared per new-line km.}
-\label{tab:upgrades}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-\textbf{Articulation bus} & \textbf{Bypass length (km)} & \textbf{MW at risk} & \textbf{MW/km} \\
-\midrule
-Davson Substation            & 2.30 & 583 & 253 \\
-South Channel Substation     & 2.02 & 416 & 206 \\
-Hardy Substation             & 3.86 & 666 & 172 \\
-Blodgett Substation          & 3.55 & 499 & 141 \\
-OSM\_2487 (T-junction)       & 1.49 & 201 & 134 \\
-East Side Substation         & 3.17 & 416 & 131 \\
-Crockett Substation          & 1.35 & 166 & 123 \\
-North Lake Substation        & 2.78 & 248 & 89  \\
-OSM\_2842 (T-junction)       & 4.05 & 331 & 82  \\
-University Substation        & 4.10 & 333 & 81  \\
-\midrule
-\textbf{Top 10 total}        & \textbf{28.7} & \textbf{3{,}859} & \textbf{134} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Read the totals directly: \textbf{29 km of new 138~kV line---roughly \$45~M at 2024 ERCOT RTP unit costs, including a 1.3$\times$ right-of-way multiplier}---would eliminate the articulation-point status of 10 substations and roughly 3{,}860~MW of load-at-risk. That is the grid-resilience bang-per-buck frontier. Every one of the top ten is a Houston-area 138~kV substation or junction, and every upgrade is under 5~km.
-
-The 345~kV corridor upgrades suggested by the spectral analysis (reinforcing the 18 bottleneck edges across the Fiedler cut) address a different fragility: coupling capacity between the North/West and Houston/South halves. They are more expensive per mile and interact with SCED market dispatch constraints (WESTEX export being the canonical example), so we flag them as a second tier without attempting to rank specific lines within that corridor.
+The absolute MW-over-rating numbers (30~GW) should not be read as predictions of real ERCOT cascade size. They are inflated by the base-case dispatch model (191 branches overloaded at $t=0$, worst ratio 5.95$\times$) and should be interpreted as severity \emph{ranks}, not absolute values.
 
 %% ============================================================
 \section{Upper Bound: A Topology-Optimal Grid}
 \label{sec:optimal}
 %% ============================================================
 
-The preceding four sections identify targeted fixes. This section provides an upper bound: what would a fresh, topology-first design buy, holding total construction cost fixed? The answer is a useful sanity check on whether the targeted upgrades in Section~\ref{sec:upgrades} are close to the achievable frontier.
+The preceding diagnostics identify targeted fixes. This section provides an upper bound: what would a fresh, topology-first design buy, holding total construction cost fixed?
 
 \subsection{Method}
 
-We compute the replacement cost of the real ERCOT grid at 2024 ERCOT RTP unit costs---\$1.553~M/km for 138~kV, \$1.304~M/km for 345~kV single-circuit, \$2.609~M/km for 345~kV double-circuit, all multiplied by a 1.3$\times$ right-of-way factor---summed over every branch's haversine distance. That gives \textbf{\$88.8~B}, consistent with ERCOT's published \$5~B/yr transmission cost-of-service implying an \$80--100~B rate base~\cite{lifepowered2026}.
+We computed the replacement cost of the real ERCOT grid using the 2024 ERCOT Regional Transmission Plan's unit costs~\cite{ercot2024rtp} (Table~\ref{tab:unit_costs}), summed over every branch's haversine length and multiplied by a 1.3$\times$ right-of-way (ROW) factor that accounts for land acquisition and access roads. The total is \textbf{\$88.8~B}, consistent with ERCOT's published \$5~B/yr transmission cost-of-service, which implies an \$80--100~B installed rate base~\cite{lifepowered2026}.
+
+\begin{table}[h]
+\centering
+\caption{2024 ERCOT RTP transmission unit costs used for the budget calculation. Each line's cost is its haversine length times the unit cost, times a 1.3$\times$ right-of-way multiplier.}
+\label{tab:unit_costs}
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Voltage tier} & \textbf{Unit cost} \\
+\midrule
+138 kV single-circuit & \$1.553 M/km \\
+345 kV single-circuit & \$1.304 M/km \\
+345 kV double-circuit & \$2.609 M/km \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 We then design a greedy topology for the same \$88.8~B:
 
@@ -330,14 +396,14 @@ The attack-curve comparison is apples-to-apples if we restrict attacks to the 3{
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{Realist/ERCOT/figures/real_vs_optimal_attack_curves.png}
+\includegraphics[width=\textwidth]{figures/real_vs_optimal_attack_curves.png}
 \caption{Attack curves: real ERCOT (solid) vs.\ topology-optimal grid at the same cost (dashed). Both grids are attacked by removing fractions of their 3{,}000 real substations. Degree-attack resilience improves from $f^* = 0.06$ to $f^* = 0.14$; population-weighted resilience drops slightly.}
 \label{fig:real_vs_opt}
 \end{figure}
 
 \begin{table}[h]
 \centering
-\caption{Real vs.\ topology-optimal grid (same \$88.8~B budget with 1.3$\times$ ROW multiplier on both).}
+\caption{Real vs.\ topology-optimal grid (same \$88.8~B budget with 1.3$\times$ ROW multiplier on both). Per Section~\ref{sec:optimal}.2, $f^*$ values here are computed by attacking only the 3{,}000 real substations in each grid (synthetic split junctions remain in the topology but are never removed); this is why degree-targeted $f^* = 0.06$ here vs.\ $0.05$ in Table~\ref{tab:attack}, which attacked all 3{,}786 nodes.}
 \label{tab:real_vs_opt}
 \begin{tabular}{@{}lrrl@{}}
 \toprule
@@ -365,37 +431,37 @@ The optimizer spends its budget on many short 138~kV local mesh connections rath
 
 \subsection{What the comparison shows and does not show}
 
-It shows that, holding total line cost fixed, reallocating spend from a few long-haul 345~kV corridors to many local 138~kV mesh additions approximately doubles the grid's resilience to coordinated hub-targeted attack.
+It shows that, holding total line cost fixed, reallocating budget from a few long-haul 345~kV corridors to many local 138~kV mesh is the best strategy for increasing resilience. It approximately doubles the grid's resilience to coordinated hub-targeted attack.
 
-It does not show that ERCOT built the wrong grid. Several classes of constraint are absent from our objective and would push a realistic optimum back toward the long-haul 345~kV spine:
+It does not show that ERCOT built the wrong grid. Several classes of constraints are not represented in the optimization and would likely push the optimal graph back towards the real world representation, which is based around the long-haul 345~kV spine:
 
 \begin{itemize}
-    \item \textbf{Wind export.} The WEST-to-NORTH 345~kV backbone exists because west Texas wind capacity (roughly 30~GW) must reach load centers in the North. A 138~kV mesh does not carry GW-scale long-distance power flows.
+    \item \textbf{Wind export.} The \textsc{West}-to-\textsc{North} 345~kV network exists because west Texas wind capacity (roughly 30~GW) must reach load centers in the North. A 138~kV mesh does not carry GW-scale long-distance power flows.
     \item \textbf{Voltage support and losses.} 138~kV lines have worse losses over long distances and require more reactive power compensation. DC-flow-only $\lambda_2$ optimization ignores both.
-    \item \textbf{Substation thermal limits.} The optimizer adds edges without checking whether the endpoint substations can carry the added flow. In practice many ``free'' edges in our design would require substation upgrades we do not cost.
+    \item \textbf{Substation thermal limits.} The optimizer adds edges without checking whether the endpoint substations can carry the added flow. In practice many free edges in our design would require substation upgrades which we do not factor into the cost.
     \item \textbf{The optimizer is greedy, single-objective, and deterministic.} It does not consider N--1 reliability, economic dispatch, or generation location. A production transmission plan would trade all of these off simultaneously.
 \end{itemize}
 
-The headline comparison (degree-attack $f^*$ doubles) is real. The inference that ERCOT should have built a different grid is not, because the missing constraints are the ones that would dominate an actual planning problem.
+The headline comparison (degree-attack $f^*$ doubles) is real. The inference that ERCOT should have built a completely different grid is not. We are working on assumptions, missing critical data, and simplified constraints which all matter when determining the actual planning problem.
 
 %% ============================================================
 \section{Conclusion}
 %% ============================================================
 
-Four independent diagnostics---articulation-point analysis, attack curves, Fiedler-vector spectral bisection, and single-step N--1 contingency stress---agree on a specific geographic answer about where the ERCOT transmission network is structurally fragile. The fragility is not uniform. It is concentrated in the Houston 138~kV sub-transmission, where 352 load-carrying articulation points each strand downstream load on failure, and in a small number of 345~kV corridors crossing the Fiedler cut between North/West and Houston/South Texas.
+We completed a total of four independent diagnostics. Articulation-point analysis, attack curves, Simulations with Fiedler-vector spectral bisection, and single-step N--1 contingency stress which agree on a specific geographic answer about where the ERCOT transmission network is structurally fragile. The fragility is not uniform. It is concentrated in the Houston 138~kV sub-transmission, where 352 load-carrying articulation points each strand downstream load on failure, and in a small number of 345~kV corridors crossing the Fiedler cut between North/West and Houston/South Texas.
 
-The policy-relevant takeaway is not the existence of fragility but its concentration. The top ten articulation-bypass upgrades clear 3{,}860~MW of isolation risk over roughly 29~km of new 138~kV line---on the order of \$45~M at current ERCOT construction rates. That is two orders of magnitude smaller than the \$88.8~B total network replacement cost. A planner cannot fix a grid by rebuilding it; the targeted-upgrade ranking says they may not have to.
+The policy-relevant takeaway is not the existence of fragility but its concentration. The top ten articulation-bypass upgrades clear 3{,}860~MW of isolation risk over roughly 29~km of new 138~kV line. Which is on the order of \$45~M at current ERCOT construction rates. That is two orders of magnitude smaller than the \$88.8~B total network replacement cost. A planner cannot fix a grid by rebuilding it; the targeted-upgrade ranking says they may not have to.
 
-The topology-optimal-grid exercise (Section~\ref{sec:optimal}) bounds what pure topology optimization under a fixed budget can achieve: roughly doubled degree-attack resilience, concentrated gains in local mesh connectivity, and no free lunch on population-weighted resilience or on the voltage-level constraints the optimizer ignores. The upper bound matters mainly as a reality check: it confirms that ERCOT's largest structural improvements available under a fixed dollar spend look quantitatively similar to what the targeted articulation-bypass ranking identifies---more 138~kV mesh in the Houston-area radial sub-transmission. The targeted program is the cheap version of the same diagnosis.
+The topology-optimal-grid exercise (Section~\ref{sec:optimal}) bounds what pure topology optimization under a fixed budget can achieve: roughly doubled degree-attack resilience, concentrated gains in local mesh connectivity, and no free lunch on population-weighted resilience or on the voltage-level constraints. The optimized graph we constructed matters mainly as a reality check: it confirms that ERCOT's largest structural improvements available under a fixed dollar spend look quantitatively similar to what the targeted articulation-bypass ranking identifies---more 138~kV mesh in the Houston-area radial sub-transmission. The targeted program is the cheap version of the same diagnosis.
 
-Finally, several of our tools have well-known blind spots. Configuration-model nulls flag spatial embedding as pathology. DC-flow on a toy dispatch inflates absolute MW numbers. Greedy $\lambda_2$ optimization ignores voltage physics. We report each of those blind spots where it matters, because a network-analytic diagnosis of a real system is only as useful as its awareness of where its models stop being faithful.
+Finally, several of our tools have well-known blind spots. Configuration-model nulls flag spatial embedding as pathology. DC-flow on a model dispatch inflates absolute MW numbers. Greedy $\lambda_2$ optimization ignores voltage physics. We report each of those blind spots where it matters, because a network-analytic diagnosis of a real system is only as useful as its awareness of where its models stop being faithful.
 
 %% ============================================================
 \section*{Acknowledgments}
 \addcontentsline{toc}{section}{Acknowledgments}
 %% ============================================================
 
-Network construction builds on the Dartboard project (independent work by Emmett Souder under Professor Ronnie Sircar). DC-SCED calibration uses the Vatic/Egret solver (Texas A\&M) on Princeton's Adroit cluster. OSM via the Overpass API; ERCOT data via ercot.com; EIA-860 via the U.S.\ Energy Information Administration. Analysis in Python (NetworkX, NumPy, SciPy, Matplotlib). Implementation assisted by Claude Code (Anthropic).
+Network construction builds on the Dartboard project (independent work by Emmett Souder under Professor Ronnie Sircar). OSM via the Overpass API; ERCOT data via ercot.com; EIA-860 via the U.S.\ Energy Information Administration. Analysis in Python (NetworkX, NumPy, SciPy, Matplotlib). Implementation assisted by Claude Code (Anthropic).
 
 %% ============================================================
 \section*{Data and Code Availability}

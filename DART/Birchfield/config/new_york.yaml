@@ -1,0 +1,38 @@
+# New York region configuration for Dartboard synthetic grid pipeline.
+
+region:
+  name: "New York"
+  state_code: "NY"
+
+data_sources:
+  gazetteer_path: "data/raw/census_gazetteer_2020.txt"
+  eia_dir: "data/eia8602023"
+  zcta_prefixes: ["10", "11", "12", "13", "14"]
+
+census:
+  load_factor_mw_per_person: 0.002
+  acs_year: 2020
+
+substations:
+  count: 600
+
+generation:
+  capture_radius_miles: 7
+  status_filter: "OP"
+
+voltage:
+  levels: [345, 115]  # kV, ordered high to low
+  pct_substations_with_high_voltage:
+    345: 0.15  # 15% of substations get 345 kV buses
+    115: 1.0   # All substations get 115 kV buses
+  selection_weight_metric: "max_load_or_generation"
+
+topology:
+  target_mn_ratio: 1.22
+  random_seed: 42
+
+bounds:
+  lat_min: 40.0
+  lat_max: 45.5
+  lon_min: -80.0
+  lon_max: -71.0

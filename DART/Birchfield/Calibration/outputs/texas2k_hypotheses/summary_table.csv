@@ -1,0 +1,13 @@
+num_nodes,num_edges,mn_ratio,mean_degree,meshedness,deg1_frac,deg2_frac,deg3plus_frac,mean_length_km,median_length_km,intersection_rate,composite_error,experiment,voltage_class,elapsed_sec,description
+182,285,1.5659,3.132,0.2897,0.0385,0.2637,0.6978,41.91,27.39,0.0211,0.3079,1_baseline,500kv,0.3,"Default Birchfield params, DC enabled"
+1549,2580,1.6656,3.331,0.3337,0.0336,0.2427,0.7237,17.6,13.29,0.0481,0.1607,1_baseline,115kv,14.8,"Default Birchfield params, DC enabled"
+182,285,1.5659,3.132,0.2897,0.0,0.3022,0.6978,43.31,27.39,0.014,0.3776,2_radial_fix,500kv,0.3,Hypothesis 2: radial threshold = 1 (degree <= 1 gets bonus)
+1549,2580,1.6656,3.331,0.3337,0.0019,0.266,0.7321,17.72,13.26,0.0388,0.2844,2_radial_fix,115kv,14.6,Hypothesis 2: radial threshold = 1 (degree <= 1 gets bonus)
+182,285,1.5659,3.132,0.2897,0.0769,0.3187,0.6044,46.65,29.24,0.007,0.1788,3_biconn_fix,500kv,0.4,Hypothesis 4: w_conn_overall on articulation points only
+1549,2580,1.6656,3.331,0.3337,0.0768,0.2705,0.6527,20.71,14.13,0.1062,0.0819,3_biconn_fix,115kv,15.5,Hypothesis 4: w_conn_overall on articulation points only
+182,285,1.5659,3.132,0.2897,0.0604,0.3297,0.6099,48.05,29.24,0.0,0.2092,4_combined,500kv,0.4,Hypotheses 2+4: radial fix + biconnectivity fix
+1549,2580,1.6656,3.331,0.3337,0.0291,0.2647,0.7063,18.88,13.63,0.0484,0.1837,4_combined,115kv,15.2,Hypotheses 2+4: radial fix + biconnectivity fix
+182,285,1.5659,3.132,0.2897,0.0604,0.3297,0.6099,48.05,29.24,0.0,0.2092,5_combined_dc115,500kv,0.3,"Combined + DC flow enabled at 115 kV, K=5"
+1549,2580,1.6656,3.331,0.3337,0.0291,0.2647,0.7063,18.88,13.63,0.0484,0.1837,5_combined_dc115,115kv,15.3,"Combined + DC flow enabled at 115 kV, K=5"
+182,285,1.5659,3.132,0.2897,0.0604,0.3297,0.6099,48.05,29.24,0.0,0.2092,6_combined_dc115_k1,500kv,0.4,Combined + DC flow at 115 kV + K=1
+1549,2580,1.6656,3.331,0.3337,0.0291,0.2647,0.7063,18.88,13.63,0.0484,0.1837,6_combined_dc115_k1,115kv,15.2,Combined + DC flow at 115 kV + K=1

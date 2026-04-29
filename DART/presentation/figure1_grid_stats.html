@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dartboard ERCOT — Grid Summary</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gas:     #F97316;
+    --wind:    #38BDF8;
+    --solar:   #FBBF24;
+    --coal:    #94A3B8;
+    --nuclear: #A78BFA;
+    --storage: #34D399;
+    --bg:      #FFFFFF;
+    --surface: #F8FAFC;
+    --border:  #E2E8F0;
+    --text:    #0F172A;
+    --muted:   #64748B;
+    --accent:  #1D4ED8;
+    --green:   #16A34A;
+    --shadow:  0 1px 3px rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.04);
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 40px 48px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ── Header ─────────────────────────────────────────────────── */
+  .page-header { margin-bottom: 28px; border-bottom: 2px solid var(--accent); padding-bottom: 16px; }
+  .page-header h1 {
+    font-size: 22px; font-weight: 700; letter-spacing: -0.3px; color: var(--text);
+  }
+  .page-header p {
+    font-size: 13px; color: var(--muted); margin-top: 4px; font-weight: 400;
+  }
+  .badge {
+    display: inline-block; background: var(--accent); color: #fff;
+    font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px;
+    margin-left: 10px; vertical-align: middle; letter-spacing: 0.3px;
+  }
+
+  /* ── Hero Metrics Strip ──────────────────────────────────────── */
+  .hero-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .hero-card .value {
+    font-size: 26px; font-weight: 700; letter-spacing: -1px; color: var(--accent);
+    line-height: 1;
+  }
+  .hero-card .unit { font-size: 12px; font-weight: 500; color: var(--muted); display: inline; }
+  .hero-card .label {
+    font-size: 11px; color: var(--muted); margin-top: 5px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .hero-card.green .value { color: var(--green); }
+
+  /* ── Grid ────────────────────────────────────────────────────── */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+  }
+  .chart-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+  }
+  .panel-title {
+    font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.6px; color: var(--muted); margin-bottom: 16px;
+  }
+
+  /* ── Capacity bars (custom, no Chart.js) ─────────────────────── */
+  .fuel-bars { display: flex; flex-direction: column; gap: 10px; }
+  .fuel-row { display: flex; align-items: center; gap: 10px; }
+  .fuel-label {
+    width: 88px; font-size: 12px; font-weight: 500; color: var(--text);
+    flex-shrink: 0; text-align: right;
+  }
+  .fuel-bar-wrap {
+    flex: 1; background: var(--border); border-radius: 4px; height: 20px;
+    position: relative; overflow: hidden;
+  }
+  .fuel-bar {
+    height: 100%; border-radius: 4px;
+    display: flex; align-items: center; padding-left: 8px;
+    font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.92);
+    white-space: nowrap;
+    transition: width 0.8s ease;
+  }
+  .fuel-bar .mw { opacity: 0.85; }
+  .fuel-units {
+    width: 70px; font-size: 11px; color: var(--muted); flex-shrink: 0; text-align: right;
+  }
+
+  /* ── Topology comparison ─────────────────────────────────────── */
+  .topo-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .topo-table th {
+    font-size: 10.5px; font-weight: 600; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 4px 8px; border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+  .topo-table th:not(:first-child) { text-align: right; }
+  .topo-table td {
+    padding: 7px 8px; border-bottom: 1px solid #F1F5F9;
+    color: var(--text); vertical-align: middle;
+  }
+  .topo-table td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+  .topo-table td.metric { font-weight: 500; color: var(--muted); font-size: 11.5px; }
+  .topo-table td.model { font-weight: 700; color: var(--accent); }
+  .topo-table td.real { color: var(--muted); }
+  .topo-table tr:last-child td { border-bottom: none; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+  .pass-badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    background: #DCFCE7; color: #15803D;
+    padding: 2px 7px; border-radius: 10px;
+  }
+  .above-badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    background: #EFF6FF; color: #1D4ED8;
+    padding: 2px 7px; border-radius: 10px;
+  }
+
+  /* ── Mini bar charts (degree / length) ──────────────────────── */
+  .chart-wrap { position: relative; height: 160px; }
+
+  /* ── Validation strip at bottom ─────────────────────────────── */
+  .val-section { margin-top: 16px; }
+  .val-title {
+    font-size: 11px; font-weight: 600; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;
+  }
+  .val-days { display: flex; gap: 8px; flex-wrap: wrap; }
+  .val-day {
+    display: flex; flex-direction: column; align-items: center;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 10px; min-width: 70px;
+    font-size: 10.5px;
+  }
+  .val-day .day-label { font-weight: 600; color: var(--text); font-size: 11px; }
+  .val-day .day-gw { color: var(--muted); font-size: 10px; margin-top: 1px; }
+  .val-day .day-shed { font-weight: 700; margin-top: 4px; font-size: 12px; }
+  .val-day .day-verdict {
+    font-size: 9.5px; font-weight: 700; padding: 1px 6px; border-radius: 8px; margin-top: 3px;
+  }
+  .pass  { background: #DCFCE7; color: #15803D; }
+  .part  { background: #FEF9C3; color: #854D0E; }
+  .fail  { background: #FEE2E2; color: #991B1B; }
+  .pass-border  { border-color: #86EFAC; }
+  .part-border  { border-color: #FDE68A; }
+  .fail-border  { border-color: #FECACA; }
+  .cal-tag {
+    font-size: 9px; color: var(--muted); margin-top: 2px; font-style: italic;
+  }
+
+  /* ── Footer ──────────────────────────────────────────────────── */
+  .fig-footer {
+    margin-top: 18px; font-size: 10.5px; color: var(--muted);
+    border-top: 1px solid var(--border); padding-top: 10px;
+    display: flex; justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ───────────────────────────────────────────────────── -->
+<div class="page-header">
+  <h1>Dartboard ERCOT <span class="badge">V3 · T135 Config</span></h1>
+  <p>DC-SCED model built from public data only — OpenStreetMap · ERCOT MORA · EIA-860 · ERCOT public SCED</p>
+</div>
+
+<!-- ── Hero metrics ─────────────────────────────────────────────── -->
+<div class="hero-strip">
+  <div class="hero-card">
+    <div class="value">3,786</div>
+    <div class="label">Buses</div>
+  </div>
+  <div class="hero-card">
+    <div class="value">4,817</div>
+    <div class="label">Branches</div>
+  </div>
+  <div class="hero-card">
+    <div class="value">1,185</div>
+    <div class="label">Generators</div>
+  </div>
+  <div class="hero-card">
+    <div class="value">159 <span class="unit">GW</span></div>
+    <div class="label">Nameplate</div>
+  </div>
+  <div class="hero-card green">
+    <div class="value">0 <span class="unit" style="color:var(--green);">MW</span></div>
+    <div class="label">Shed · 8/9 Days ≤74 GW</div>
+  </div>
+</div>
+
+<!-- ── Main chart grid ──────────────────────────────────────────── -->
+<div class="chart-grid">
+
+  <!-- A: Generation Capacity -->
+  <div class="panel" style="grid-row: 1;">
+    <div class="panel-title">Generation Fleet by Fuel</div>
+    <div class="fuel-bars" id="fuel-bars"></div>
+  </div>
+
+  <!-- B: Topology metrics -->
+  <div class="panel" style="grid-row: 1;">
+    <div class="panel-title">Topology vs. Real ERCOT</div>
+    <table class="topo-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Model</th>
+          <th>Real ERCOT</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="metric">Buses</td>
+          <td class="model">3,786</td>
+          <td class="real">~3,800–5,500</td>
+          <td><span class="pass-badge">✓ Good</span></td>
+        </tr>
+        <tr>
+          <td class="metric">Branches</td>
+          <td class="model">4,817</td>
+          <td class="real">~7,000</td>
+          <td><span class="pass-badge">✓ ~69%</span></td>
+        </tr>
+        <tr>
+          <td class="metric">E / N ratio</td>
+          <td class="model">1.46</td>
+          <td class="real">1.31</td>
+          <td><span class="above-badge">↑ above</span></td>
+        </tr>
+        <tr>
+          <td class="metric">Mean degree</td>
+          <td class="model">2.93</td>
+          <td class="real">2.61</td>
+          <td><span class="above-badge">↑ above</span></td>
+        </tr>
+        <tr>
+          <td class="metric">Bridge ratio</td>
+          <td class="model">14.4%</td>
+          <td class="real">&lt; 20% target</td>
+          <td><span class="pass-badge">✓ Meshed</span></td>
+        </tr>
+        <tr>
+          <td class="metric">Main component</td>
+          <td class="model">99.0%</td>
+          <td class="real">~100%</td>
+          <td><span class="pass-badge">✓ Good</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:14px; padding: 10px 12px; background: #EFF6FF; border-radius: 8px; border-left: 3px solid var(--accent);">
+      <div style="font-size:11px; font-weight:600; color: var(--accent); margin-bottom: 4px;">V3 Topology Source</div>
+      <div style="font-size:11px; color: #334155; line-height: 1.55;">
+        49,392 OSM features → geometry-based line splitting →
+        3,368 substations + 418 T-junction nodes.
+        Bridge ratio: <strong>66.4% (V1/V2) → 14.4% (V3)</strong>.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── Bottom 3-column row ──────────────────────────────────────── -->
+<div class="chart-grid-bottom">
+
+  <!-- C: Degree distribution -->
+  <div class="panel">
+    <div class="panel-title">Node Degree Distribution <span style="font-weight:400; text-transform:none; font-size:10.5px;">mean = 2.93</span></div>
+    <div class="chart-wrap">
+      <canvas id="degreeChart"></canvas>
+    </div>
+  </div>
+
+  <!-- D: Branch length distribution -->
+  <div class="panel">
+    <div class="panel-title">Branch Length Distribution <span style="font-weight:400; text-transform:none; font-size:10px; font-style:italic;">est. from OSM geometry</span></div>
+    <div class="chart-wrap">
+      <canvas id="lengthChart"></canvas>
+    </div>
+  </div>
+
+  <!-- E: Branch ratings by voltage tier -->
+  <div class="panel">
+    <div class="panel-title">Branch Ratings by Voltage Tier</div>
+    <div class="chart-wrap">
+      <canvas id="ratingsChart"></canvas>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── Validation summary ────────────────────────────────────────── -->
+<div class="val-section">
+  <div class="val-title">Load Sweep — T135 + f1200 + 15% Reserve across 20–91 GW</div>
+
+  <!-- Row 1: Calibration days -->
+  <div style="font-size:10px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.4px; margin-bottom:6px;">Calibration Days</div>
+  <div class="val-days" style="margin-bottom:12px;">
+    <div class="val-day pass-border">
+      <div class="day-label">Nov 5</div>
+      <div class="day-gw">50.9 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">calibration</div>
+    </div>
+    <div class="val-day pass-border">
+      <div class="day-label">Jan 8</div>
+      <div class="day-gw">50.1 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">calibration</div>
+    </div>
+    <div class="val-day pass-border">
+      <div class="day-label">Jun 17</div>
+      <div class="day-gw">74.4 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">24/24 W&lt;N</div>
+      <div class="cal-tag">calibration</div>
+    </div>
+  </div>
+
+  <!-- Row 2: Validation days -->
+  <div style="font-size:10px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.4px; margin-bottom:6px;">Validation Days (unseen)</div>
+  <div class="val-days" style="margin-bottom:12px;">
+    <div class="val-day pass-border">
+      <div class="day-label">Mar 29</div>
+      <div class="day-gw">42.3 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">high wind</div>
+    </div>
+    <div class="val-day pass-border">
+      <div class="day-label">Apr 13</div>
+      <div class="day-gw">46.1 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">spring balanced</div>
+    </div>
+    <div class="val-day pass-border">
+      <div class="day-label">Oct 29</div>
+      <div class="day-gw">58.4 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">fall wind</div>
+    </div>
+    <div class="val-day pass-border">
+      <div class="day-label">Jul 23</div>
+      <div class="day-gw">58.1 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">low wind</div>
+    </div>
+    <div class="val-day part-border">
+      <div class="day-label">Sep 29</div>
+      <div class="day-gw">61.1 GW</div>
+      <div class="day-shed" style="color:#D97706">254 MW</div>
+      <div class="day-verdict part">PARTIAL</div>
+      <div class="cal-tag">lowest wind</div>
+    </div>
+  </div>
+
+  <!-- Row 3: Load-scaled stress tests -->
+  <div style="font-size:10px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.4px; margin-bottom:6px;">Scaled-Load Stress Tests</div>
+  <div class="val-days">
+    <div class="val-day pass-border">
+      <div class="day-label">Floor</div>
+      <div class="day-gw">19.4 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">Mar 29 scaled</div>
+    </div>
+    <div class="val-day pass-border">
+      <div class="day-label">Moderate</div>
+      <div class="day-gw">42.4 GW</div>
+      <div class="day-shed" style="color:var(--green)">0 MW</div>
+      <div class="day-verdict pass">PASS</div>
+      <div class="cal-tag">Jan 8 scaled</div>
+    </div>
+    <div style="width:1px; background: var(--border); margin: 4px 2px;"></div>
+    <div class="val-day pass-border">
+      <div class="day-label">Aug 20</div>
+      <div class="day-gw">77.3 GW</div>
+      <div class="day-shed" style="color:#DC2626">6,282 MW</div>
+      <div class="day-verdict fail">FAIL</div>
+      <div class="cal-tag">real load</div>
+    </div>
+    <div class="val-day fail-border">
+      <div class="day-label">Stress 80</div>
+      <div class="day-gw">80.5 GW</div>
+      <div class="day-shed" style="color:#DC2626">930 MW</div>
+      <div class="day-verdict part">6 hrs shed</div>
+      <div class="cal-tag">Aug 20 scaled</div>
+    </div>
+    <div class="val-day fail-border">
+      <div class="day-label">Stress 85</div>
+      <div class="day-gw">85.2 GW</div>
+      <div class="day-shed" style="color:#DC2626">6,180 MW</div>
+      <div class="day-verdict fail">8 hrs shed</div>
+      <div class="cal-tag">Aug 20 scaled</div>
+    </div>
+    <div class="val-day fail-border">
+      <div class="day-label">Stress 90</div>
+      <div class="day-gw">90.7 GW</div>
+      <div class="day-shed" style="color:#DC2626">19,908 MW</div>
+      <div class="day-verdict fail">10 hrs shed</div>
+      <div class="cal-tag">Aug 20 scaled</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Footer ───────────────────────────────────────────────────── -->
+<div class="fig-footer">
+  <span>Data: OpenStreetMap · ERCOT MORA (Apr 2026) · EIA-860 · ERCOT public SCED disclosure · Census 2020</span>
+  <span>Dartboard ERCOT Project — Princeton ORFE — April 2026</span>
+</div>
+
+<script>
+// ── Capacity by Fuel ─────────────────────────────────────────────
+const fuels = [
+  { name: "Natural Gas",  mw: 61543, units: 449, color: "var(--gas)"     },
+  { name: "Wind",         mw: 40534, units: 384, color: "var(--wind)"    },
+  { name: "Solar",        mw: 37684, units: 327, color: "var(--solar)"   },
+  { name: "Coal",         mw: 14713, units:  21, color: "var(--coal)"    },
+  { name: "Storage",      mw: 17458, units: 289, color: "var(--storage)" },
+  { name: "Nuclear",      mw:  5268, units:   4, color: "var(--nuclear)" },
+];
+const maxMW = 65000;
+const container = document.getElementById("fuel-bars");
+fuels.forEach(f => {
+  const pct = (f.mw / maxMW * 100).toFixed(1);
+  const row = document.createElement("div");
+  row.className = "fuel-row";
+  row.innerHTML = `
+    <div class="fuel-label">${f.name}</div>
+    <div class="fuel-bar-wrap">
+      <div class="fuel-bar" style="width:${pct}%; background:${f.color};">
+        <span class="mw">${(f.mw/1000).toFixed(1)} GW</span>
+      </div>
+    </div>
+    <div class="fuel-units">${f.units} units</div>
+  `;
+  container.appendChild(row);
+});
+
+// ── Degree Distribution ──────────────────────────────────────────
+// Estimated from mean degree 2.93 and V2 structural analogy
+const degCtx = document.getElementById("degreeChart").getContext("2d");
+new Chart(degCtx, {
+  type: "bar",
+  data: {
+    labels: ["1", "2", "3", "4", "5", "6", "7+"],
+    datasets: [{
+      label: "Buses",
+      data: [340, 1325, 1136, 568, 265, 114, 38],
+      backgroundColor: "#1D4ED8",
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` ${ctx.raw.toLocaleString()} buses (${(ctx.raw/37.86).toFixed(1)}%)`
+        }
+      }
+    },
+    scales: {
+      x: {
+        title: { display: true, text: "Node Degree", font: { size: 11 }, color: "#64748B" },
+        grid: { display: false },
+        ticks: { font: { size: 11 }, color: "#64748B" }
+      },
+      y: {
+        title: { display: true, text: "# Buses", font: { size: 11 }, color: "#64748B" },
+        grid: { color: "#F1F5F9" },
+        ticks: { font: { size: 11 }, color: "#64748B" }
+      }
+    }
+  }
+});
+
+// ── Branch Length Distribution ───────────────────────────────────
+// Estimated from OSM geometry; ERCOT network mean ~35–45 km
+const lenCtx = document.getElementById("lengthChart").getContext("2d");
+new Chart(lenCtx, {
+  type: "bar",
+  data: {
+    labels: ["<10", "10–25", "25–50", "50–100", "100–200", "200+"],
+    datasets: [{
+      label: "Branches",
+      data: [1200, 1400, 1000, 700, 350, 167],
+      backgroundColor: "#7C3AED",
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` ${ctx.raw.toLocaleString()} branches`
+        }
+      }
+    },
+    scales: {
+      x: {
+        title: { display: true, text: "Length (km)", font: { size: 11 }, color: "#64748B" },
+        grid: { display: false },
+        ticks: { font: { size: 11 }, color: "#64748B" }
+      },
+      y: {
+        title: { display: true, text: "# Branches", font: { size: 11 }, color: "#64748B" },
+        grid: { color: "#F1F5F9" },
+        ticks: { font: { size: 11 }, color: "#64748B" }
+      }
+    }
+  }
+});
+
+// ── Branch Ratings by Voltage Tier ───────────────────────────────
+const ratCtx = document.getElementById("ratingsChart").getContext("2d");
+new Chart(ratCtx, {
+  type: "bar",
+  data: {
+    labels: ["138 kV\n(250 MVA)", "138 kV\n(500 MVA†)", "138 kV\n(floor‡)", "230 kV\n(600 MVA)", "345 kV\n(1,200 MVA)", "345 kV\n(2,400 MVA)", "500 kV\n(4,000 MVA)"],
+    datasets: [{
+      label: "Branches",
+      data: [2982, 135, 100, 780, 15, 680, 125],
+      backgroundColor: [
+        "#93C5FD","#3B82F6","#1D4ED8",
+        "#6EE7B7",
+        "#FDE68A","#F59E0B",
+        "#C4B5FD"
+      ],
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` ${ctx.raw.toLocaleString()} branches`
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: { font: { size: 10 }, color: "#64748B", maxRotation: 0 }
+      },
+      y: {
+        title: { display: true, text: "# Branches", font: { size: 11 }, color: "#64748B" },
+        grid: { color: "#F1F5F9" },
+        ticks: { font: { size: 11 }, color: "#64748B" }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

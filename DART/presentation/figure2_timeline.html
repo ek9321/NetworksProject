@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dartboard ERCOT — Project Timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:     #FFFFFF;
+    --surface:#F8FAFC;
+    --border: #E2E8F0;
+    --text:   #0F172A;
+    --muted:  #64748B;
+    --accent: #1D4ED8;
+    /* Lane colors */
+    --c-topo:   #4F46E5;  /* indigo */
+    --c-sced:   #059669;  /* emerald */
+    --c-adroit: #EA580C;  /* orange */
+    --c-viz:    #7C3AED;  /* violet */
+    /* Milestone */
+    --c-key:    #DC2626;  /* red */
+    --c-win:    #16A34A;  /* green */
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 40px 48px 52px;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .page-header { margin-bottom: 32px; border-bottom: 2px solid var(--accent); padding-bottom: 16px; }
+  .page-header h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .page-header p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .badge {
+    display: inline-block; background: var(--accent); color: #fff;
+    font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px;
+    margin-left: 10px; vertical-align: middle;
+  }
+
+  /* ── Legend ──────────────────────────────────────────────────── */
+  .legend {
+    display: flex; gap: 20px; margin-bottom: 24px; align-items: center;
+    flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 500; }
+  .legend-swatch { width: 28px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+  .legend-sep { width: 1px; height: 18px; background: var(--border); }
+
+  /* ── Gantt ───────────────────────────────────────────────────── */
+  .gantt-outer {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  /* Month header */
+  .gantt-months {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: #F1F5F9;
+  }
+  .gantt-lane-label-spacer { width: 150px; flex-shrink: 0; border-right: 1px solid var(--border); }
+  .month-cells { flex: 1; display: flex; position: relative; }
+  .month-cell {
+    flex: 1;
+    text-align: center;
+    font-size: 11px; font-weight: 600; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 8px 0;
+    border-right: 1px solid var(--border);
+  }
+  .month-cell:last-child { border-right: none; }
+  /* Subdivide each month into approximate weeks via border-left on sub-dividers */
+
+  /* Lanes */
+  .gantt-body { position: relative; }
+  .gantt-row {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+  }
+  .gantt-row:last-child { border-bottom: none; }
+  .lane-label {
+    width: 150px; flex-shrink: 0;
+    display: flex; align-items: center;
+    padding: 0 14px;
+    font-size: 11.5px; font-weight: 600;
+    border-right: 1px solid var(--border);
+    min-height: 56px;
+    gap: 8px;
+  }
+  .lane-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .lane-track {
+    flex: 1;
+    position: relative;
+    padding: 8px 0;
+    min-height: 56px;
+  }
+
+  /* Grid lines for weeks */
+  .gantt-body::before {
+    /* vertical week lines - drawn via JS */
+  }
+
+  /* Task bars */
+  .task-bar {
+    position: absolute;
+    height: 34px;
+    top: 9px;
+    border-radius: 5px;
+    display: flex; align-items: center; padding: 0 6px;
+    font-size: 9px; font-weight: 600; color: white;
+    overflow: hidden; white-space: normal;
+    line-height: 1.3;
+    word-break: break-word;
+    cursor: default;
+  }
+  .task-bar.muted {
+    opacity: 0.45;
+    background-image: repeating-linear-gradient(
+      45deg, transparent, transparent 4px, rgba(0,0,0,0.07) 4px, rgba(0,0,0,0.07) 8px
+    );
+  }
+
+  /* Milestone markers (vertical) */
+  .milestones-layer {
+    position: absolute;
+    top: 0; left: 150px; right: 0;
+    pointer-events: none;
+    height: 100%;
+  }
+  .milestone {
+    position: absolute;
+    top: 0; height: 100%;
+    border-left: 2px dashed;
+  }
+  .milestone.key   { border-color: rgba(220,38,38,0.45); }
+  .milestone.win   { border-color: rgba(22,163,74,0.5); }
+  .milestone.final { border-color: rgba(29,78,216,0.5); }
+  .milestone-label {
+    position: absolute;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 7px;
+    font-size: 9.5px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.35;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    z-index: 10;
+  }
+  .milestone-label.key   { color: #DC2626; border-color: #FECACA; }
+  .milestone-label.win   { color: #16A34A; border-color: #BBF7D0; }
+  .milestone-label.final { color: var(--accent); border-color: #BFDBFE; }
+
+  /* Milestone label row */
+  .milestone-row {
+    display: flex;
+    border-top: 1px solid var(--border);
+  }
+  .milestone-row .lane-label {
+    visibility: hidden;
+  }
+  .milestone-row .lane-track {
+    min-height: 110px;
+  }
+
+  /* ── Footer ──────────────────────────────────────────────────── */
+  .fig-footer {
+    margin-top: 18px; font-size: 10.5px; color: var(--muted);
+    border-top: 1px solid var(--border); padding-top: 10px;
+    display: flex; justify-content: space-between;
+  }
+
+  /* ── Outcome strip ───────────────────────────────────────────── */
+  .outcome-strip {
+    display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;
+  }
+  .outcome-card {
+    flex: 1; min-width: 180px;
+    border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; background: var(--surface);
+  }
+  .outcome-card .oc-date { font-size: 10.5px; color: var(--muted); font-weight: 500; }
+  .outcome-card .oc-title { font-size: 13px; font-weight: 700; margin-top: 3px; }
+  .outcome-card .oc-desc { font-size: 11.5px; color: var(--muted); margin-top: 4px; line-height: 1.45; }
+  .oc-green { border-left: 4px solid #16A34A; }
+  .oc-red   { border-left: 4px solid #DC2626; }
+  .oc-blue  { border-left: 4px solid var(--accent); }
+  .oc-gray  { border-left: 4px solid #94A3B8; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Dartboard ERCOT <span class="badge">Project Timeline</span></h1>
+  <p>~10 weeks · Four parallel work streams · 100+ calibration experiments on Princeton Adroit cluster</p>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-swatch" style="background:#FECACA; border:1px solid #DC2626"></div>
+    Key finding / pivot
+  </div>
+  <div class="legend-item">
+    <div class="legend-swatch" style="background:#BBF7D0; border:1px solid #16A34A"></div>
+    Milestone solved
+  </div>
+</div>
+
+<!-- Gantt chart -->
+<div class="gantt-outer" id="gantt-outer">
+  <!-- Month headers -->
+  <div class="gantt-months">
+    <div class="gantt-lane-label-spacer"></div>
+    <div class="month-cells" id="month-cells">
+      <!-- populated by JS -->
+    </div>
+  </div>
+  <!-- Body -->
+  <div class="gantt-body" id="gantt-body">
+    <!-- Lanes populated by JS -->
+  </div>
+</div>
+
+<!-- Key outcome cards -->
+<div class="outcome-strip">
+  <div class="outcome-card oc-gray">
+    <div class="oc-date">Late Jan 2026</div>
+    <div class="oc-title">Birchfield Pivot</div>
+    <div class="oc-desc">Synthetic replication approach abandoned — circular data dependency. Switched to OSM as primary topology source.</div>
+  </div>
+  <div class="outcome-card oc-red">
+    <div class="oc-date">Mar 18, 2026</div>
+    <div class="oc-title">Critical Diagnostic</div>
+    <div class="oc-desc">floor/2x experiment: removing all branch limits → 0 MW shed. <strong>All shedding is branch ratings</strong>, not missing generation.</div>
+  </div>
+  <div class="outcome-card oc-red">
+    <div class="oc-date">Mar 24, 2026</div>
+    <div class="oc-title">Compensating Error Found</div>
+    <div class="oc-desc">V1/V2 had 66% bridge ratio (should be &lt;20%). Inflated ratings masked a broken 138 kV network. V3 rewrite required.</div>
+  </div>
+  <div class="outcome-card oc-green">
+    <div class="oc-date">Mar 28, 2026</div>
+    <div class="oc-title">Jun 17 Solved — 0 MW</div>
+    <div class="oc-desc">v3-j17-t135f-r15: zero load shedding on peak summer day (74 GW). 24/24 W&lt;N hours. WESTEX constraint preserved.</div>
+  </div>
+  <div class="outcome-card oc-green">
+    <div class="oc-date">Mar 30, 2026</div>
+    <div class="oc-title">All 3 Cal. Days Solved</div>
+    <div class="oc-desc">Nov 5, Jan 8, Jun 17 all at 0 MW shed. 4/6 unseen validation days pass clean (20–74 GW range).</div>
+  </div>
+  <div class="outcome-card oc-blue">
+    <div class="oc-date">Apr 3, 2026</div>
+    <div class="oc-title">Presentation</div>
+    <div class="oc-desc">Princeton ORFE — Prof. Sircar. First publicly reproducible DC-SCED model of ERCOT from open data.</div>
+  </div>
+</div>
+
+<div class="fig-footer">
+  <span>Wall-clock time ≈ 10 weeks · Human strategic effort ≈ 120 hrs · Claude Code agent: all implementation + 100+ SLURM experiments</span>
+  <span>Dartboard ERCOT Project — Princeton ORFE — April 2026</span>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────
+// Date math helpers
+// ─────────────────────────────────────────────────────────────────
+const START = new Date("2026-01-25");  // Jan 25
+const END   = new Date("2026-04-12");  // Apr 12
+const TOTAL_DAYS = (END - START) / 86400000;
+
+function dayOffset(dateStr) {
+  return (new Date(dateStr) - START) / 86400000;
+}
+function pct(dateStr) {
+  return (dayOffset(dateStr) / TOTAL_DAYS * 100).toFixed(3) + "%";
+}
+function pctWidth(start, end) {
+  return ((dayOffset(end) - dayOffset(start)) / TOTAL_DAYS * 100).toFixed(3) + "%";
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Month header
+// ─────────────────────────────────────────────────────────────────
+const months = [
+  { label: "Jan",            start: "2026-01-25", end: "2026-02-01" },
+  { label: "February 2026", start: "2026-02-01", end: "2026-03-01" },
+  { label: "March 2026",    start: "2026-03-01", end: "2026-04-01" },
+  { label: "April 2026",    start: "2026-04-01", end: "2026-04-12" },
+];
+const monthCells = document.getElementById("month-cells");
+months.forEach(m => {
+  const dStart = dayOffset(m.start);
+  const dEnd   = Math.min(dayOffset(m.end), TOTAL_DAYS);
+  const w = ((dEnd - Math.max(dStart,0)) / TOTAL_DAYS * 100).toFixed(2) + "%";
+  const el = document.createElement("div");
+  el.className = "month-cell";
+  el.style.flex = "0 0 " + w;
+  el.textContent = m.label;
+  monthCells.appendChild(el);
+});
+
+// ─────────────────────────────────────────────────────────────────
+// Lanes definition
+// ─────────────────────────────────────────────────────────────────
+const LANES = [
+  {
+    id: "topo",
+    label: "Topology\nPipeline",
+    color: "var(--c-topo)",
+    tasks: [
+      { start:"2026-01-25", end:"2026-02-05", label:"Birchfield replication", muted: true },
+      { start:"2026-02-20", end:"2026-03-10", label:"V1 OSM bus/branch tables" },
+      { start:"2026-03-10", end:"2026-03-22", label:"V1 topology iteration" },
+      { start:"2026-03-22", end:"2026-03-26", label:"V2 topo analysis" },
+      { start:"2026-03-26", end:"2026-03-30", label:"V3 geometry extract" },
+    ]
+  },
+  {
+    id: "sced",
+    label: "SCED &\nSolver",
+    color: "var(--c-sced)",
+    tasks: [
+      { start:"2026-02-05", end:"2026-03-01", label:"Vatic/Egret integration" },
+      { start:"2026-03-01", end:"2026-03-18", label:"SCED pipeline v2–v5" },
+      { start:"2026-03-18", end:"2026-03-26", label:"Cal. day prep (Nov·Jun·Jan)" },
+      { start:"2026-03-26", end:"2026-03-30", label:"V3 SCED + storage" },
+      { start:"2026-03-30", end:"2026-04-03", label:"Validation (10 runs)" },
+    ]
+  },
+  {
+    id: "adroit",
+    label: "Adroit\nExperiments",
+    color: "var(--c-adroit)",
+    tasks: [
+      { start:"2026-02-22", end:"2026-03-05", label:"Cluster setup + env" },
+      { start:"2026-03-05", end:"2026-03-28", label:"100+ SLURM experiments (jobs 3050xxx)" },
+      { start:"2026-03-28", end:"2026-04-01", label:"Validation + stress" },
+    ]
+  },
+  {
+    id: "viz",
+    label: "Viz &\nDiagnostics",
+    color: "var(--c-viz)",
+    tasks: [
+      { start:"2026-03-12", end:"2026-03-22", label:"grid_visualizer (v1–v3)" },
+      { start:"2026-03-22", end:"2026-03-26", label:"Binding branch diag." },
+      { start:"2026-03-26", end:"2026-03-30", label:"SCED diag. map" },
+      { start:"2026-03-30", end:"2026-04-03", label:"Report + figures" },
+    ]
+  },
+];
+
+// ─────────────────────────────────────────────────────────────────
+// Render lanes
+// ─────────────────────────────────────────────────────────────────
+const ganttBody = document.getElementById("gantt-body");
+
+LANES.forEach(lane => {
+  const row = document.createElement("div");
+  row.className = "gantt-row";
+
+  // Label
+  const labelEl = document.createElement("div");
+  labelEl.className = "lane-label";
+  labelEl.style.color = lane.color;
+  labelEl.innerHTML = `<div class="lane-dot" style="background:${lane.color}"></div>
+    <span style="white-space:pre-line; line-height:1.3;">${lane.label}</span>`;
+  row.appendChild(labelEl);
+
+  // Track
+  const track = document.createElement("div");
+  track.className = "lane-track";
+
+  lane.tasks.forEach((t, i) => {
+    const bar = document.createElement("div");
+    bar.className = "task-bar" + (t.muted ? " muted" : "");
+    bar.style.left  = pct(t.start);
+    bar.style.width = pctWidth(t.start, t.end);
+    bar.style.background = t.muted ? "#CBD5E1" : lane.color;
+    bar.style.top = "14px";
+
+    // Stagger rows if overlapping (simple: alternate top)
+    if (i > 0) {
+      const prev = lane.tasks[i-1];
+      if (new Date(t.start) < new Date(prev.end)) {
+        bar.style.top = "34px";
+      }
+    }
+
+    bar.textContent = t.label;
+    bar.title = `${t.label}: ${t.start} → ${t.end}`;
+    track.appendChild(bar);
+  });
+
+  row.appendChild(track);
+  ganttBody.appendChild(row);
+});
+
+// ─────────────────────────────────────────────────────────────────
+// Milestone overlays
+// ─────────────────────────────────────────────────────────────────
+const MILESTONES = [
+  { date:"2026-02-05", type:"key",   label:"OSM pivot",           top: 6 },
+  { date:"2026-03-18", type:"key",   label:"floor/2x diagnostic", top: 6 },
+  { date:"2026-03-24", type:"key",   label:"Comp. error found",   top: 42 },
+  { date:"2026-03-26", type:"key",   label:"V3 rewrite",          top: 78 },
+  { date:"2026-03-28", type:"win",   label:"Jun 17 SOLVED ✓",     top: 6 },
+  { date:"2026-03-30", type:"win",   label:"All 3 days ✓",        top: 42 },
+  { date:"2026-04-03", type:"final", label:"Presentation ★",      top: 6 },
+];
+
+// Dashed lines through the lane rows (no labels)
+const mLayer = document.createElement("div");
+mLayer.className = "milestones-layer";
+mLayer.style.position = "absolute";
+mLayer.style.top = "0";
+mLayer.style.left = "150px";
+mLayer.style.right = "0";
+mLayer.style.height = "100%";
+mLayer.style.pointerEvents = "none";
+
+MILESTONES.forEach(m => {
+  const line = document.createElement("div");
+  line.className = `milestone ${m.type}`;
+  line.style.left = pct(m.date);
+  mLayer.appendChild(line);
+});
+
+ganttBody.style.position = "relative";
+ganttBody.appendChild(mLayer);
+
+// Dedicated label row below the lanes
+const mRow = document.createElement("div");
+mRow.className = "gantt-row milestone-row";
+
+const mRowLabel = document.createElement("div");
+mRowLabel.className = "lane-label";
+mRowLabel.innerHTML = "&nbsp;";
+mRow.appendChild(mRowLabel);
+
+const mRowTrack = document.createElement("div");
+mRowTrack.className = "lane-track";
+mRowTrack.style.minHeight = "110px";
+
+MILESTONES.forEach(m => {
+  const lbl = document.createElement("div");
+  lbl.className = `milestone-label ${m.type}`;
+  lbl.style.left = pct(m.date);
+  lbl.style.top = (m.top || 6) + "px";
+  lbl.textContent = m.label;
+  mRowTrack.appendChild(lbl);
+});
+
+mRow.appendChild(mRowTrack);
+ganttBody.appendChild(mRow);
+</script>
+</body>
+</html>

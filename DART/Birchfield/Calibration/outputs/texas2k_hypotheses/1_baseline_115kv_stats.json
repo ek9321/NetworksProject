@@ -1,0 +1,18 @@
+{
+  "num_nodes": 1549,
+  "num_edges": 2580,
+  "mn_ratio": 1.6656,
+  "mean_degree": 3.331,
+  "meshedness": 0.3337,
+  "deg1_frac": 0.0336,
+  "deg2_frac": 0.2427,
+  "deg3plus_frac": 0.7237,
+  "mean_length_km": 17.6,
+  "median_length_km": 13.29,
+  "intersection_rate": 0.0481,
+  "composite_error": 0.1607,
+  "experiment": "1_baseline",
+  "voltage_class": "115kv",
+  "elapsed_sec": 14.8,
+  "description": "Default Birchfield params, DC enabled"
+}

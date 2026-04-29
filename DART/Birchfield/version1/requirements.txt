@@ -1,0 +1,12 @@
+pdfplumber
+pandas
+numpy
+matplotlib
+scipy
+pillow
+requests
+geopandas
+shapely
+scikit-learn
+networkx
+openpyxl

@@ -1,0 +1,18 @@
+{
+  "num_nodes": 182,
+  "num_edges": 285,
+  "mn_ratio": 1.5659,
+  "mean_degree": 3.132,
+  "meshedness": 0.2897,
+  "deg1_frac": 0.0,
+  "deg2_frac": 0.3022,
+  "deg3plus_frac": 0.6978,
+  "mean_length_km": 43.31,
+  "median_length_km": 27.39,
+  "intersection_rate": 0.014,
+  "composite_error": 0.3776,
+  "experiment": "2_radial_fix",
+  "voltage_class": "500kv",
+  "elapsed_sec": 0.3,
+  "description": "Hypothesis 2: radial threshold = 1 (degree <= 1 gets bonus)"
+}

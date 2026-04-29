@@ -1,2 +1,0 @@
-total_substations,total_buses,total_transformers,voltage_levels,requested_pct_345kv,actual_pct_345kv,count_345kv
-630,724,94,"[345, 115]",0.15,0.1492063492063492,94

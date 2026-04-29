@@ -1,57 +1,68 @@
-# ERCOT Transmission Grid — Network Analysis
+# Diagnosing Resilience in the ERCOT Transmission Network
 
-A network science analysis of the real ERCOT (Electric Reliability Council of Texas) transmission grid, built from OpenStreetMap data and public ERCOT filings.
+Network science analysis of the ERCOT (Electric Reliability Council of Texas) transmission grid.
+See `DART/report.tex` for the full paper.
 
-## The Network
+## The Network (V3 pipeline)
 
 | | |
 |---|---|
-| **Nodes** | 3,878 substations (345/230/138 kV) |
-| **Edges** | 4,501 transmission lines |
-| **Zones** | NORTH (1,309), SOUTH (1,170), WEST (916), HOUSTON (483) |
-| **Generation** | 159,742 MW nameplate across Nuclear, Coal, Gas, Wind, Solar |
-| **Connectivity** | Single connected component (100%) |
-
-Edge attributes: voltage (kV), line length (km), thermal capacity (MVA), reactance.
-Node attributes: zone, voltage level, lat/lng, aggregated generation (MW + fuel type), load.
+| **Nodes** | 3,786 (3,000 real substations + 786 synthetic T-junctions) |
+| **Edges** | 4,817 transmission lines |
+| **Zones** | NORTH (1,319), SOUTH (1,081), WEST (909), HOUSTON (477) |
+| **Generation** | 159 GW nameplate, 1,185 units (MORA April 2026) |
+| **Connectivity** | Single connected component (100%), bridge ratio 14.4% |
 
 ## Data Pipeline
 
 ```
-OSM GeoJSON → bus.csv / branch.csv / gen.csv → build_network.py → nodes.csv, edges.csv, ercot_network.graphml
+OpenStreetMap (OSM)   ──► build_osm_bus_table.py        ─┐
+ERCOT MORA April 2026 ──► extract_mora.py                ─┼─► sced_inputs_v3/
+Census 2020 pop.      ──► (inline in network_analysis.py) ─┘
+                                    │
+                         build_osm_branch_table_v3.py
+                         (V3: 50 m proximity snap + T-junctions)
+                                    │
+                         network_analysis.py   ──► figures/, network_analysis_results.json
+                         optimal_grid.py       ──► figures/real_vs_optimal_attack_curves.png
 ```
 
-Source data lives in `../grid_data/sced_inputs/SourceData/`. The build script reads those CSVs, computes line lengths via haversine, assigns capacity ratings, aggregates generators onto bus nodes, and exports the simplified network.
+Source data lives in `DART/Realist/grid_data/sced_inputs_v3/SourceData/`.
 
 ## Analyses
 
-Run `build_network.py` first, then `analyze_network.py`. Figures are saved to `figures/`.
-
-1. **Basic topology** — Degree distribution, clustering coefficient, density. Power grids are sparse, planar-ish, low clustering — distinct from social or biological networks.
-
-2. **Betweenness centrality** — Capacity-weighted betweenness identifies bottleneck corridors. Geographic heatmap shows which substations are critical for power flow.
-
-3. **Community detection** — Louvain algorithm on the topology, compared side-by-side with ERCOT's actual load zone boundaries. Tests whether network structure alone recovers the operational zones.
-
-4. **Cascading failure** — Remove edges (targeted by betweenness vs random), simulate overload cascades. Measures giant component fragmentation under each strategy.
-
-5. **Grid visualization** — Geographic map with voltage-colored edges and fuel-type generation markers.
-
-6. **Random graph comparison** — ERCOT vs Erdos-Renyi vs Barabasi-Albert of matched size. Degree distribution, clustering, and connectivity compared.
+| Script | Output | Section in paper |
+|---|---|---|
+| `network_analysis.py` | `figures/attack_curves.png` | §4 Attack curves |
+| `network_analysis.py` | `figures/spectral_analysis.png` | §4 Spectral bisection |
+| `network_analysis.py` | `figures/n1_stress.png` | §5 N–1 contingency |
+| `optimal_grid.py` | `figures/real_vs_optimal_attack_curves.png` | §6 Topology-optimal grid |
+| `notebooks/graph_simulations.ipynb` | `sim.png` | §4 Link prediction simulation |
 
 ## Requirements
 
 ```
-pip install networkx matplotlib numpy
+pip install networkx matplotlib numpy scipy pandas geopandas shapely
 ```
 
 ## File Manifest
 
 ```
-build_network.py        — reads SCED CSVs, writes nodes.csv + edges.csv + graphml
-analyze_network.py      — all analyses, writes figures/
-nodes.csv               — node table (generated)
-edges.csv               — edge table (generated)
-ercot_network.graphml   — NetworkX graph (generated)
-figures/                — output plots (generated)
+DART/report.tex                                  — paper source
+DART/Realist/ERCOT/
+  network_analysis.py                            — attack curves, spectral, N–1, null model
+  optimal_grid.py                                — greedy λ₂-optimal grid + attack-curve comparison
+  build_osm_bus_table.py                         — OSM substation extraction
+  build_osm_branch_table_v3.py                   — V3 line extraction (50 m proximity snap)
+  extract_mora.py                                — MORA generation unit ingestion
+  figures/                                       — output plots
+  network_analysis_results.json                  — numerical results
+  optimal_grid_results.json
+  n1_stress_results.csv
+DART/Realist/grid_data/
+  sced_inputs_v3/SourceData/{bus,branch,gen}.csv — V3 grid inputs
+  MORA_April2026_unit_capacities.csv             — generation nameplate
+  texas_tract_pop_2020.csv                       — Census 2020 load allocation
+  ercot_zones.geojson                            — ERCOT zone boundaries
+notebooks/graph_simulations.ipynb                — link prediction simulation
 ```

@@ -1,13 +1,7 @@
 {
-	"folders": [
-		{
-			"name": "NetworksProject",
-			"path": "."
-		},
-		{
-			"name": "jack dart",
-			"path": "../../../Downloads/jack dart"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }

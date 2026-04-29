@@ -3,6 +3,70 @@
 Network science analysis of the ERCOT (Electric Reliability Council of Texas) transmission grid.
 See `DART/report.tex` for the full paper.
 
+---
+
+## How to read this repo (start here)
+
+The repo root looks busy because the analysis scripts hard-code paths like `nodes.csv`
+and `figures/01_*.png`, so we left every original file in place. To navigate the
+project the way the paper is structured, **ignore the root file list and use the
+index instead**:
+
+### Step 1 — open the paper-section index
+
+**[`PAPER_INDEX.md`](PAPER_INDEX.md)** is the entry point. It has one link per paper
+section and per appendix.
+
+### Step 2 — pick the section you want
+
+The "clean" view that mirrors the paper is exactly these folders:
+
+```
+PAPER_INDEX.md                            ← start here
+visualization/                            ← grid map (Fig. used in §3)
+analysis/
+├── 3_network_construction/               ← §3
+├── 4_structural_diagnosis/               ← §4 (overview)
+│   ├── 4.1_articulation_points/          ← §4.1
+│   ├── 4.2_attack_curves/                ← §4.2
+│   ├── 4.3_link_prediction/              ← §4.3
+│   └── 4.4_spectral_bisection/           ← §4.4
+├── 5_n1_contingency/                     ← §5
+└── 6_topology_optimal/                   ← §6
+appendix/                                 ← full inventory of scripts/data/figures
+```
+
+Every folder above contains a `README.md` with: a short summary of that section,
+relative links to the relevant figure(s) in `figures/`, the script(s) that produced
+them, and pointers to related sections.
+
+### Step 3 — ignore everything else at the root *for navigation purposes*
+
+The following root entries are the *machinery* that the indexed READMEs link back
+to. You don't need to browse them directly; the indexed READMEs will pull up the
+right file when you click through:
+
+| Root entry | What it is | Used by |
+|---|---|---|
+| `build_network.py` | builds the graph | §3 |
+| `analyze_network.py` | runs all diagnostics | §4, §5 |
+| `nodes.csv`, `edges.csv` | graph data | every section |
+| `figures/` | all generated PNGs | linked from each section README |
+| `notebooks/` | Jupyter notebooks | §4.3 |
+| `output.png` | debug output of `build_network.py` | — |
+| `DART/` | precursor sub-project (Dartboard) | acknowledgments |
+| `CLAUDE.md`, `.gitignore`, `*.code-workspace` | tooling | — |
+
+### TL;DR
+
+> **Click [`PAPER_INDEX.md`](PAPER_INDEX.md). Click the section you want. Each
+> section's README links to its figures and code. Don't browse the root.**
+
+---
+
+## Original repo notes (machinery reference)
+
+
 ## The Network (V3 pipeline)
 
 | | |

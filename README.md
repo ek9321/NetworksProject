@@ -130,3 +130,34 @@ DART/Realist/grid_data/
   ercot_zones.geojson                            — ERCOT zone boundaries
 notebooks/graph_simulations.ipynb                — link prediction simulation
 ```
+
+---
+
+## Live network visualizer (v3)
+
+An interactive Leaflet map of the full ERCOT transmission graph (substations,
+SCED branches, voltage tiers, zone overlays) is embedded as a self-contained
+HTML page at:
+
+[`DART/Realist/grid_visualizer_v3.html`](DART/Realist/grid_visualizer_v3.html)
+
+### Click here to view it live in your browser
+
+**[▶ Open the live ERCOT network visualizer (v3)](https://htmlpreview.github.io/?https://github.com/ek9321/NetworksProject/blob/report/DART/Realist/grid_visualizer_v3.html)**
+
+The link above renders the file through `htmlpreview.github.io`, which executes
+the embedded JavaScript so the map, layers, and toggles work exactly as they
+would locally. No clone or install required — just click.
+
+If the rendered version is slow to load (the graph data is embedded inline and
+the file is ~600 lines), you can also clone the repo and open the file
+directly:
+
+```bash
+git clone https://github.com/ek9321/NetworksProject.git
+cd NetworksProject
+git checkout report
+open DART/Realist/grid_visualizer_v3.html      # macOS
+xdg-open DART/Realist/grid_visualizer_v3.html  # Linux
+start DART/Realist/grid_visualizer_v3.html     # Windows
+```
